@@ -8,47 +8,32 @@ public class Ground : MonoBehaviour
     float _rayLength = 1f;
 
     [SerializeField]
-    private Transform _rayPosition;
+    private Transform _firstRayPosition;
+
+    [SerializeField]
+    private Transform _secondRayPosition;
 
     [SerializeField]
     private LayerMask _groundLayer;
 
-    // Raycast parameters
-    // using in IsGrounded and
-    // GetGroundAngle.
-    Vector2 _position;
+
     Vector2 _direction = Vector2.down;
 
     public bool IsGrounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(_position, _direction, _rayLength, _groundLayer);
+        RaycastHit2D hit1 = Physics2D.Raycast(_firstRayPosition.position, _direction, _rayLength, _groundLayer);
+        RaycastHit2D hit2 = Physics2D.Raycast(_secondRayPosition.position, _direction, _rayLength, _groundLayer);
 
-        if (hit.collider != null)
+        if (hit1.collider != null || hit2.collider != null)
         {
             return true;
         }
         return false;
     }
 
-    public Vector2 GetGroundNormal()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(_position, _direction, _rayLength, _groundLayer);
-
-        Vector2 groundNormal;
-
-        if (hit.collider != null)
-        {
-            groundNormal = hit.normal;
-
-            return groundNormal;
-        }
-
-        return Vector2.zero;
-    }
-
     void Update()
     {
-        _position = _rayPosition.position;
-        Debug.DrawRay(_position, _direction * _rayLength, Color.red); 
+        Debug.DrawRay(_firstRayPosition.position, _direction * _rayLength, Color.red);
+        Debug.DrawRay(_secondRayPosition.position, _direction * _rayLength, Color.red);
     }
 }

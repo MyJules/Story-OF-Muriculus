@@ -14,7 +14,9 @@ public class PlayerAnimation : MonoBehaviour
 
     private float _moveX, _moveY;
 
-    private bool _isFirst = true;
+    private bool _isFirst = true, _fliped;
+
+    private Vector3 _localScale;
 
 
     // Start is called before the first frame update
@@ -35,15 +37,24 @@ public class PlayerAnimation : MonoBehaviour
         _moveX = _rigidbody.velocity.x;
         _moveY = _rigidbody.velocity.y;
 
+        _localScale = transform.localScale;
+
         // flip X
-        if (_moveX < -0.1)
-            _spriteRender.flipX = true;
-        else if (_moveX > 0.1)
-            _spriteRender.flipX = false;
+        if (_moveX < -0.1 && !_fliped)
+        {
+            _localScale.x *= -1;
+            _fliped = true;
+        }
+        else if (_moveX > 0.1 && _fliped)
+        {
+            _localScale.x *= -1;
+            _fliped = false;
+        }
 
+        transform.localScale = _localScale;
 
-            //jump animaiton
-            if (!_groundDetection.IsGrounded())
+        //jump animaiton
+        if (!_groundDetection.IsGrounded())
             {
                 if (_isFirst)
                     _animator.SetTrigger("takeOff");

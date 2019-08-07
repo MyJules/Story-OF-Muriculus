@@ -18,11 +18,14 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private float _fallGravity = 5;
 
+    [SerializeField]
+    private float coyoteTimeMax;
+
     private Rigidbody2D _rb;
 
     private Ground _groundDetection;
 
-    private float _rbGravity, _coyoteTime = 0.5f;
+    private float _rbGravity, _coyoteTime;
 
     private float _moveX, _moveY;
 
@@ -30,12 +33,16 @@ public class PlayerMove : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _groundDetection = GetComponent<Ground>();
+
         _rbGravity = _rb.gravityScale;
+
+        _coyoteTime = coyoteTimeMax;
     }
 
     private void FixedUpdate()
     {
         CalculateMovement();
+
         _rb.velocity = new Vector2(_moveX * _speed, _moveY);
     }
 
@@ -45,12 +52,31 @@ public class PlayerMove : MonoBehaviour
         _moveX = Input.GetAxis("Horizontal");
         _moveY = _rb.velocity.y;
 
-        //jumping
-        if (Input.GetButton("Jump") && _groundDetection.IsGrounded())
+        bool isGrounded = _groundDetection.IsGrounded();
+
+        //callculate coyoteTime
+        if (!isGrounded)
         {
-            _moveY = _jumpHeight;
+            _coyoteTime -= Time.deltaTime;
+        }
+        else
+        {
+            _coyoteTime = coyoteTimeMax;
         }
 
+        //jumping
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (isGrounded)
+            {
+                Jump();
+            }
+            //coyote jump
+            else if (_coyoteTime >= 0 && _moveY < 0)
+            {
+                Jump();
+            }
+        }
 
         //increase gravity if player is falling
         if (!_groundDetection.IsGrounded() && _moveY < 0)
@@ -61,6 +87,11 @@ public class PlayerMove : MonoBehaviour
         {
             _rb.gravityScale = _rbGravity;
         }
+    }
+
+    private void Jump()
+    {
+        _moveY = _jumpHeight;
     }
 
 }
