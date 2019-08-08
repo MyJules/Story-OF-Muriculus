@@ -7,8 +7,6 @@ public class NPCDialogueTriger : MonoBehaviour
 
     public Dialogue dialogue;
 
-    private BoxCollider2D _boxColider;
-
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);

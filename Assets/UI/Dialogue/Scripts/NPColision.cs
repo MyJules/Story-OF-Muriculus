@@ -8,8 +8,6 @@ public class NPColision : MonoBehaviour
 
     private DialogueManager _dialogueManager;
 
-    private bool isColiding;
-
     private void Start()
     {
         _dialogueTriger = GetComponent<NPCDialogueTriger>();

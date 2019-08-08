@@ -29,6 +29,8 @@ public class PlayerMove : MonoBehaviour
 
     private float _moveX, _moveY;
 
+    private bool _isFirst;
+
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -39,7 +41,7 @@ public class PlayerMove : MonoBehaviour
         _coyoteTime = coyoteTimeMax;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         CalculateMovement();
 
@@ -48,13 +50,13 @@ public class PlayerMove : MonoBehaviour
 
     private void CalculateMovement()
     {
-        //get input.
+        //get input
         _moveX = Input.GetAxis("Horizontal");
         _moveY = _rb.velocity.y;
 
         bool isGrounded = _groundDetection.IsGrounded();
 
-        //callculate coyoteTime
+        //callculate coyote Time
         if (!isGrounded)
         {
             _coyoteTime -= Time.deltaTime;
@@ -70,12 +72,18 @@ public class PlayerMove : MonoBehaviour
             if (isGrounded)
             {
                 Jump();
+                _isFirst = true;
             }
             //coyote jump
             else if (_coyoteTime >= 0 && _moveY < 0)
             {
                 Jump();
             }
+
+        } else if (Input.GetButtonUp("Jump") && _moveY > 5 && _isFirst)
+        {
+            _moveY = _jumpHeight/2.5f;
+            _isFirst = false;
         }
 
         //increase gravity if player is falling

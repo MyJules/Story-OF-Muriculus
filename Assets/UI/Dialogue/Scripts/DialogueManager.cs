@@ -70,8 +70,6 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        Debug.Log("End Conversation");
-        
         _dialogueUI.SetActive(false);
     }
 

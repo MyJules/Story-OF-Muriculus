@@ -68,7 +68,9 @@ public class PlayerAnimation : MonoBehaviour
 
                 _isFirst = true;
             }
-
+        //setting up jump animation.
+        _animator.SetFloat("vertical_velocity", _moveY);
+        
         //setting horizontal animation
         _animator.SetFloat("Speed", Mathf.Abs(_moveX));
     }
