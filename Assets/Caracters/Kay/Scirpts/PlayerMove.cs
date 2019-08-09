@@ -41,10 +41,10 @@ public class PlayerMove : MonoBehaviour
         _coyoteTime = coyoteTimeMax;
     }
 
+
     private void Update()
     {
         CalculateMovement();
-
         _rb.velocity = new Vector2(_moveX * _speed, _moveY);
     }
 
@@ -80,7 +80,8 @@ public class PlayerMove : MonoBehaviour
                 Jump();
             }
 
-        } else if (Input.GetButtonUp("Jump") && _moveY > 5 && _isFirst)
+            //relising button during jumping
+        } else if (Input.GetButtonUp("Jump") && _moveY > 8 && _isFirst)
         {
             _moveY = _jumpHeight/2.5f;
             _isFirst = false;

@@ -117,6 +117,8 @@
     <Compile Include="Assets\dll\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\dll\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\dll\Cinemachine\Timeline\CinemachineTrack.cs" />
+    <Compile Include="Assets\Platforms\Scripts\MovablePlatform.cs" />
+    <Compile Include="Assets\Platforms\Scripts\StickThePlayer.cs" />
     <Compile Include="Assets\UI\Dialogue\Scripts\Dialogue.cs" />
     <Compile Include="Assets\UI\Dialogue\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\UI\Dialogue\Scripts\NPCDialogueTriger.cs" />

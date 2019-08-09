@@ -10,8 +10,6 @@ public class PlayerAnimation : MonoBehaviour
 
     private Ground _groundDetection;
 
-    private SpriteRenderer _spriteRender;
-
     private float _moveX, _moveY;
 
     private bool _isFirst = true, _fliped;
@@ -27,8 +25,6 @@ public class PlayerAnimation : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
 
         _groundDetection = GetComponent<Ground>();
-
-        _spriteRender = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
