@@ -35,16 +35,19 @@ public class PlayerAnimation : MonoBehaviour
 
         _localScale = transform.localScale;
 
-        // flip X
-        if (_moveX < -0.1 && !_fliped)
+        if (_groundDetection.IsGrounded())
         {
-            _localScale.x *= -1;
-            _fliped = true;
-        }
-        else if (_moveX > 0.1 && _fliped)
-        {
-            _localScale.x *= -1;
-            _fliped = false;
+            // flip X
+            if (_moveX < -0.1 && !_fliped)
+            {
+                _localScale.x *= -1;
+                _fliped = true;
+            }
+            else if (_moveX > 0.1 && _fliped)
+            {
+                _localScale.x *= -1;
+                _fliped = false;
+            }
         }
 
         transform.localScale = _localScale;

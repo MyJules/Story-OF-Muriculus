@@ -29,8 +29,6 @@ public class MovablePlatform : MonoBehaviour
 
     private Transform _nextPoint;
 
-    private Rigidbody2D _platformRigidbody;
-
     private int _i;
 
     private bool _isReturning = false;
@@ -40,7 +38,6 @@ public class MovablePlatform : MonoBehaviour
     {
         _i = 0;
         _nextPoint = points[0];
-        _platformRigidbody = platformObject.GetComponent<Rigidbody2D>();
 
         platformObject.transform.position = points[0].transform.position; 
     }
@@ -90,8 +87,7 @@ public class MovablePlatform : MonoBehaviour
 
     void GoToPoint(Transform goToPosition)
     {
-       // platformObject.transform.position = Vector2.MoveTowards(platformObject.transform.position, goToPosition.transform.position, speed * Time.deltaTime); 
-       _platformRigidbody.transform.position = Vector2.MoveTowards(platformObject.transform.position, goToPosition.transform.position, speed * Time.deltaTime);
+        platformObject.transform.position = Vector2.MoveTowards(platformObject.transform.position, goToPosition.transform.position, speed * Time.deltaTime); 
     }
 
     private void OnDrawGizmos()

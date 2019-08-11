@@ -13,13 +13,23 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Jump")]
     [SerializeField]
-    private float _jumpHeight = 10;
+    private float _jumpHeight = 25;
 
     [SerializeField]
-    private float _fallGravity = 5;
+    private float _fallGravityScale = 5;
+
+    [Header("Air Control")]
 
     [SerializeField]
-    private float coyoteTimeMax;
+    private float coyoteTimeMax = 0.1f;
+    [SerializeField]
+    private float verticalMultipl = 0.9f;
+    [SerializeField]
+    [Tooltip("Deccelerate when in air you change velocity X direction.")]
+    private float verticalSwithMultipl = 0.8f;
+
+
+    [Space]
 
     private Rigidbody2D _rb;
 
@@ -29,7 +39,9 @@ public class PlayerMove : MonoBehaviour
 
     private float _moveX, _moveY;
 
-    private bool _isFirst;
+    private bool _isFirstV = true, _isFirstH = true;
+
+    float startVelocity = 0;
 
     private void Start()
     {
@@ -39,6 +51,7 @@ public class PlayerMove : MonoBehaviour
         _rbGravity = _rb.gravityScale;
 
         _coyoteTime = coyoteTimeMax;
+
     }
 
 
@@ -48,12 +61,54 @@ public class PlayerMove : MonoBehaviour
         _rb.velocity = new Vector2(_moveX * _speed, _moveY);
     }
 
+
     private void CalculateMovement()
     {
         //get input
         _moveX = Input.GetAxis("Horizontal");
         _moveY = _rb.velocity.y;
 
+        CalculateHorizontalMovement();
+        CalculateVertialMovement();     
+    }
+
+
+    private void CalculateHorizontalMovement()
+    {
+        bool isGrounded = _groundDetection.IsGrounded();
+
+
+        if (!isGrounded)
+        {
+            //decrease X velocity while jumping
+            _moveX *= verticalMultipl;
+
+            //get begin X velocity
+            if (_isFirstH)
+            {
+                startVelocity = _rb.velocity.x;
+                _isFirstH = false;
+            }
+
+            if (startVelocity < 0)
+            {
+                if (_rb.velocity.x > 0)
+                    _moveX *= verticalSwithMultipl;
+            }
+            else if (startVelocity > 0)
+            {
+                if (_rb.velocity.x < 0)
+                    _moveX *= verticalSwithMultipl;
+            }
+
+        }
+        else
+        _isFirstH = true;
+    }
+
+
+    private void CalculateVertialMovement()
+    {
         bool isGrounded = _groundDetection.IsGrounded();
 
         //callculate coyote Time
@@ -72,35 +127,40 @@ public class PlayerMove : MonoBehaviour
             if (isGrounded)
             {
                 Jump();
-                _isFirst = true;
+                _isFirstV = true;
             }
             //coyote jump
-            else if (_coyoteTime >= 0 && _moveY < 0)
+            else if (_coyoteTime >= 0 && _moveY < 0 && _isFirstV)
             {
                 Jump();
             }
 
             //relising button during jumping
-        } else if (Input.GetButtonUp("Jump") && _moveY > 8 && _isFirst)
+        }
+        else if (Input.GetButtonUp("Jump") && _moveY > 8 && _isFirstV)
         {
-            _moveY = _jumpHeight/2.5f;
-            _isFirst = false;
+            _moveY = _jumpHeight / 2.5f;
+            _isFirstV = false;
         }
 
         //increase gravity if player is falling
-        if (!_groundDetection.IsGrounded() && _moveY < 0)
+        if (!isGrounded && _moveY < 0)
         {
-            _rb.gravityScale = _fallGravity;
+            if(_isFirstV)
+            _rb.gravityScale *= _fallGravityScale;
+
+            _isFirstV = false;
         }
         else
         {
             _rb.gravityScale = _rbGravity;
+            _isFirstV = true;
         }
     }
+
 
     private void Jump()
     {
         _moveY = _jumpHeight;
     }
-
 }
