@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class NPColision : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class NPColision : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.C) && collision.gameObject.layer == 9)
+        if (CrossPlatformInputManager.GetButtonUp("NextDialogue") && collision.gameObject.layer == 9)
         {
             _dialogueManager.DisplayNextSentence();
         }

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityStandardAssets.CrossPlatformInput;
 
 [DefaultExecutionOrder(-100)]
 public class PlayerMove : MonoBehaviour
@@ -65,7 +65,7 @@ public class PlayerMove : MonoBehaviour
     private void CalculateMovement()
     {
         //get input
-        _moveX = Input.GetAxis("Horizontal");
+        _moveX = CrossPlatformInputManager.GetAxis("Horizontal");
         _moveY = _rb.velocity.y;
 
         CalculateHorizontalMovement();
@@ -122,7 +122,7 @@ public class PlayerMove : MonoBehaviour
         }
 
         //jumping
-        if (Input.GetButtonDown("Jump"))
+        if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
             if (isGrounded)
             {
@@ -130,14 +130,14 @@ public class PlayerMove : MonoBehaviour
                 _isFirstV = true;
             }
             //coyote jump
-            else if (_coyoteTime >= 0 && _moveY < 0 && _isFirstV)
+            else if (_coyoteTime > 0 && _moveY < 0)
             {
                 Jump();
             }
 
             //relising button during jumping
         }
-        else if (Input.GetButtonUp("Jump") && _moveY > 8 && _isFirstV)
+        else if (CrossPlatformInputManager.GetButtonUp("Jump") && _moveY > 8 && _isFirstV)
         {
             _moveY = _jumpHeight / 2.5f;
             _isFirstV = false;

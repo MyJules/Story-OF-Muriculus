@@ -12,7 +12,7 @@ public class PlayerAnimation : MonoBehaviour
 
     private float _moveX, _moveY;
 
-    private bool _isFirst = true, _fliped;
+    private bool _isFirst = true, _fliped, _zeroFlip;
 
     private Vector3 _localScale;
 
@@ -28,15 +28,16 @@ public class PlayerAnimation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         _moveX = _rigidbody.velocity.x;
         _moveY = _rigidbody.velocity.y;
 
         _localScale = transform.localScale;
 
-        if (_groundDetection.IsGrounded())
-        {
+
+       // if (_groundDetection.IsGrounded())
+       // {
             // flip X
             if (_moveX < -0.1 && !_fliped)
             {
@@ -48,7 +49,7 @@ public class PlayerAnimation : MonoBehaviour
                 _localScale.x *= -1;
                 _fliped = false;
             }
-        }
+      //  }
 
         transform.localScale = _localScale;
 
