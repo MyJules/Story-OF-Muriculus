@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Caracters\Kay\Scirpts\Ground.cs" />
     <Compile Include="Assets\Caracters\Kay\Scirpts\PlayerAnimation.cs" />
+    <Compile Include="Assets\Caracters\Kay\Scirpts\PlayerMechanics.cs" />
     <Compile Include="Assets\Caracters\Kay\Scirpts\PlayerMove.cs" />
     <Compile Include="Assets\dll\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\dll\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
@@ -128,6 +129,8 @@
     <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
     <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
     <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+    <Compile Include="Assets\GameMechanics\Death\DeadTrigger.cs" />
+    <Compile Include="Assets\GameMechanics\Death\IDie.cs" />
     <Compile Include="Assets\Platforms\MovingPlatform\Scripts\MovablePlatform.cs" />
     <Compile Include="Assets\Platforms\MovingPlatform\Scripts\StickThePlayer.cs" />
     <Compile Include="Assets\UI\Dialogue\Scripts\Dialogue.cs" />
@@ -376,9 +379,6 @@
     </Reference>
     <Reference Include="Unity.Locator">
       <HintPath>D:/Dev/Unity/Unity/2018.4.6f1/Editor/Data/Managed/Unity.Locator.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>D:/Projects/RigCaracter/New Unity Project/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/Dev/Unity/Unity/2018.4.6f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

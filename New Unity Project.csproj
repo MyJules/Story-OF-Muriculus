@@ -292,10 +292,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="New Unity Project.Plugins.csproj">
-      <Project>{63576ABA-4A40-934C-D330-C7D17E72811A}</Project>
-      <Name>New Unity Project.Plugins</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
       <Project>{40344580-C9DB-975C-B85C-99EB2D800146}</Project>
       <Name>Unity.2D.Animation.Runtime</Name>
@@ -410,6 +406,17 @@
     <Compile Include="Assets\dll\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\dll\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\dll\Cinemachine\Timeline\CinemachineTrack.cs" />
+    <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+    <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+    <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+    <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+    <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
+    <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+    <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+    <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+    <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
+    <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
+    <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\Platforms\MovingPlatform\Scripts\MovablePlatform.cs" />
     <Compile Include="Assets\Platforms\MovingPlatform\Scripts\StickThePlayer.cs" />
     <Compile Include="Assets\UI\Dialogue\Scripts\Dialogue.cs" />
@@ -418,8 +425,8 @@
     <Compile Include="Assets\UI\Dialogue\Scripts\NPColision.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\dll\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\dll\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\dll\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\dll\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\dll\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
