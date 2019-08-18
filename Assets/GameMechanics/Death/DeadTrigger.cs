@@ -6,11 +6,11 @@ public class DeadTrigger : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IDie dead = collision.GetComponent<IDie>();
+        IDie dieObject = collision.GetComponent<IDie>();
 
-        if (dead)
+        if (dieObject)
         {
-            dead.Die();
+            dieObject.Die();
         }
 
     }

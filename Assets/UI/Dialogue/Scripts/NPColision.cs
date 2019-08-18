@@ -18,7 +18,7 @@ public class NPColision : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //9 - player layer
-        if (collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             _dialogueTriger.TriggerDialogue();
         }
@@ -26,7 +26,7 @@ public class NPColision : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             _dialogueManager.EndDialogue();
         }
@@ -34,7 +34,7 @@ public class NPColision : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (CrossPlatformInputManager.GetButtonUp("NextDialogue") && collision.gameObject.layer == 9)
+        if (CrossPlatformInputManager.GetButtonUp("NextDialogue") && collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             _dialogueManager.DisplayNextSentence();
         }

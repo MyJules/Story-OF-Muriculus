@@ -255,7 +255,7 @@ namespace Cinemachine
                         rayLength = Mathf.Min(m_DistanceLimit, rayLength);
 
                     // Make a ray that looks towards the camera, to get the most distant obstruction
-                    Ray ray = new Ray(pos - rayLength * dir, dir);
+                    UnityEngine.Ray ray = new UnityEngine.Ray(pos - rayLength * dir, dir);
                     rayLength += PrecisionSlush;
                     if (rayLength > Epsilon)
                     {
@@ -285,7 +285,7 @@ namespace Cinemachine
             return displacement;
         }
 
-        private bool RaycastIgnoreTag(Ray ray, out RaycastHit hitInfo, float rayLength)
+        private bool RaycastIgnoreTag(UnityEngine.Ray ray, out RaycastHit hitInfo, float rayLength)
         {
             while (Physics.Raycast(
                 ray, out hitInfo, rayLength, m_CollideAgainst.value, 
@@ -295,7 +295,7 @@ namespace Cinemachine
                     return true;
 
                 // Pull ray origin forward in front of tagged obstacle
-                Ray inverseRay = new Ray(ray.GetPoint(rayLength), -ray.direction);
+                UnityEngine.Ray inverseRay = new UnityEngine.Ray(ray.GetPoint(rayLength), -ray.direction);
                 if (!hitInfo.collider.Raycast(inverseRay, out hitInfo, rayLength))
                     break; // should never happen!
                 rayLength = hitInfo.distance - PrecisionSlush;
@@ -317,7 +317,7 @@ namespace Cinemachine
             if (!GetWalkingDirection(pos, pushDir, obstacle, ref dir))
                 return pos;
 
-            Ray ray = new Ray(pos, dir);
+            UnityEngine.Ray ray = new UnityEngine.Ray(pos, dir);
             float distance = GetPushBackDistance(ray, startPlane, targetDistance, lookAtPos);
             if (distance <= Epsilon)
                 return pos;
@@ -349,11 +349,11 @@ namespace Cinemachine
             dir = pos - lookAtPos;
             float d = dir.magnitude;
             RaycastHit hitInfo2;
-            if (d < Epsilon || RaycastIgnoreTag(new Ray(lookAtPos, dir), out hitInfo2, d - PrecisionSlush))
+            if (d < Epsilon || RaycastIgnoreTag(new UnityEngine.Ray(lookAtPos, dir), out hitInfo2, d - PrecisionSlush))
                 return currentPos;
 
             // All clear
-            ray = new Ray(pos, dir);
+            ray = new UnityEngine.Ray(pos, dir);
             extra.AddPointToDebugPath(pos);
             distance = GetPushBackDistance(ray, startPlane, targetDistance, lookAtPos);
             if (distance > Epsilon)
@@ -406,7 +406,7 @@ namespace Cinemachine
                         if (d.magnitude > Vector3.kEpsilon)
                         {
                             if (m_CornerBuffer[i].collider.Raycast(
-                                new Ray(pos, d), out m_CornerBuffer[i], nearbyDistance))
+                                new UnityEngine.Ray(pos, d), out m_CornerBuffer[i], nearbyDistance))
                             {
                                 if (!(m_CornerBuffer[i].normal - obstacle.normal).AlmostZero())
                                     normal2 = m_CornerBuffer[i].normal;
@@ -437,7 +437,7 @@ namespace Cinemachine
         }
 
         const float AngleThreshold = 0.1f;
-        float GetPushBackDistance(Ray ray, Plane startPlane, float targetDistance, Vector3 lookAtPos)
+        float GetPushBackDistance(UnityEngine.Ray ray, Plane startPlane, float targetDistance, Vector3 lookAtPos)
         {
             float maxDistance = targetDistance - (ray.origin - lookAtPos).magnitude;
             if (maxDistance < Epsilon)
@@ -459,7 +459,7 @@ namespace Cinemachine
             return distance;
         }
                 
-        float ClampRayToBounds(Ray ray, float distance, Bounds bounds)
+        float ClampRayToBounds(UnityEngine.Ray ray, float distance, Bounds bounds)
         {
             float d;
             if (Vector3.Dot(ray.direction, Vector3.up) > 0)
@@ -554,7 +554,7 @@ namespace Cinemachine
                 float distance = dir.magnitude;
                 if (distance < Mathf.Max(m_MinimumDistanceFromTarget, Epsilon))
                     return true;
-                Ray ray = new Ray(pos, dir.normalized);
+                UnityEngine.Ray ray = new UnityEngine.Ray(pos, dir.normalized);
                 RaycastHit hitInfo;
                 if (RaycastIgnoreTag(ray, out hitInfo, distance - m_MinimumDistanceFromTarget))
                     return true;

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Frame
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
   - Player
+  - Ground
   - 
   - 
   - 
@@ -37,7 +38,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - PostProcess
   m_SortingLayers:
   - name: Default
     uniqueID: 0
