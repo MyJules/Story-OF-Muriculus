@@ -120,11 +120,17 @@
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/Projects/RigCaracter/New Unity Project/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="PsdPlugin">
+      <HintPath>D:/Projects/RigCaracter/New Unity Project/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/Projects/RigCaracter/New Unity Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>D:/Projects/RigCaracter/New Unity Project/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+      <HintPath>D:/Projects/RigCaracter/New Unity Project/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
       <HintPath>D:/Projects/RigCaracter/New Unity Project/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
