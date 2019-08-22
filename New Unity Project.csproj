@@ -312,6 +312,10 @@
       <Project>{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}</Project>
       <Name>Unity.PackageManagerUI.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="PsdPlugin.csproj">
+      <Project>{ADF1AF9C-AC10-13AA-22FE-B42FBA7E3271}</Project>
+      <Name>PsdPlugin</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
       <Project>{C12CEEC6-100C-58A2-DE36-314E4DE5E40B}</Project>
       <Name>Unity.CollabProxy.Editor</Name>
@@ -319,6 +323,10 @@
     <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
       <Project>{CBEC4DCB-1B2B-E03B-0387-393C59967E8B}</Project>
       <Name>Unity.Postprocessing.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Psdimporter.Editor.csproj">
+      <Project>{8AF62ECC-5081-7EF3-D5B1-B31AC4B05A6F}</Project>
+      <Name>Unity.2D.Psdimporter.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
       <Project>{569BEDA1-1A48-C20A-F481-9D86637B1749}</Project>
@@ -361,11 +369,11 @@
     <Compile Include="Assets\Camera\ParalaxEffect\ParallaxBackground.cs" />
     <Compile Include="Assets\Camera\ParalaxEffect\ParallaxCamera.cs" />
     <Compile Include="Assets\Camera\ParalaxEffect\ParallaxLayer.cs" />
-    <Compile Include="Assets\Caracters\Player\Scirpts\PlayerAnimation.cs" />
-    <Compile Include="Assets\Caracters\Player\Scirpts\PlayerMechanics.cs" />
-    <Compile Include="Assets\Caracters\Player\Scirpts\PlayerMove.cs" />
-    <Compile Include="Assets\Caracters\Player\Scirpts\PlayerSE.cs" />
-    <Compile Include="Assets\Caracters\Player\Scirpts\Rays.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\PlayerAnimation.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\PlayerMechanics.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\PlayerMove.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\PlayerSE.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\Rays.cs" />
     <Compile Include="Assets\dll\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\dll\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Assets\dll\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
@@ -514,6 +522,9 @@
     <None Include="Packages\com.unity.2d.ik\Runtime\Unity.2D.IK.Runtime.asmdef" />
     <None Include="Packages\com.unity.2d.ik\Tests\Editor\Unity.2D.IK.EditorTests.asmdef" />
     <None Include="Packages\com.unity.2d.ik\Tests\Runtime\Unity.2D.IK.RuntimeTests.asmdef" />
+    <None Include="Packages\com.unity.2d.psdimporter\Editor\PSDPlugin\PsdPlugin.asmdef" />
+    <None Include="Packages\com.unity.2d.psdimporter\Editor\Unity.2D.Psdimporter.Editor.asmdef" />
+    <None Include="Packages\com.unity.2d.psdimporter\Tests\EditorTests\Unity.2D.Psdimporter.EditorTests.asmdef" />
     <None Include="Packages\com.unity.2d.triangle\Runtime\Unity.2D.Triangle.Runtime.asmdef" />
     <None Include="Packages\com.unity.2d.triangle\Tests\Editor\Unity.2D.Triangle.EditorTests.asmdef" />
     <None Include="Packages\com.unity.2d.triangle\Tests\Runtime\Unity.2D.Triangle.RuntimeTests.asmdef" />

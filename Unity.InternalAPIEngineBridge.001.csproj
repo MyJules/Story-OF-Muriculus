@@ -408,6 +408,9 @@
     <None Include="Packages\com.unity.2d.ik\Runtime\Unity.2D.IK.Runtime.asmdef" />
     <None Include="Packages\com.unity.2d.ik\Tests\Editor\Unity.2D.IK.EditorTests.asmdef" />
     <None Include="Packages\com.unity.2d.ik\Tests\Runtime\Unity.2D.IK.RuntimeTests.asmdef" />
+    <None Include="Packages\com.unity.2d.psdimporter\Editor\PSDPlugin\PsdPlugin.asmdef" />
+    <None Include="Packages\com.unity.2d.psdimporter\Editor\Unity.2D.Psdimporter.Editor.asmdef" />
+    <None Include="Packages\com.unity.2d.psdimporter\Tests\EditorTests\Unity.2D.Psdimporter.EditorTests.asmdef" />
     <None Include="Packages\com.unity.2d.triangle\Runtime\Unity.2D.Triangle.Runtime.asmdef" />
     <None Include="Packages\com.unity.2d.triangle\Tests\Editor\Unity.2D.Triangle.EditorTests.asmdef" />
     <None Include="Packages\com.unity.2d.triangle\Tests\Runtime\Unity.2D.Triangle.RuntimeTests.asmdef" />

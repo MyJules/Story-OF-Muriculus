@@ -8,7 +8,7 @@ public class DeadTrigger : MonoBehaviour
     {
         IDie dieObject = collision.GetComponent<IDie>();
 
-        if (dieObject)
+        if (dieObject != null)
         {
             dieObject.Die();
         }

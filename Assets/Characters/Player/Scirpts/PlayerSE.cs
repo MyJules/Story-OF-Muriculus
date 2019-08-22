@@ -11,24 +11,19 @@ public class PlayerSE : MonoBehaviour
 
     private Rays _rays;
 
-    private bool isFirst = true, isGroundWithParticle;
+    private bool isGroundWithParticle;
 
     private void Start()
     {
-        _rays = GetComponent<Rays>();
+        _rays = GetComponentInParent<Rays>();
 
     }
 
-    void Update()
-    {
-        StartCoroutine("SpawnParticle");
-    }
-
-    IEnumerator SpawnParticle()
+    public void SpawnParticle()
     {
         isGroundWithParticle = _rays.IsCrossedWith(0);
 
-        if (isGroundWithParticle && isFirst)
+        if (isGroundWithParticle)
         {
             _specialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<SpecialEffects>();
 
@@ -36,14 +31,6 @@ public class PlayerSE : MonoBehaviour
             {
                 Instantiate(_specialEffects.landParticles, particlePosition);
             }
-
-            isFirst = false;
         }
-        else if (!isGroundWithParticle)
-        {
-            isFirst = true;
-        }
-
-        yield return new WaitForSeconds(5f);
     }
 }

@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 
-public abstract class IDie : MonoBehaviour
+public interface IDie
 {
-    public virtual void Die()
-    {
-        Destroy(gameObject);
-    }
+    void Die();
 }
+ 

@@ -64,11 +64,13 @@
     <Compile Include="Assets\Camera\ParalaxEffect\ParallaxBackground.cs" />
     <Compile Include="Assets\Camera\ParalaxEffect\ParallaxCamera.cs" />
     <Compile Include="Assets\Camera\ParalaxEffect\ParallaxLayer.cs" />
-    <Compile Include="Assets\Caracters\Player\Scirpts\PlayerAnimation.cs" />
-    <Compile Include="Assets\Caracters\Player\Scirpts\PlayerMechanics.cs" />
-    <Compile Include="Assets\Caracters\Player\Scirpts\PlayerMove.cs" />
-    <Compile Include="Assets\Caracters\Player\Scirpts\PlayerSE.cs" />
-    <Compile Include="Assets\Caracters\Player\Scirpts\Rays.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\PlayerAnimation.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\PlayerInfo.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\PlayerMechanics.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\PlayerMove.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\PlayerPersistance.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\PlayerSE.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\Rays.cs" />
     <Compile Include="Assets\dll\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\dll\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Assets\dll\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
@@ -135,6 +137,8 @@
     <Compile Include="Assets\dll\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\GameMechanics\Death\DeadTrigger.cs" />
     <Compile Include="Assets\GameMechanics\Death\IDie.cs" />
+    <Compile Include="Assets\GameMechanics\Saving\IMemory.cs" />
+    <Compile Include="Assets\GameMechanics\Saving\SaveTrigger.cs" />
     <Compile Include="Assets\Ground\GroundParticles\Scripts\AutoDestroyParticle.cs" />
     <Compile Include="Assets\Ground\GroundParticles\Scripts\SpecialEffects.cs" />
     <Compile Include="Assets\Ground\MovingPlatform\Scripts\MovablePlatform.cs" />
