@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-D:/Projects/RigCaracter/misc/New Unity Project.exe
+C:/Users/Push/Desktop/New Unity Project.exe
 SceneListBegin?
 Assets/Scenes/Main.unity
 SceneListEnd?
@@ -62,7 +62,7 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 0fd6822f6177297bd0eb4d83cc7a9030 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-ef46ddcf109fe32eb457fda0d48ea05f Assembly-CSharp.dll:.FrameManager
+03b4ce3dd817d3fb699c986c07ab7ea1 Assembly-CSharp.dll:.FrameManager
 f542c1afca5bb4022f91fdda19b8d622 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.DepthOfField
 b31ef1c110c5a7ed74ad67be3ae59038 Unity.TextMeshPro.dll:TMPro.TMP_InputField
 352455aaadb8c98ff36ead557753abfa Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.TiltInput
@@ -132,6 +132,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 6afb9d003a999b7915c0f3287fe0a41c Assembly-CSharp.dll:Cinemachine.CinemachineFreeLook
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+d4a493bb4307ddafb51da21aff3cd832 Assembly-CSharp.dll:Cinemachine.PostFX.CinemachinePostProcessing
 ab36ced446fbfea4462afaf79c72454e Assembly-CSharp.dll:Cinemachine.NoiseSettings
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.AutoDestroyParticle
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
@@ -225,7 +226,7 @@ d0987ce3e9092dbe0fa30d73f333fffa Unity.Postprocessing.Runtime.dll:UnityEngine.Re
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 ac6acd886c54c48c599ab5fed5781ea7 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.AmbientOcclusion
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.PlayerMechanics
-efdf82a477097a74ec230b4edc3f9ae0 Assembly-CSharp.dll:.FrameControl
+2ecdbe75f54c8965e9d317f6c9a2e0e3 Assembly-CSharp.dll:.FrameControl
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 0e1d02c74d354ffc8b804011a794739b Unity.2D.IK.Runtime.dll:UnityEngine.Experimental.U2D.IK.IKManager2D
 8df2bee66a446c58b31b6bc7b1a991c6 Assembly-CSharp.dll:Cinemachine.CinemachineBrain
