@@ -6,13 +6,6 @@ public class PlayerMechanics : MonoBehaviour, IDie, IMemory
 {
     private PlayerInfo _playerInfo;
 
-    private Animator _anim;
-
-    private void Start()
-    {
-        _anim = GetComponentInChildren<Animator>();
-    }
-
     public void Die()
     {
 

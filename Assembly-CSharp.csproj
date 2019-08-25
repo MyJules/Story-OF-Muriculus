@@ -71,6 +71,7 @@
     <Compile Include="Assets\Characters\Player\Scirpts\PlayerPersistance.cs" />
     <Compile Include="Assets\Characters\Player\Scirpts\PlayerSE.cs" />
     <Compile Include="Assets\Characters\Player\Scirpts\Rays.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\RaysInfo.cs" />
     <Compile Include="Assets\dll\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\dll\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Assets\dll\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />

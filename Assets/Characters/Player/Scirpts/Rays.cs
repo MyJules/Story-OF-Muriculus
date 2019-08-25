@@ -5,45 +5,14 @@ using UnityEngine;
 public class Rays : MonoBehaviour
 {
     [SerializeField]
-    float rayLength = 1f;
-
-    [Space]
-
-    [SerializeField]
-    private Transform[] rays;
-
-    [Space]
-
-    [SerializeField]
-    Vector2 raycastDirection = Vector2.down;
-
-    [Space]
-
-    [SerializeField]
-    public LayerMask crossedLayer;
-
-    public bool IsCrossed()
-    {
-
-        for (int i = 0; i < rays.Length; i++)
-        {
-            RaycastHit2D raycast = Physics2D.Raycast(rays[i].position, raycastDirection, rayLength, crossedLayer);
-
-            if (raycast == true)
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
+    private RaysInfo[] _rayInfo;
 
     public bool IsCrossed(int fromRay, int toRay)
     {
 
         for (int i = fromRay; i <= toRay; i++)
         {
-            RaycastHit2D raycast = Physics2D.Raycast(rays[i].position, raycastDirection, rayLength, crossedLayer);
+            RaycastHit2D raycast = Physics2D.Raycast(_rayInfo[i].rayTransform.position, Quaternion.Euler(_rayInfo[i].rayTransform.rotation.eulerAngles) * Vector3.forward, _rayInfo[i].rayLength, _rayInfo[i].rayCrossLayer);
 
             if (raycast == true)
             {
@@ -54,9 +23,9 @@ public class Rays : MonoBehaviour
         return false;
     }
 
-    public bool IsCrossedWith(int i)
+    public bool IsCrossed(int i)
     {
-            RaycastHit2D raycast = Physics2D.Raycast(rays[i].position, raycastDirection, rayLength, crossedLayer);
+            RaycastHit2D raycast = Physics2D.Raycast(_rayInfo[i].rayTransform.position, Quaternion.Euler(_rayInfo[i].rayTransform.rotation.eulerAngles) * Vector3.forward, _rayInfo[i].rayLength, _rayInfo[i].rayCrossLayer);
 
             if (raycast == true)
             {
@@ -66,16 +35,19 @@ public class Rays : MonoBehaviour
         return false;
     }
 
+
     public RaycastHit2D GetCrossInformaiton(int i)
     {
-        return Physics2D.Raycast(rays[i].position, raycastDirection, rayLength, crossedLayer);
+        return Physics2D.Raycast(_rayInfo[i].rayTransform.position, Quaternion.Euler(_rayInfo[i].rayTransform.rotation.eulerAngles) * Vector3.forward, _rayInfo[i].rayLength, _rayInfo[i].rayCrossLayer);
     }
+
+
 
     private void OnDrawGizmos()
     {
-        for (int i = 0; i < rays.Length; i++)
+        for (int i = 0; i < _rayInfo.Length; i++)
         {
-            Debug.DrawRay(rays[i].position, raycastDirection * rayLength, Color.red);
+            Debug.DrawRay(_rayInfo[i].rayTransform.position, Quaternion.Euler(_rayInfo[i].rayTransform.rotation.eulerAngles) * Vector3.forward * _rayInfo[i].rayLength, color: Color.red);
         }
     }
 }

@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Push/Desktop/New Unity Project.exe
+D:/Projects/RigCaracter/misc/New Unity Project.exe
 SceneListBegin?
 Assets/Scenes/Main.unity
 SceneListEnd?
@@ -161,6 +161,7 @@ d6fc8d3165070298511ec776ea575626 Unity.Postprocessing.Runtime.dll:UnityEngine.Re
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.MobileControlRig
 70dda21b503c92f379e405e8945ea860 Assembly-CSharp.dll:.PlayerSE
 a53651ee3996fbba20dfe0fce02f0b23 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.AutoExposure
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SaveTrigger
 694d20920c0e41f567e119f7159a3644 Assembly-CSharp.dll:Cinemachine.CinemachinePath
 50c443b12ccc0b475183318b5088bcc5 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessDebug
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
