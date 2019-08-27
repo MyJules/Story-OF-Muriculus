@@ -40,6 +40,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private float wallMaxVelocity = 30f;
 
+    [SerializeField]
+    private float wallJumpDelayTimerMax = 0.8f;
+
 
     [Space]
 
@@ -139,7 +142,6 @@ public class PlayerMove : MonoBehaviour
         //callculate wall coyote Time
         if (!isWallGrabbed)
         {
-            _isFirsWallJump = true;
             _wallCoyoteTime -= Time.deltaTime;
         }
         else if(isWallGrabbed)
@@ -177,9 +179,12 @@ public class PlayerMove : MonoBehaviour
                 if (_isFirsWallJump)
                 {
                     Jump();
+                    _isFirsWallJump = false;
                 }
-                _isFirsWallJump = false;
             }
+
+            if(!isWallGrabbed)
+                _isFirsWallJump = true;
 
             //releasing button during jumping
         }
