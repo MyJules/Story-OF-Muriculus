@@ -1,104 +1,293 @@
 fileFormatVersion: 2
 guid: f950b9d6ce8d023489aa07b8e5f04db0
 ScriptedImporter:
-  fileIDToRecycleName:
-    100000: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO
-    100002: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMLEFT
-    100004: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMRIGHT
-    100006: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/BILOK
-    100008: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/HEAD
-    100010: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGLEFT
-    100012: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGRIGHT
-    100014: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/NARYCHI
-    100016: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/PONCHO
-    100018: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/TORSO
-    100020: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ZRACHOK
-    100022: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/LHand_UP/LHand_Down
-    100060: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone
-    100062: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN
-    100064: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP
-    100066: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN
-    100068: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN/LFeet_Begin
-    100070: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN/LFeet_Begin/LFeet_End
-    100072: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP
-    100074: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN
-    100076: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN/RFeet_Begin
-    100078: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN/RFeet_Begin/RFeet_End
-    100080: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP
-    100082: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head
-    100084: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Ear
-    100086: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Eye
-    100088: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Eye/Eye
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO
+  - first:
+      1: 100002
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMLEFT
+  - first:
+      1: 100004
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMRIGHT
+  - first:
+      1: 100006
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/BILOK
+  - first:
+      1: 100008
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/HEAD
+  - first:
+      1: 100010
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGLEFT
+  - first:
+      1: 100012
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGRIGHT
+  - first:
+      1: 100014
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/NARYCHI
+  - first:
+      1: 100016
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/PONCHO
+  - first:
+      1: 100018
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/TORSO
+  - first:
+      1: 100020
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ZRACHOK
+  - first:
+      1: 100022
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/LHand_UP/LHand_Down
+  - first:
+      1: 100060
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone
+  - first:
+      1: 100062
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN
+  - first:
+      1: 100064
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP
+  - first:
+      1: 100066
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN
+  - first:
+      1: 100068
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN/LFeet_Begin
+  - first:
+      1: 100070
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN/LFeet_Begin/LFeet_End
+  - first:
+      1: 100072
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP
+  - first:
+      1: 100074
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN
+  - first:
+      1: 100076
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN/RFeet_Begin
+  - first:
+      1: 100078
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN/RFeet_Begin/RFeet_End
+  - first:
+      1: 100080
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP
+  - first:
+      1: 100082
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head
+  - first:
+      1: 100084
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Ear
+  - first:
+      1: 100086
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Eye
+  - first:
+      1: 100088
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Eye/Eye
       1
-    100090: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Nose
-    100092: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/LHand_UP
-    100096: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/RHand_UP
-    100098: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/RHand_UP/RHand_DOWN
-    400000: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/Transform
-    400002: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMLEFT/Transform
-    400004: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMRIGHT/Transform
-    400006: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/BILOK/Transform
-    400008: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/HEAD/Transform
-    400010: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGLEFT/Transform
-    400012: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGRIGHT/Transform
-    400014: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/NARYCHI/Transform
-    400016: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/PONCHO/Transform
-    400018: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/TORSO/Transform
-    400020: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ZRACHOK/Transform
-    400022: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/LHand_UP/LHand_Down/Transform
-    400060: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Transform
-    400062: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Transform
-    400064: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/Transform
-    400066: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN/Transform
-    400068: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN/LFeet_Begin/Transform
-    400070: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN/LFeet_Begin/LFeet_End/Transform
-    400072: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/Transform
-    400074: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN/Transform
-    400076: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN/RFeet_Begin/Transform
-    400078: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN/RFeet_Begin/RFeet_End/Transform
-    400080: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Transform
-    400082: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Transform
-    400084: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Ear/Transform
-    400086: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Eye/Transform
-    400088: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Eye/Eye
+  - first:
+      1: 100090
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Nose
+  - first:
+      1: 100092
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/LHand_UP
+  - first:
+      1: 100096
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/RHand_UP
+  - first:
+      1: 100098
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/RHand_UP/RHand_DOWN
+  - first:
+      4: 400000
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/Transform
+  - first:
+      4: 400002
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMLEFT/Transform
+  - first:
+      4: 400004
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMRIGHT/Transform
+  - first:
+      4: 400006
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/BILOK/Transform
+  - first:
+      4: 400008
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/HEAD/Transform
+  - first:
+      4: 400010
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGLEFT/Transform
+  - first:
+      4: 400012
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGRIGHT/Transform
+  - first:
+      4: 400014
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/NARYCHI/Transform
+  - first:
+      4: 400016
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/PONCHO/Transform
+  - first:
+      4: 400018
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/TORSO/Transform
+  - first:
+      4: 400020
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ZRACHOK/Transform
+  - first:
+      4: 400022
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/LHand_UP/LHand_Down/Transform
+  - first:
+      4: 400060
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Transform
+  - first:
+      4: 400062
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Transform
+  - first:
+      4: 400064
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/Transform
+  - first:
+      4: 400066
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN/Transform
+  - first:
+      4: 400068
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN/LFeet_Begin/Transform
+  - first:
+      4: 400070
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/LLeg_UP/LLeg_DOWN/LFeet_Begin/LFeet_End/Transform
+  - first:
+      4: 400072
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/Transform
+  - first:
+      4: 400074
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN/Transform
+  - first:
+      4: 400076
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN/RFeet_Begin/Transform
+  - first:
+      4: 400078
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/RLeg_UP/RLeg_DOWN/RFeet_Begin/RFeet_End/Transform
+  - first:
+      4: 400080
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Transform
+  - first:
+      4: 400082
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Transform
+  - first:
+      4: 400084
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Ear/Transform
+  - first:
+      4: 400086
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Eye/Transform
+  - first:
+      4: 400088
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Eye/Eye
       1/Transform
-    400090: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Nose/Transform
-    400092: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/LHand_UP/Transform
-    400096: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/RHand_UP/Transform
-    400098: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/RHand_UP/RHand_DOWN/Transform
-    2800000: CHARACTEFIGLUED
-    11400000: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMLEFT/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400002: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMRIGHT/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400004: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/BILOK/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400006: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/HEAD/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400008: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGLEFT/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400010: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGRIGHT/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400012: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/NARYCHI/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400014: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/PONCHO/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400016: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/TORSO/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    11400018: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ZRACHOK/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
-    21200000: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMLEFT/SpriteRenderer
-    21200002: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMRIGHT/SpriteRenderer
-    21200004: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/BILOK/SpriteRenderer
-    21200006: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/HEAD/SpriteRenderer
-    21200008: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGLEFT/SpriteRenderer
-    21200010: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGRIGHT/SpriteRenderer
-    21200012: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/NARYCHI/SpriteRenderer
-    21200014: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/PONCHO/SpriteRenderer
-    21200016: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/TORSO/SpriteRenderer
-    21200018: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ZRACHOK/SpriteRenderer
-    21300000: 0defefb0e5e38934bb8c7eeb83cfe269
-    21300002: 42958c2890dcf8246a8d852b7f356865
-    21300004: 55fa22c3cb4d1164c821803fb1d4826e
-    21300006: 3f02c53ee4cf67349858cd1de45ed0d3
-    21300008: 5d04d3d7aaca85940a1371673d718b7d
-    21300010: a4dac97bfe49e7b44b5577b8bd041d9b
-    21300012: 1ae91021e6356184180bd83340fc9274
-    21300014: bef802c4b59768344a30e0eebf32a3a7
-    21300016: 7ab874e81bc0449428116dd3cce14b25
-    21300018: 825e1fe15eb151544b1c652047755cd2
-    100100000: CHARACTEFIGLUED_GO
+  - first:
+      4: 400090
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/Head/Nose/Transform
+  - first:
+      4: 400092
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/LHand_UP/Transform
+  - first:
+      4: 400096
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/RHand_UP/Transform
+  - first:
+      4: 400098
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/MainBone/Torso_DOWN/Torso_UP/RHand_UP/RHand_DOWN/Transform
+  - first:
+      28: 2800000
+    second: CHARACTEFIGLUED
+  - first:
+      114: 11400000
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMLEFT/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400002
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMRIGHT/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400004
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/BILOK/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400006
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/HEAD/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400008
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGLEFT/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400010
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGRIGHT/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400012
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/NARYCHI/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400014
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/PONCHO/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400016
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/TORSO/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      114: 11400018
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ZRACHOK/MonoBehaviour-UnityEngine.Experimental.U2D.Animation.SpriteSkin
+  - first:
+      212: 21200000
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMLEFT/SpriteRenderer
+  - first:
+      212: 21200002
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ARMRIGHT/SpriteRenderer
+  - first:
+      212: 21200004
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/BILOK/SpriteRenderer
+  - first:
+      212: 21200006
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/HEAD/SpriteRenderer
+  - first:
+      212: 21200008
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGLEFT/SpriteRenderer
+  - first:
+      212: 21200010
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/LEGRIGHT/SpriteRenderer
+  - first:
+      212: 21200012
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/NARYCHI/SpriteRenderer
+  - first:
+      212: 21200014
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/PONCHO/SpriteRenderer
+  - first:
+      212: 21200016
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/TORSO/SpriteRenderer
+  - first:
+      212: 21200018
+    second: CHARACTEFIGLUED_GO/CHARACTEFIGLUED_GO/ZRACHOK/SpriteRenderer
+  - first:
+      213: 21300000
+    second: 0defefb0e5e38934bb8c7eeb83cfe269
+  - first:
+      213: 21300002
+    second: 42958c2890dcf8246a8d852b7f356865
+  - first:
+      213: 21300004
+    second: 55fa22c3cb4d1164c821803fb1d4826e
+  - first:
+      213: 21300006
+    second: 3f02c53ee4cf67349858cd1de45ed0d3
+  - first:
+      213: 21300008
+    second: 5d04d3d7aaca85940a1371673d718b7d
+  - first:
+      213: 21300010
+    second: a4dac97bfe49e7b44b5577b8bd041d9b
+  - first:
+      213: 21300012
+    second: 1ae91021e6356184180bd83340fc9274
+  - first:
+      213: 21300014
+    second: bef802c4b59768344a30e0eebf32a3a7
+  - first:
+      213: 21300016
+    second: 7ab874e81bc0449428116dd3cce14b25
+  - first:
+      213: 21300018
+    second: 825e1fe15eb151544b1c652047755cd2
+  - first:
+      1001: 100100000
+    second: CHARACTEFIGLUED_GO
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -169,6 +358,7 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: 
+    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,6 +382,7 @@ ScriptedImporter:
       width: 652
       height: 887
     spriteID: 0defefb0e5e38934bb8c7eeb83cfe269
+    internalID: 0
     spriteBone:
     - name: Torso_DOWN
       position: {x: 338.60486, y: 133.7182, z: 0}
@@ -746,6 +937,7 @@ ScriptedImporter:
       width: 181
       height: 196
     spriteID: 42958c2890dcf8246a8d852b7f356865
+    internalID: 0
     spriteBone:
     - name: Torso_DOWN
       position: {x: -212.39514, y: -158.28174, z: 0}
@@ -1222,6 +1414,7 @@ ScriptedImporter:
       width: 367
       height: 634
     spriteID: 55fa22c3cb4d1164c821803fb1d4826e
+    internalID: 0
     spriteBone:
     - name: RHand_UP
       position: {x: 43.5459, y: 593.9846, z: 0}
@@ -2114,6 +2307,7 @@ ScriptedImporter:
       width: 493
       height: 374
     spriteID: 3f02c53ee4cf67349858cd1de45ed0d3
+    internalID: 0
     spriteBone:
     - name: Torso_DOWN
       position: {x: 239.60486, y: 49.7182, z: 0}
@@ -2610,6 +2804,7 @@ ScriptedImporter:
       width: 247
       height: 729
     spriteID: 5d04d3d7aaca85940a1371673d718b7d
+    internalID: 0
     spriteBone:
     - name: RLeg_UP
       position: {x: 177.22827, y: 676.0193, z: 0}
@@ -3306,6 +3501,7 @@ ScriptedImporter:
       width: 247
       height: 804
     spriteID: a4dac97bfe49e7b44b5577b8bd041d9b
+    internalID: 0
     spriteBone:
     - name: LLeg_UP
       position: {x: 177.0299, y: 679.65576, z: 0}
@@ -3971,6 +4167,7 @@ ScriptedImporter:
       width: 367
       height: 634
     spriteID: 1ae91021e6356184180bd83340fc9274
+    internalID: 0
     spriteBone:
     - name: LHand_UP
       position: {x: 328.96423, y: 597.2356, z: 0}
@@ -4761,6 +4958,7 @@ ScriptedImporter:
       width: 355
       height: 214
     spriteID: bef802c4b59768344a30e0eebf32a3a7
+    internalID: 0
     spriteBone:
     - name: Eye 1
       position: {x: 88.90869, y: 109.59558, z: 0}
@@ -5083,6 +5281,7 @@ ScriptedImporter:
       width: 283
       height: 316
     spriteID: 7ab874e81bc0449428116dd3cce14b25
+    internalID: 0
     spriteBone:
     - name: Eye
       position: {x: 146.01697, y: 146.5564, z: 0}
@@ -5427,6 +5626,7 @@ ScriptedImporter:
       width: 1251
       height: 825
     spriteID: 825e1fe15eb151544b1c652047755cd2
+    internalID: 0
     spriteBone:
     - name: Head
       position: {x: 332.98425, y: -0.00023949133, z: 0}
@@ -5984,11 +6184,12 @@ ScriptedImporter:
   platformSettings:
   - name: Default
     overridden: 1
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 100
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 1
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
@@ -5999,6 +6200,9 @@ ScriptedImporter:
   importedTextureWidth: 2048
   importedTextureHeight: 2048
   documentSize: {x: 3840, y: 2210}
+  paperDollMode: 0
+  spriteCategoryList:
+    categories: []
   textureActualWidth: 2048
   textureActualHeight: 2048
   spritePackingTag: 
@@ -6186,6 +6390,7 @@ ScriptedImporter:
         height: 887
       spriteId: 0defefb0e5e38934bb8c7eeb83cfe269
       bones: 00000000010000000a00000011000000
+      parentGroup: 0
     - spritePosition:
         x: 2166
         y: 851
@@ -6193,6 +6398,7 @@ ScriptedImporter:
         height: 196
       spriteId: 42958c2890dcf8246a8d852b7f356865
       bones: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000
+      parentGroup: 0
     - spritePosition:
         x: 2118
         y: 539
@@ -6200,6 +6406,7 @@ ScriptedImporter:
         height: 634
       spriteId: 55fa22c3cb4d1164c821803fb1d4826e
       bones: 1100000012000000
+      parentGroup: 0
     - spritePosition:
         x: 1714
         y: 643
@@ -6207,6 +6414,7 @@ ScriptedImporter:
         height: 374
       spriteId: 3f02c53ee4cf67349858cd1de45ed0d3
       bones: 00000000
+      parentGroup: 0
     - spritePosition:
         x: 1941
         y: 8
@@ -6214,6 +6422,7 @@ ScriptedImporter:
         height: 729
       spriteId: 5d04d3d7aaca85940a1371673d718b7d
       bones: 060000000700000008000000090000000a000000
+      parentGroup: 0
     - spritePosition:
         x: 1654
         y: 8
@@ -6221,6 +6430,7 @@ ScriptedImporter:
         height: 804
       spriteId: a4dac97bfe49e7b44b5577b8bd041d9b
       bones: 02000000030000000400000005000000
+      parentGroup: 0
     - spritePosition:
         x: 1437
         y: 538
@@ -6228,6 +6438,7 @@ ScriptedImporter:
         height: 634
       spriteId: 1ae91021e6356184180bd83340fc9274
       bones: 0f00000010000000
+      parentGroup: 0
     - spritePosition:
         x: 1714
         y: 1549
@@ -6235,6 +6446,7 @@ ScriptedImporter:
         height: 214
       spriteId: bef802c4b59768344a30e0eebf32a3a7
       bones: 0c000000
+      parentGroup: 0
     - spritePosition:
         x: 1714
         y: 1498
@@ -6242,6 +6454,7 @@ ScriptedImporter:
         height: 316
       spriteId: 7ab874e81bc0449428116dd3cce14b25
       bones: 0b000000
+      parentGroup: 0
     - spritePosition:
         x: 1275
         y: 1238
@@ -6249,7 +6462,9 @@ ScriptedImporter:
         height: 825
       spriteId: 825e1fe15eb151544b1c652047755cd2
       bones: 0a0000000d0000000e00000001000000
+      parentGroup: 0
     dimension: {x: 0, y: 0}
+    characterGroups: []
   boneGOs:
   - go: {fileID: 100062, guid: f950b9d6ce8d023489aa07b8e5f04db0, type: 3}
     index: 0
@@ -6294,3 +6509,4 @@ ScriptedImporter:
   generateGOHierarchy: 0
   textureAssetName: CHARACTEFIGLUED
   prefabAssetName: CHARACTEFIGLUED_GO
+  spriteLibAssetName: 

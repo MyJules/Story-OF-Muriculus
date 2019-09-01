@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class RaysInfo
+public struct RaysInfo
 {
     public string rayName;
 

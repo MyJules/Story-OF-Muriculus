@@ -12,12 +12,16 @@ public class PlayerAnimation : MonoBehaviour
 
     private float _moveX, _moveY;
 
-    private bool _isFirst = true, _fliped, _zeroFlip;
+    private bool _isFirst = true, _fliped = false, isAnimFinished = false;
 
     private bool isGrouded, isWallGrabbed;
 
     private Vector3 _localScale;
 
+    [SerializeField]
+    private float flipTimerMax = 1f;
+
+    private float _flipTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +34,7 @@ public class PlayerAnimation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         _moveX = _rigidbody.velocity.x;
         _moveY = _rigidbody.velocity.y;
@@ -40,19 +44,35 @@ public class PlayerAnimation : MonoBehaviour
 
         _localScale = transform.localScale;
 
-            if (_moveX < -0.1 && !_fliped)
-            {
-                _localScale.x *= -1;
-                _fliped = true;
-            }
-            else if (_moveX > 0.1 && _fliped)
-            {
-                _localScale.x *= -1;
-                _fliped = false;
-            }
+        //reseting flip Timer
+        if (isGrouded || isWallGrabbed)
+        {
+            _flipTimer = flipTimerMax;
+        }
+        else
+        {
+            _flipTimer -= Time.deltaTime;
+        }
+
+        //flip just when on ground or on wall
+        if (_flipTimer >= 0)
+        {
+               if (_moveX < -0.1 && !_fliped)
+               {
+                   Flip(true);
+                   _fliped = true;
+               }
+               else if (_moveX > 0.1 && _fliped)
+               {
+                   Flip(true);
+                   _fliped = false;
+               }
+
+        }
+
+
 
         transform.localScale = _localScale;
-
 
         //grab the wall
         if (isWallGrabbed && !isGrouded)
@@ -87,5 +107,11 @@ public class PlayerAnimation : MonoBehaviour
 
         //setting horizontal animation
         _animator.SetFloat("Speed", Mathf.Abs(_moveX));
+    }
+
+    private void Flip(bool isflip)
+    {
+        if(isflip)
+        _localScale.x *= -1;
     }
 }

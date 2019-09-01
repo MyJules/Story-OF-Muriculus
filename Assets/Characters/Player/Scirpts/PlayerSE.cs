@@ -19,7 +19,7 @@ public class PlayerSE : MonoBehaviour
 
     }
 
-    public void SpawnParticle()
+    public void SpawnGroundParticle()
     {
         isGroundWithParticle = _rays.IsCrossed(0);
 
