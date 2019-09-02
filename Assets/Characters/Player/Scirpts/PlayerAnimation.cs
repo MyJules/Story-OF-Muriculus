@@ -19,9 +19,9 @@ public class PlayerAnimation : MonoBehaviour
     private Vector3 _localScale;
 
     [SerializeField]
-    private float flipTimerMax = 1f;
+    private float allowFlipTimerMax = 0.1f;
 
-    private float _flipTimer;
+    private float _allowflipTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -47,15 +47,15 @@ public class PlayerAnimation : MonoBehaviour
         //reseting flip Timer
         if (isGrouded || isWallGrabbed)
         {
-            _flipTimer = flipTimerMax;
+            _allowflipTimer = allowFlipTimerMax;
         }
         else
         {
-            _flipTimer -= Time.deltaTime;
+            _allowflipTimer -= Time.deltaTime;
         }
 
         //flip just when on ground or on wall
-        if (_flipTimer >= 0)
+        if (_allowflipTimer >= 0)
         {
                if (_moveX < -0.1 && !_fliped)
                {
