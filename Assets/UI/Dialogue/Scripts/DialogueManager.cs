@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject _dialogueUI;
 
+    private Animator _dialogueAnimator;
+
     private Queue<string> _sentences;
 
 
@@ -20,6 +22,8 @@ public class DialogueManager : MonoBehaviour
         _sentences = new Queue<string>();
 
         _dialogueUI.SetActive(false);
+
+        _dialogueAnimator = _dialogueUI.GetComponentInChildren<Animator>();
 
     }
 
@@ -70,7 +74,19 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        _dialogueUI.SetActive(false);
+        if (_dialogueUI.active)
+        { 
+            _dialogueAnimator.SetTrigger("Disapear");
+
+            StartCoroutine(DeactivateWithTime(_dialogueAnimator.GetCurrentAnimatorStateInfo(0).length, _dialogueUI));
+            //_dialogueUI.SetActive(false);
+        }
     }
 
+    private IEnumerator DeactivateWithTime(float duration, GameObject deactivateObject)
+    {
+        deactivateObject.SetActive(true);
+        yield return new WaitForSeconds(duration);
+        deactivateObject.SetActive(false);
+    }
 }

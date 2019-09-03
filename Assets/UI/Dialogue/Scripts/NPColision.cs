@@ -52,6 +52,7 @@ public class NPColision : MonoBehaviour
 
             _dialogueManager.EndDialogue();
             _isFirstTrigger = false;
+            _isStayInTrigger = false;
         }
     }
 
@@ -66,19 +67,21 @@ public class NPColision : MonoBehaviour
     //using because need to handle input
     private void Update()
     {
-        if (_isStayInTrigger && CrossPlatformInputManager.GetButtonDown("NextDialogue") )
-        {
-            //disapear dialogue indicator and trigger dialogue one time.
-            if (_isFirstTrigger)
+
+            if (_isStayInTrigger && CrossPlatformInputManager.GetButtonDown("NextDialogue"))
             {
-                _indicatorAnimator.SetTrigger("Disapear");
-                Destroy(_diallogueIndicatorInstance, _indicatorAnimator.GetCurrentAnimatorStateInfo(0).length);
+                //disapear dialogue indicator and trigger dialogue one time.
+                if (_isFirstTrigger)
+                {
+                    _indicatorAnimator.SetTrigger("Disapear");
+                    Destroy(_diallogueIndicatorInstance, _indicatorAnimator.GetCurrentAnimatorStateInfo(0).length);
 
-                _dialogueTriger.TriggerDialogue();
-                _isFirstTrigger = false;
+                    _dialogueTriger.TriggerDialogue();
+                    _isFirstTrigger = false;
+                }
+                else 
+                    _dialogueManager.DisplayNextSentence();
+
             }
-
-            _dialogueManager.DisplayNextSentence();
         }
-    }
 }

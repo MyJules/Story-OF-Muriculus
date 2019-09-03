@@ -31,6 +31,7 @@ public class PlayerAnimation : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
 
         _crossDetection = GetComponent<Rays>();
+        _localScale = transform.localScale;
     }
 
     // Update is called once per frame
@@ -42,7 +43,7 @@ public class PlayerAnimation : MonoBehaviour
         isGrouded = _crossDetection.IsCrossed(1, 2);
         isWallGrabbed = _crossDetection.IsCrossed(3);
 
-        _localScale = transform.localScale;
+
 
         //reseting flip Timer
         if (isGrouded || isWallGrabbed)
@@ -57,22 +58,29 @@ public class PlayerAnimation : MonoBehaviour
         //flip just when on ground or on wall
         if (_allowflipTimer >= 0)
         {
-               if (_moveX < -0.1 && !_fliped)
-               {
-                   Flip(true);
-                   _fliped = true;
-               }
-               else if (_moveX > 0.1 && _fliped)
-               {
-                   Flip(true);
-                   _fliped = false;
-               }
+            if (_moveX < -0.1 && !_fliped)
+            {
+
+                if (isGrouded)
+                    StartCoroutine(AnimatedFlip());
+                else
+                    Flip();
+
+                _fliped = true;
+            }
+            else if (_moveX > 0.1 && _fliped)
+            {
+
+                if (isGrouded)
+                    StartCoroutine(AnimatedFlip());
+                else
+                    Flip();
+
+                _fliped = false;
+            }
 
         }
 
-
-
-        transform.localScale = _localScale;
 
         //grab the wall
         if (isWallGrabbed && !isGrouded)
@@ -109,9 +117,19 @@ public class PlayerAnimation : MonoBehaviour
         _animator.SetFloat("Speed", Mathf.Abs(_moveX));
     }
 
-    private void Flip(bool isflip)
+    private IEnumerator AnimatedFlip()
     {
-        if(isflip)
-        _localScale.x *= -1;
+        _animator.SetBool("isFlipTransition", true);
+        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f && Mathf.Abs(_moveX) > 0.1f);
+        Flip();
+
+        _animator.SetBool("isFlipTransition", false);
     }
+
+    private void Flip()
+    {
+        _localScale.x *= -1;
+        transform.localScale = _localScale;
+    }
+
 }
