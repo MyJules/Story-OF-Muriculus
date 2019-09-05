@@ -6,7 +6,7 @@ using Cinemachine;
 public class FrameManager : MonoBehaviour
 {
     [SerializeField]
-    private CinemachineConfiner frameConfiner;
+    private CinemachineConfiner[] frameConfiner;
 
     private GameObject[] _frames;
 
@@ -25,9 +25,11 @@ public class FrameManager : MonoBehaviour
    
     public void ChangeToFrame(Collider2D collider)
     {
-        frameConfiner.InvalidatePathCache();
-        frameConfiner.m_BoundingShape2D = collider;
-
+        for (int i = 0; i < frameConfiner.Length; i++)
+        {
+            frameConfiner[i].InvalidatePathCache();
+            frameConfiner[i].m_BoundingShape2D = collider;
+        }
         //disabling all other frames.
         for (int i = 0; i < _frames.Length; i++)
         {

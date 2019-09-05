@@ -45,7 +45,8 @@ public class MovablePlatform : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (platformObject.position == points[_i].position)
+        //if (platformObject.position == points[_i].position)
+        if(Vector2.Distance(platformObject.position, points[_i].position ) < 0.1f)
         {
             if (_isReturning)
             {

@@ -3,12 +3,13 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AutoDestroyParticle
     - CameraChanger
+    - Cinemachine.CinemachineBasicMultiChannelPerlin
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineConfiner
     - Cinemachine.CinemachineFramingTransposer
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineVirtualCamera
-    - DeadTrigger
+    - Cinemachine.NoiseSettings
     - DialogueManager
     - FrameControl
     - FrameManager
@@ -56,10 +57,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -155,6 +154,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10982}
     - Class: 114
+      Script: {instanceID: 11010}
+    - Class: 114
       Script: {instanceID: 11082}
     - Class: 114
       Script: {instanceID: 11124}
@@ -193,8 +194,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12498}
     - Class: 114
-      Script: {instanceID: 12572}
-    - Class: 114
       Script: {instanceID: 12596}
     - Class: 114
       Script: {instanceID: 12674}
@@ -205,7 +204,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12976}
     - Class: 114
-      Script: {instanceID: 13156}
+      Script: {instanceID: 13194}
     - Class: 114
       Script: {instanceID: 13318}
     - Class: 114
@@ -227,7 +226,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13740}
     - Class: 114
+      Script: {instanceID: 13764}
+    - Class: 114
       Script: {instanceID: 13866}
+    - Class: 114
+      Script: {instanceID: 19902}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -417,7 +420,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 03b4ce3dd817d3fb699c986c07ab7ea1
+      Hash: 5d1fdb79a0753489d558af70d8ae0ac4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FrameManager
@@ -1095,7 +1098,7 @@ ScriptsOnlyBuild:
     className: TouchPad
   - hash:
       serializedVersion: 2
-      Hash: bdb24b6eb2dc059c5b913cefcddf6603
+      Hash: 6615d7c41d366bcde20df0ca1d031073
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraChanger

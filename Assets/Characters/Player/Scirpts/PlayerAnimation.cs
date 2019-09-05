@@ -120,9 +120,8 @@ public class PlayerAnimation : MonoBehaviour
     private IEnumerator AnimatedFlip()
     {
         _animator.SetBool("isFlipTransition", true);
-        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f && Mathf.Abs(_moveX) > 0.1f);
+        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f && Mathf.Abs(_moveX) > 0.2f);
         Flip();
-
         _animator.SetBool("isFlipTransition", false);
     }
 

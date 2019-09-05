@@ -4,14 +4,20 @@ using Cinemachine;
 public class CameraChanger : MonoBehaviour
 {
     [SerializeField]
-    private CinemachineVirtualCamera _changeToCamera;
+        CinemachineVirtualCamera changeEnterCamera;
+
+    [SerializeField]
+        CinemachineVirtualCamera changeExitCamera;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _changeToCamera.Priority = 100;
+        changeEnterCamera.Priority = 100;
+        changeExitCamera.Priority = 0;
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _changeToCamera.Priority = -100;
+        changeEnterCamera.Priority = -100;
+        changeExitCamera.Priority = 0;
     }
 }
