@@ -1684,7 +1684,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particlePosition: {fileID: 3616109078816496233}
-  audioSorce: {fileID: 0}
 --- !u!1 &3616109078758884093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,7 +2107,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3616109079139740010}
-  - component: {fileID: 2167076726185797199}
   - component: {fileID: 3616109079139740005}
   - component: {fileID: 3616109079139740004}
   - component: {fileID: 3616109079139740006}
@@ -2139,14 +2137,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &2167076726185797199
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3616109079139740002}
-  m_Enabled: 1
 --- !u!114 &3616109079139740005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2179,7 +2169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02a7aed461e6e0d41b61028487cd729d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowFlipTimerMax: 0.1
 --- !u!114 &3616109079139740006
 MonoBehaviour:
   m_ObjectHideFlags: 0

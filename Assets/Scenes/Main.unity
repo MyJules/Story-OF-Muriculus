@@ -637,9 +637,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &51655560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1017,9 +1014,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &90533489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,9 +1270,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &125131550
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,7 +2107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185909422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -165.61516, y: 25.1, z: 0}
+  m_LocalPosition: {x: -22.193218, y: 25.1, z: 0}
   m_LocalScale: {x: 1.6848, y: 1.6848, z: 1.6848}
   m_Children:
   - {fileID: 664382423}
@@ -2193,9 +2184,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &188930136
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2284,9 +2272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &199492537
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2434,9 +2419,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &211182291
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2845,9 +2827,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &223976522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3178,9 +3157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &252585487
 GameObject:
   m_ObjectHideFlags: 0
@@ -3483,9 +3459,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &297275141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3734,9 +3707,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &317313221
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3933,9 +3903,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!114 &331927282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4092,9 +4059,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &347200362
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4183,9 +4147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &357548932
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4274,9 +4235,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &360416058
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4509,9 +4467,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &368309933
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,9 +4796,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &385856325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4916,9 +4868,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &389139117
 GameObject:
   m_ObjectHideFlags: 0
@@ -5171,9 +5120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &405214631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5558,9 +5504,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &442918330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5649,9 +5592,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &447739085
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5740,9 +5680,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &452947344
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5896,9 +5833,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 8300000, guid: fa89f0f99872e1b4fa26708fbfca4796, type: 3}
 --- !u!61 &460817392
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6190,8 +6124,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499274736}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61, y: 67.5, z: 4.321906}
-  m_LocalScale: {x: 1.0299957, y: 78.292366, z: 0.6931447}
+  m_LocalPosition: {x: -58.499996, y: 67.5, z: 4.321906}
+  m_LocalScale: {x: 0.25992927, y: 78.292366, z: 0.6931447}
   m_Children:
   - {fileID: 2057004260}
   m_Father: {fileID: 729523508}
@@ -6445,9 +6379,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &533290051
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6520,9 +6451,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &551798477
 GameObject:
   m_ObjectHideFlags: 0
@@ -6802,9 +6730,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &558449573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7401,9 +7326,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &630926558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7476,9 +7398,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &664382422
 GameObject:
   m_ObjectHideFlags: 0
@@ -7525,9 +7444,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &665820083
 GameObject:
   m_ObjectHideFlags: 0
@@ -7829,136 +7745,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
---- !u!1 &683925790
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 683925791}
-  - component: {fileID: 683925792}
-  m_Layer: 0
-  m_Name: Ambiente
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &683925791
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683925790}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &683925792
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683925790}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 740.7739
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &715091934
 GameObject:
   m_ObjectHideFlags: 0
@@ -8078,9 +7864,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &716027020
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8185,9 +7968,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &744684668
 GameObject:
   m_ObjectHideFlags: 0
@@ -8318,9 +8098,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &792387770
 GameObject:
   m_ObjectHideFlags: 0
@@ -8533,7 +8310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804581069}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 81.14055, y: 44.7, z: 3.6994264}
+  m_LocalPosition: {x: 17.995861, y: 44.7, z: 3.6994264}
   m_LocalScale: {x: 4.8792915, y: 4.8792915, z: 4.8792915}
   m_Children:
   - {fileID: 1004964326}
@@ -8600,9 +8377,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &812492882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8654,7 +8428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831761440}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.6405525, y: 40.8, z: 3.6994264}
+  m_LocalPosition: {x: -37.00676, y: 40.8, z: 3.6994264}
   m_LocalScale: {x: 3.1279674, y: 3.1279674, z: 3.1279674}
   m_Children:
   - {fileID: 1271825175}
@@ -8861,9 +8635,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &902278697
 GameObject:
   m_ObjectHideFlags: 0
@@ -8941,9 +8712,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &907549865
 GameObject:
   m_ObjectHideFlags: 0
@@ -9086,9 +8854,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &911546937
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9204,9 +8969,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &934139501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9337,9 +9099,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &949326594
 GameObject:
   m_ObjectHideFlags: 0
@@ -9707,9 +9466,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &992737424
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10149,9 +9905,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1027886839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10224,9 +9977,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1047099410
 GameObject:
   m_ObjectHideFlags: 0
@@ -10594,9 +10344,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1076728617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10823,9 +10570,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1090852160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10898,9 +10642,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1111872059
 GameObject:
   m_ObjectHideFlags: 0
@@ -11043,9 +10784,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1129885040
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11205,9 +10943,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1142872333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11724,9 +11459,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1249921062
 GameObject:
   m_ObjectHideFlags: 0
@@ -11838,9 +11570,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1271825174
 GameObject:
   m_ObjectHideFlags: 0
@@ -12025,9 +11754,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1300310629
 GameObject:
   m_ObjectHideFlags: 0
@@ -12075,9 +11801,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1300310632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12150,9 +11873,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1331134099
 GameObject:
   m_ObjectHideFlags: 0
@@ -12611,9 +12331,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1394459862
 GameObject:
   m_ObjectHideFlags: 0
@@ -12690,9 +12407,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1416753279
 GameObject:
   m_ObjectHideFlags: 0
@@ -12979,9 +12693,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1451213924
 GameObject:
   m_ObjectHideFlags: 0
@@ -13167,7 +12878,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456413911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -119.51515, y: 63, z: 0}
+  m_LocalPosition: {x: 23.90678, y: 63, z: 0}
   m_LocalScale: {x: 1.64248, y: 1.64248, z: 1.64248}
   m_Children:
   - {fileID: 388974001}
@@ -13897,9 +13608,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1553265969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14053,9 +13761,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1567055326
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14174,9 +13879,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1576678957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14486,9 +14188,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1635900036
 GameObject:
   m_ObjectHideFlags: 0
@@ -14631,9 +14330,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1647832102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14867,9 +14563,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1658136258
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14943,9 +14636,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1667876256
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15019,9 +14709,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1677368918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15108,9 +14795,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1680206896
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15512,9 +15196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!114 &1735971465 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1184071111453111, guid: 6db985bb253ca2248ad148956b582584,
@@ -15617,6 +15298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1767177413}
   - component: {fileID: 1767177412}
+  - component: {fileID: 1767177411}
   - component: {fileID: 1767177414}
   - component: {fileID: 1767177415}
   m_Layer: 0
@@ -15626,6 +15308,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!81 &1767177411
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767177410}
+  m_Enabled: 1
 --- !u!20 &1767177412
 Camera:
   m_ObjectHideFlags: 0
@@ -15677,7 +15367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767177410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 119.10138, y: 46.376205, z: -100}
+  m_LocalPosition: {x: 116.6, y: 46.34, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15852,9 +15542,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1779494125
 GameObject:
   m_ObjectHideFlags: 0
@@ -16116,9 +15803,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1783636536
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16170,7 +15854,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793410262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -165.61516, y: 25.1, z: 0}
+  m_LocalPosition: {x: -22.193218, y: 25.1, z: 0}
   m_LocalScale: {x: 1.6848, y: 1.6848, z: 1.6848}
   m_Children:
   - {fileID: 1290428140}
@@ -16246,9 +15930,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1805962972
 GameObject:
   m_ObjectHideFlags: 0
@@ -16833,9 +16514,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!4 &1900325708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1184071111453104, guid: 6db985bb253ca2248ad148956b582584,
@@ -16996,9 +16674,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1925688934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17263,9 +16938,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1937505657
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17418,9 +17090,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &1950521661
 GameObject:
   m_ObjectHideFlags: 0
@@ -17446,7 +17115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950521661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.44055, y: 17.9, z: 3.6994264}
+  m_LocalPosition: {x: -5.104141, y: 17.9, z: 3.6994264}
   m_LocalScale: {x: 4.8792915, y: 4.8792915, z: 4.8792915}
   m_Children:
   - {fileID: 586990976}
@@ -17631,9 +17300,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &1972539255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17929,9 +17595,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &2023446749
 GameObject:
   m_ObjectHideFlags: 0
@@ -18138,9 +17801,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &2053734180
 GameObject:
   m_ObjectHideFlags: 0
@@ -18188,9 +17848,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &2053734183
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18853,9 +18510,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &2074117543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18940,9 +18594,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &2102335427
 GameObject:
   m_ObjectHideFlags: 0
@@ -19150,9 +18801,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
     type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &2116604416
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19488,7 +19136,7 @@ PrefabInstance:
     - target: {fileID: 8423273719737357795, guid: 480866609d3552741ab60ba3518b9502,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 59.3
+      value: 62.8
       objectReference: {fileID: 0}
     - target: {fileID: 8423273719737357795, guid: 480866609d3552741ab60ba3518b9502,
         type: 3}
@@ -19548,7 +19196,7 @@ PrefabInstance:
     - target: {fileID: 8423273719171295479, guid: 480866609d3552741ab60ba3518b9502,
         type: 3}
       propertyPath: m_ScreenY
-      value: 0.74
+      value: 0.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 480866609d3552741ab60ba3518b9502, type: 3}
@@ -19745,11 +19393,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3616109078702222256, guid: 91083a7ce6105754e8b67546443d0d2d,
-        type: 3}
-      propertyPath: audioSorce
-      value: 
-      objectReference: {fileID: 3616109078132541684}
     - target: {fileID: 3616109079294495382, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -19938,37 +19581,37 @@ PrefabInstance:
     - target: {fileID: 3616109078765478842, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.86904675
+      value: 0.9999608
       objectReference: {fileID: 0}
     - target: {fileID: 3616109078765478842, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.49473011
+      value: 0.008862239
       objectReference: {fileID: 0}
     - target: {fileID: 3616109078370160364, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.42166415
+      value: -0.029551573
       objectReference: {fileID: 0}
     - target: {fileID: 3616109078370160364, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9067521
+      value: 0.9995633
       objectReference: {fileID: 0}
     - target: {fileID: 3616109079425622983, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.79218954
+      value: 0.0000027026979
       objectReference: {fileID: 0}
     - target: {fileID: 3616109079425622983, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.61027515
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3616109079425622983, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 104.781006
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3616109079425622983, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
@@ -20048,7 +19691,7 @@ PrefabInstance:
     - target: {fileID: 3616109078000579086, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.303031
+      value: 3.3030312
       objectReference: {fileID: 0}
     - target: {fileID: 3616109078000579086, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
@@ -20063,12 +19706,12 @@ PrefabInstance:
     - target: {fileID: 3616109077525436182, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4887304
+      value: -1.942935
       objectReference: {fileID: 0}
     - target: {fileID: 3616109077525436182, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.46134
+      value: 4.4613404
       objectReference: {fileID: 0}
     - target: {fileID: 3616109077525436182, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
@@ -20290,115 +19933,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.16
       objectReference: {fileID: 0}
-    - target: {fileID: 3616109079139740001, guid: 91083a7ce6105754e8b67546443d0d2d,
-        type: 3}
-      propertyPath: _rayInfo.Array.data[0].rayLength
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91083a7ce6105754e8b67546443d0d2d, type: 3}
---- !u!1 &3616109078132541683 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3616109078702222285, guid: 91083a7ce6105754e8b67546443d0d2d,
-    type: 3}
-  m_PrefabInstance: {fileID: 3616109078132541682}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &3616109078132541684
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3616109078132541683}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: -3
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.846
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &8422098787906722641
 PrefabInstance:
   m_ObjectHideFlags: 0
