@@ -62,7 +62,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -73,7 +72,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/Main.unity:
@@ -112,6 +110,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -230,7 +232,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13866}
     - Class: 114
-      Script: {instanceID: 19902}
+      Script: {instanceID: 19970}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -816,7 +818,7 @@ ScriptsOnlyBuild:
     className: MobileControlRig
   - hash:
       serializedVersion: 2
-      Hash: 70dda21b503c92f379e405e8945ea860
+      Hash: dafe24a4eb52dc57d51fe7f4367f2042
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerSE
@@ -1308,7 +1310,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: ad7c5b408026cf882992fce41b858527
+      Hash: 79b86ef97a964cc8f92e55a178b1760e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpecialEffects
