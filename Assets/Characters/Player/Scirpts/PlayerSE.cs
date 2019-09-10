@@ -54,7 +54,7 @@ public class PlayerSE : MonoBehaviour
         }
     }
 
-    public void PlayLendSound()
+    public void PlayLandSound()
     {
         isGroundWithParticle = _rays.IsCrossed(0);
 

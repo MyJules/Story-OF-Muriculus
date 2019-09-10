@@ -5,18 +5,20 @@ using UnityEngine;
 public class PlayerMechanics : MonoBehaviour, IDie, IMemory
 {
     private PlayerInfo _playerInfo;
-
     public void Die()
     {
-
-        Application.LoadLevel(Application.loadedLevel);
+        Load();
+       
     }
 
     public void Load()
     {
+         //Application.LoadLevel(Application.loadedLevel);
+
         _playerInfo = PlayerPersistance.LoadInfo();
 
         transform.position = _playerInfo.position;
+    
     }
 
     public void Save()

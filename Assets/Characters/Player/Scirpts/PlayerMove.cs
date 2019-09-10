@@ -40,6 +40,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private float wallMaxVelocity = 30f;
 
+    [SerializeField]
+    private float OffJumpForceX = 3f, OffJumpForceY = 3f;
+
 
     [Space]
 
@@ -55,7 +58,7 @@ public class PlayerMove : MonoBehaviour
 
     private bool isGrounded, isWallGrabbed;
 
-    float startVelocity = 0;
+    private float startVelocity = 0;
 
     private void Start()
     {
@@ -76,6 +79,7 @@ public class PlayerMove : MonoBehaviour
 
         isGrounded = _crossDetection.IsCrossed(1, 2);
         isWallGrabbed = _crossDetection.IsCrossed(3);
+
 
         CalculateMovement();
         _rb.velocity = new Vector2(_moveX * _speed, _moveY);

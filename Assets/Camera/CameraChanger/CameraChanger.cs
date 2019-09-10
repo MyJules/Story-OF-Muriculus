@@ -11,13 +11,19 @@ public class CameraChanger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
         changeEnterCamera.Priority = 100;
         changeExitCamera.Priority = 0;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
         changeEnterCamera.Priority = -100;
         changeExitCamera.Priority = 0;
+        }
     }
 }

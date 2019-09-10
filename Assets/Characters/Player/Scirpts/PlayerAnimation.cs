@@ -14,7 +14,7 @@ public class PlayerAnimation : MonoBehaviour
 
     private bool _isFirst = true, _fliped = false, isAnimFinished = false;
 
-    private bool isGrouded, isWallGrabbed;
+    private bool isGrouded, isWallGrabbed, isPushing;
 
     private Vector3 _localScale;
 
@@ -35,15 +35,23 @@ public class PlayerAnimation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         _moveX = _rigidbody.velocity.x;
         _moveY = _rigidbody.velocity.y;
-
+        
         isGrouded = _crossDetection.IsCrossed(1, 2);
         isWallGrabbed = _crossDetection.IsCrossed(3);
 
+        isPushing = _crossDetection.IsCrossed(4);
 
+        if(isPushing)
+        {
+            _animator.SetBool("isPushing", true);
+        }else
+        {
+            _animator.SetBool("isPushing", false);
+        }
 
         //reseting flip Timer
         if (isGrouded || isWallGrabbed)
@@ -84,29 +92,31 @@ public class PlayerAnimation : MonoBehaviour
 
         //grab the wall
         if (isWallGrabbed && !isGrouded)
-        {
             _animator.SetBool("isWallGrabbed", true);
-        }
         else
             _animator.SetBool("isWallGrabbed", false);
 
 
         //jump animaiton
-        if (!isGrouded)
+        if (isGrouded)
         {
-            if (_isFirst)
-                _animator.SetTrigger("takeOff");
-
-            _isFirst = false;
+            // if (_moveY < 0.2 && _moveY > -0.2)
+            // {
+            if (!_isFirst)
+            {
+               // _animator.SetTrigger("landing");
+                _animator.SetBool("isJumping", false);
+                _isFirst = true;
+            }
+            // }
         }
         else
         {
-            if (_moveY < 0.2 && _moveY > -0.2)
+            if (_isFirst)
             {
-                if (!_isFirst)
-                    _animator.SetTrigger("landing");
-
-                _isFirst = true;
+                //_animator.SetTrigger("takeOff");
+                 _animator.SetBool("isJumping", true);
+                _isFirst = false;
             }
         }
 
