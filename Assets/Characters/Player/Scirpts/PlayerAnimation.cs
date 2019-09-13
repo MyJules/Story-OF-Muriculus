@@ -6,7 +6,7 @@ public class PlayerAnimation : MonoBehaviour
 {
     private Animator _animator;
 
-    private Rigidbody2D _rigidbody;
+    private Rigidbody2D _rb;
 
     private Rays _crossDetection;
 
@@ -28,27 +28,28 @@ public class PlayerAnimation : MonoBehaviour
     {
         _animator = GetComponentInChildren<Animator>();
 
-        _rigidbody = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
 
         _crossDetection = GetComponent<Rays>();
         _localScale = transform.localScale;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        _moveX = _rigidbody.velocity.x;
-        _moveY = _rigidbody.velocity.y;
-        
+        _moveX = _rb.velocity.x;
+        _moveY = _rb.velocity.y;
+
         isGrouded = _crossDetection.IsCrossed(1, 2);
         isWallGrabbed = _crossDetection.IsCrossed(3);
 
         isPushing = _crossDetection.IsCrossed(4);
 
-        if(isPushing)
+        if (isPushing)
         {
             _animator.SetBool("isPushing", true);
-        }else
+        }
+        else
         {
             _animator.SetBool("isPushing", false);
         }
@@ -68,25 +69,25 @@ public class PlayerAnimation : MonoBehaviour
         {
             if (_moveX < -0.1 && !_fliped)
             {
-
                 if (isGrouded)
                     StartCoroutine(AnimatedFlip());
                 else
-                    Flip();
+                {
+                    Flip();                    
+                }
 
                 _fliped = true;
             }
             else if (_moveX > 0.1 && _fliped)
             {
-
                 if (isGrouded)
                     StartCoroutine(AnimatedFlip());
                 else
+                {
                     Flip();
-
+                }
                 _fliped = false;
             }
-
         }
 
 
@@ -104,7 +105,7 @@ public class PlayerAnimation : MonoBehaviour
             // {
             if (!_isFirst)
             {
-               // _animator.SetTrigger("landing");
+                // _animator.SetTrigger("landing");
                 _animator.SetBool("isJumping", false);
                 _isFirst = true;
             }
@@ -115,7 +116,7 @@ public class PlayerAnimation : MonoBehaviour
             if (_isFirst)
             {
                 //_animator.SetTrigger("takeOff");
-                 _animator.SetBool("isJumping", true);
+                _animator.SetBool("isJumping", true);
                 _isFirst = false;
             }
         }
@@ -130,9 +131,9 @@ public class PlayerAnimation : MonoBehaviour
     private IEnumerator AnimatedFlip()
     {
         _animator.SetBool("isFlipTransition", true);
-        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f );
-        Flip();
+        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f && Mathf.Abs(_moveX) > 0.1f && isGrouded);
         _animator.SetBool("isFlipTransition", false);
+        Flip();
     }
 
     private void Flip()

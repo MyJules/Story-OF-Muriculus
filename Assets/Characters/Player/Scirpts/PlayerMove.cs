@@ -83,6 +83,7 @@ public class PlayerMove : MonoBehaviour
 
         CalculateMovement();
         _rb.velocity = new Vector2(_moveX * _speed, _moveY);
+
     }
 
     private void CalculateMovement()
