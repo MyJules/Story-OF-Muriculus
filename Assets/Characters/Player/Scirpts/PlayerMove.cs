@@ -54,6 +54,8 @@ public class PlayerMove : MonoBehaviour
 
     private float _moveX, _moveY;
 
+    private bool _isJumpDown, _isJumpUp;
+
     private bool _isFirstV = true, _isFirstH = true, _isFirsWallJump = true, _isFirstCoyoteJump = true;
 
     private bool isGrounded, isWallGrabbed;
@@ -76,16 +78,20 @@ public class PlayerMove : MonoBehaviour
     {
         _moveX = CrossPlatformInputManager.GetAxis("Horizontal");
         _moveY = _rb.velocity.y;
+        _isJumpDown = CrossPlatformInputManager.GetButtonDown("Jump");
+        _isJumpUp = CrossPlatformInputManager.GetButtonUp("Jump");
 
         isGrounded = _crossDetection.IsCrossed(1, 2);
         isWallGrabbed = _crossDetection.IsCrossed(3);
 
-
         CalculateMovement();
+
         _rb.velocity = new Vector2(_moveX * _speed, _moveY);
-
     }
-
+    private void FixedUpdate()
+    {
+        
+    }
     private void CalculateMovement()
     {
         CalculateHorizontalMovement();
@@ -155,7 +161,7 @@ public class PlayerMove : MonoBehaviour
 
 
         //jumping
-        if (CrossPlatformInputManager.GetButtonDown("Jump"))
+        if (_isJumpDown)
         {
 
             //jumping
@@ -188,7 +194,7 @@ public class PlayerMove : MonoBehaviour
 
             //releasing button during jumping
         }
-        else if (CrossPlatformInputManager.GetButtonUp("Jump") && _moveY > 10 && _isFirstV)
+        else if (_isJumpUp && _moveY > 10 && _isFirstV)
         {
             _moveY = _jumpHeight / 2.5f;
             _isFirstV = false;
