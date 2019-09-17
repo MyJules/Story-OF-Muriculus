@@ -2110,7 +2110,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3616109079139740010}
   - component: {fileID: 2167076726185797199}
-  - component: {fileID: 3616109079139740005}
+  - component: {fileID: 1889689461066736950}
+  - component: {fileID: 1895987259740445747}
   - component: {fileID: 3616109079139740004}
   - component: {fileID: 3616109079139740006}
   - component: {fileID: 3616109079139740001}
@@ -2148,7 +2149,29 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3616109079139740002}
   m_Enabled: 1
---- !u!114 &3616109079139740005
+--- !u!114 &1889689461066736950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3616109079139740002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0499fba2b5a9bc4bac7eeb36307f729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxSpeed: 100
+  _acceleration: 200
+  _decceleration: 400
+  _jumpHeight: 25
+  _fallGravityScale: 5
+  coyoteTimeMax: 0.1
+  verticalMultipl: 0.9
+  verticalSwithMultipl: 0.8
+  wallJumpCoyoteTimeMax: 1
+  wallMaxVelocity: 30
+--- !u!114 &1895987259740445747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2160,16 +2183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f6f42e5b9be3f47ad08683adeff7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 25
-  _jumpHeight: 35
-  _fallGravityScale: 3
-  coyoteTimeMax: 0.1
-  verticalMultipl: 0.86
-  verticalSwithMultipl: 0.5
-  wallJumpCoyoteTimeMax: 0.13
-  wallMaxVelocity: -25
-  OffJumpForceX: 3
-  OffJumpForceY: 3
+  jumpButton: Jump
+  horizontalButton: Horizontal
 --- !u!114 &3616109079139740004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2182,7 +2197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02a7aed461e6e0d41b61028487cd729d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowFlipTimerMax: 0.1
 --- !u!114 &3616109079139740006
 MonoBehaviour:
   m_ObjectHideFlags: 0

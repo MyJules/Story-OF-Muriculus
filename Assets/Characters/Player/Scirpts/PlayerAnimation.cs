@@ -18,11 +18,6 @@ public class PlayerAnimation : MonoBehaviour
 
     private Vector3 _localScale;
 
-    [SerializeField]
-    private float allowFlipTimerMax = 0.1f;
-
-    private float _allowflipTimer;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,9 +28,8 @@ public class PlayerAnimation : MonoBehaviour
         _crossDetection = GetComponent<Rays>();
         _localScale = transform.localScale;
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    void FixedUpdate()
     {
         _moveX = _rb.velocity.x;
         _moveY = _rb.velocity.y;
@@ -54,40 +48,27 @@ public class PlayerAnimation : MonoBehaviour
             _animator.SetBool("isPushing", false);
         }
 
-        //reseting flip Timer
-        if (isGrouded || isWallGrabbed)
-        {
-            _allowflipTimer = allowFlipTimerMax;
-        }
-        else
-        {
-            _allowflipTimer -= Time.deltaTime;
-        }
-
         //flip just when on ground or on wall
-        if (_allowflipTimer >= 0)
+        if (_moveX < -0.8f && !_fliped)
         {
-            if (_moveX < -0.1 && !_fliped)
+            if (isGrouded)
+                StartCoroutine(AnimatedFlip());
+            else
             {
-                if (isGrouded)
-                    StartCoroutine(AnimatedFlip());
-                else
-                {
-                    Flip();                    
-                }
+                Flip();                    
+            }
 
-                _fliped = true;
-            }
-            else if (_moveX > 0.1 && _fliped)
+            _fliped = true;
+        }
+        else if (_moveX > 0.8f && _fliped)
+        {
+            if (isGrouded)
+                StartCoroutine(AnimatedFlip());
+            else
             {
-                if (isGrouded)
-                    StartCoroutine(AnimatedFlip());
-                else
-                {
-                    Flip();
-                }
-                _fliped = false;
+                Flip();
             }
+            _fliped = false;
         }
 
 
@@ -101,21 +82,16 @@ public class PlayerAnimation : MonoBehaviour
         //jump animaiton
         if (isGrouded)
         {
-            // if (_moveY < 0.2 && _moveY > -0.2)
-            // {
             if (!_isFirst)
             {
-                // _animator.SetTrigger("landing");
                 _animator.SetBool("isJumping", false);
                 _isFirst = true;
             }
-            // }
         }
         else
         {
             if (_isFirst)
             {
-                //_animator.SetTrigger("takeOff");
                 _animator.SetBool("isJumping", true);
                 _isFirst = false;
             }
@@ -131,7 +107,8 @@ public class PlayerAnimation : MonoBehaviour
     private IEnumerator AnimatedFlip()
     {
         _animator.SetBool("isFlipTransition", true);
-        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f && Mathf.Abs(_moveX) > 0.1f && isGrouded);
+        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f 
+                                                   && Mathf.Abs(_moveX) > 0.1f &&  isGrouded);
         _animator.SetBool("isFlipTransition", false);
         Flip();
     }
