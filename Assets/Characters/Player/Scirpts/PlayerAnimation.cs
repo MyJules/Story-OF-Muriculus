@@ -49,7 +49,7 @@ public class PlayerAnimation : MonoBehaviour
         }
 
         //flip just when on ground or on wall
-        if (_moveX < -0.8f && !_fliped)
+        if (_moveX < -2f && !_fliped)
         {
             if (isGrouded)
                 StartCoroutine(AnimatedFlip());
@@ -60,7 +60,7 @@ public class PlayerAnimation : MonoBehaviour
 
             _fliped = true;
         }
-        else if (_moveX > 0.8f && _fliped)
+        else if (_moveX > 2f && _fliped)
         {
             if (isGrouded)
                 StartCoroutine(AnimatedFlip());

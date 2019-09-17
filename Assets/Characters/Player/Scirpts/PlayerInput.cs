@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 [DefaultExecutionOrder(-100)]
@@ -53,6 +50,7 @@ public class PlayerInput : MonoBehaviour
         {
             _isJumping = true;
         }
+
         if (_isJumpUp)
         {
             _isJumping = false;

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Timers;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -41,11 +37,6 @@ public class PlayerController : MonoBehaviour
     [Range(0, 3)]
     private float wallJumpCoyoteTimeMax = 0.5f;
 
-    [SerializeField]
-    private float wallMaxVelsocity = 20f;
-
-    [SerializeField] private float wallJumpDecceleration = 40f;
-
     [SerializeField] private float jumpOffForce = 30f;
 
     [Space]
@@ -61,6 +52,8 @@ public class PlayerController : MonoBehaviour
     private float _coyoteTime, _wallCoyoteTime;
 
     private Vector2 _wallNormal;
+
+    private bool jumpWasRealised = false;
 
     private void Start()
     {
@@ -78,13 +71,13 @@ public class PlayerController : MonoBehaviour
         GetWallNormal();
 
         CalculateCoyoteTime();
-        CallculateWallCoyoteTime();
+        CalculateWallCoyoteTime();
     }
 
     public void Move(float horizontalInput, bool isJumping)
     {
         Running(horizontalInput);
-        Jumping(_jumpHeight, isJumping);
+        Jumping(isJumping);
         WallJump(isJumping, _isWallGrabbed);
         AirControl();
     }
@@ -115,37 +108,53 @@ public class PlayerController : MonoBehaviour
         }
         
         //setting velocity to 0 if x velocity is small
-        if (Mathf.Abs(_rb.velocity.x) < 0.2f && horizontalInput == 0 && _isGrounded)
+        if (Mathf.Abs(_rb.velocity.x) < 1f && horizontalInput == 0 && _isGrounded)
         {
             _rb.velocity = Vector2.zero;
         }
     }
 
-    private void Jumping(float jumpForce, bool isJumping)
+    private void Jumping(bool isJumping)
     {
-        if (isJumping && _isFirstJump && !_isWallGrabbed)
-        {
-            if (_coyoteTime > 0)
+        //main
+            if (isJumping && _isFirstJump && jumpWasRealised)
             {
-                Jump();
-                _isFirstJump = false;
+                if (_coyoteTime > 0)
+                {
+                    Jump();
+                    _isFirstJump = false;
+                    jumpWasRealised = false;
+                }
             }
-        }else     //realising button when jumping
-        if (!isJumping && _rb.velocity.y > 0.1f)
-        {
-            _rb.AddForce(Vector2.down * _rb.velocity.y * 5);
-        }
+            else //realising button when jumping
+            if (!isJumping && _rb.velocity.y > 0.1f)
+            {
+                _rb.AddForce(Vector2.down * _rb.velocity.y * 5);
+                jumpWasRealised = true;
+            }
+
+            if (!isJumping)
+            {
+                jumpWasRealised = true;
+            }
     }
     
     private void WallJump(bool isJumping, bool isWallGrabbed)
     {
-        if (isWallGrabbed)
+        if (isWallGrabbed || _wallCoyoteTime > 0)
         {
-            if (isJumping && _wallCoyoteTime > 0 && _isWallJump)
+            if (isJumping && _isWallJump && jumpWasRealised)
             {
+                _rb.velocity = Vector2.zero;
+                jumpWasRealised = false;
                 _isWallJump = false;
                 WallJump();
             }
+        }
+
+        if (!isJumping)
+        {
+            jumpWasRealised = true;
         }
     }
     
@@ -190,7 +199,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    private void CallculateWallCoyoteTime()
+    private void CalculateWallCoyoteTime()
     {
         if (_isWallGrabbed)
         {
@@ -205,7 +214,7 @@ public class PlayerController : MonoBehaviour
     
     private void GetWallNormal()
     {
-        if (_isWallGrabbed)
+        if (_isWallGrabbed && _crossDetection.IsCrossed(3))
         {
             _wallNormal = _crossDetection.GetCrossInformaiton(3).normal;
         }
