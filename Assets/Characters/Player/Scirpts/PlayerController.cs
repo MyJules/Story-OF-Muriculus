@@ -26,16 +26,21 @@ public class PlayerController : MonoBehaviour
     [Range(0, 3)]
     private float coyoteTimeMax = 0.1f;
 
-    [Space]
+    [SerializeField] private float _airAcceleration = 300;
+    
+    [SerializeField] private float _airDecceeleration = 200;
+
+    [SerializeField] private float _simpleAirDeccelerationDiv = 2;
+
+        [Space]
 
     [Header("Wall Jump Control")]
 
+        [SerializeField]
+        [Range(0, 3)] private float wallJumpCoyoteTimeMax = 0.5f;
+        
     [SerializeField]
     private float wallJumpHeight = 500f;
-    
-    [SerializeField]
-    [Range(0, 3)]
-    private float wallJumpCoyoteTimeMax = 0.5f;
 
     [SerializeField] private float jumpOffForce = 30f;
 
@@ -79,31 +84,34 @@ public class PlayerController : MonoBehaviour
         Running(horizontalInput);
         Jumping(isJumping);
         WallJump(isJumping, _isWallGrabbed);
-        AirControl();
+        AirControl(horizontalInput);
     }
 
     private void Running(float horizontalInput)
     {
-        //setting up max speed + acceleration and decceleration
-        if (Mathf.Abs(_rb.velocity.x) < _maxSpeed && horizontalInput != 0)
+        if(_isGrounded)
         {
-            _rb.AddForce(new Vector2(horizontalInput * _acceleration, y: 0));
-        }else if (_rb.velocity.x < 0 && horizontalInput == 1) 
-        {    //deccelerate if we pushing the opposite direction
-            _rb.AddForce(new Vector2(horizontalInput * _decceleration , y: 0));
-        }else if (_rb.velocity.x > 0 && horizontalInput == -1)
-        {    //deccelerate if we pushing the opposite direction
-            _rb.AddForce(new Vector2(horizontalInput * _decceleration , y: 0));
-        }else if (Mathf.Abs(_rb.velocity.x) > 0.2f && horizontalInput == 0)
-        {
-            //deccelerete if don't puch any button
-            if (_rb.velocity.x < 0.2f)
+            //setting up max speed + acceleration and decceleration
+            if (Mathf.Abs(_rb.velocity.x) < _maxSpeed && horizontalInput != 0)
             {
-                _rb.AddForce(new Vector2( _decceleration/_simpleDeccelerationDiv,0));
-            }
-            else if(_rb.velocity.x > 0.2f)
+                _rb.AddForce(new Vector2(horizontalInput * _acceleration, y: 0));
+            }else if (_rb.velocity.x < 0 && horizontalInput == 1) 
+            {    //deccelerate if we pushing the opposite direction
+                _rb.AddForce(new Vector2(horizontalInput * _decceleration , y: 0));
+            }else if (_rb.velocity.x > 0 && horizontalInput == -1)
+            {    //deccelerate if we pushing the opposite direction
+                _rb.AddForce(new Vector2(horizontalInput * _decceleration , y: 0));
+            }else if (Mathf.Abs(_rb.velocity.x) > 0.2f && horizontalInput == 0)
             {
-                _rb.AddForce(new Vector2(-_decceleration/_simpleDeccelerationDiv,0));
+                //deccelerete if don't puch any button
+                if (_rb.velocity.x < 0.2f)
+                {
+                    _rb.AddForce(new Vector2(_decceleration / _simpleDeccelerationDiv, 0));
+                }
+                else if (_rb.velocity.x > 0.2f)
+                {
+                    _rb.AddForce(new Vector2(-_decceleration / _simpleDeccelerationDiv, 0));
+                }
             }
         }
         
@@ -130,7 +138,7 @@ public class PlayerController : MonoBehaviour
             if (!isJumping && _rb.velocity.y > 0.1f)
             {
                 _rb.AddForce(Vector2.down * _rb.velocity.y * 5);
-                jumpWasRealised = true;
+                   // jumpWasRealised = true;
             }
 
             if (!isJumping)
@@ -158,7 +166,42 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    private void AirControl()
+    private void AirControl(float horizontalInput)
+    {
+        IncreaseGravityScale();
+        AirMove(horizontalInput);
+    }
+
+    private void AirMove(float horizontalInput)
+    {
+        if (!_isGrounded && !_isWallGrabbed)
+        {
+            //setting up max speed + acceleration and decceleration
+            if (Mathf.Abs(_rb.velocity.x) < _maxSpeed && horizontalInput != 0)
+            {
+                _rb.AddForce(new Vector2(horizontalInput * _airAcceleration, y: 0));
+            }else if (_rb.velocity.x < 0 && horizontalInput == 1) 
+            {    //deccelerate if we pushing the opposite direction
+                _rb.AddForce(new Vector2(horizontalInput * _airDecceeleration , y: 0));
+            }else if (_rb.velocity.x > 0 && horizontalInput == -1)
+            {    //deccelerate if we pushing the opposite direction
+                _rb.AddForce(new Vector2(horizontalInput * _airDecceeleration , y: 0));
+            }else if (Mathf.Abs(_rb.velocity.x) > 0.2f && horizontalInput == 0)
+            {
+                //deccelerete if don't puch any button
+                if (_rb.velocity.x < 0.2f)
+                {
+                    _rb.AddForce(new Vector2(_airDecceeleration / _simpleAirDeccelerationDiv, 0));
+                }
+                else if (_rb.velocity.x > 0.2f)
+                {
+                    _rb.AddForce(new Vector2(-_airDecceeleration / _simpleAirDeccelerationDiv, 0));
+                }
+            }
+        }
+    }
+
+    private void IncreaseGravityScale()
     {
         if (!_isGrounded && !_isWallGrabbed)
         {
@@ -171,7 +214,8 @@ public class PlayerController : MonoBehaviour
             {
                 _rb.gravityScale = _startGravityScale;
             }
-        }else
+        }
+        else
             _rb.gravityScale = _startGravityScale;
     }
 
