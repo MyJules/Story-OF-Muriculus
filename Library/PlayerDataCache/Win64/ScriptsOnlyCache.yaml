@@ -18,10 +18,10 @@ ScriptsOnlyBuild:
     - NPColision
     - ParallaxBackground
     - ParallaxCamera
-    - ParallaxLayer
     - PlayerAnimation
+    - PlayerController
+    - PlayerInput
     - PlayerMechanics
-    - PlayerMove
     - PlayerSE
     - Rays
     - SaveTrigger
@@ -105,8 +105,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
-    - Class: 70
-      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -129,8 +127,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10022}
     - Class: 114
       Script: {instanceID: 10060}
-    - Class: 114
-      Script: {instanceID: 10064}
     - Class: 114
       Script: {instanceID: 10198}
     - Class: 114
@@ -196,37 +192,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12662}
     - Class: 114
-      Script: {instanceID: 12740}
+      Script: {instanceID: 12674}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12742}
     - Class: 114
-      Script: {instanceID: 12938}
+      Script: {instanceID: 12918}
     - Class: 114
-      Script: {instanceID: 13042}
+      Script: {instanceID: 12940}
     - Class: 114
-      Script: {instanceID: 13260}
+      Script: {instanceID: 13044}
     - Class: 114
-      Script: {instanceID: 13384}
+      Script: {instanceID: 13262}
     - Class: 114
-      Script: {instanceID: 13506}
+      Script: {instanceID: 13386}
     - Class: 114
-      Script: {instanceID: 13584}
+      Script: {instanceID: 13508}
     - Class: 114
-      Script: {instanceID: 13646}
+      Script: {instanceID: 13586}
     - Class: 114
-      Script: {instanceID: 13680}
+      Script: {instanceID: 13648}
     - Class: 114
-      Script: {instanceID: 13714}
+      Script: {instanceID: 13682}
     - Class: 114
-      Script: {instanceID: 13738}
+      Script: {instanceID: 13716}
     - Class: 114
       Script: {instanceID: 13740}
     - Class: 114
-      Script: {instanceID: 13788}
+      Script: {instanceID: 13742}
     - Class: 114
-      Script: {instanceID: 13830}
+      Script: {instanceID: 13790}
     - Class: 114
-      Script: {instanceID: 13932}
+      Script: {instanceID: 13832}
+    - Class: 114
+      Script: {instanceID: 13934}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -616,7 +614,7 @@ ScriptsOnlyBuild:
     className: PostProcessEffectSettings
   - hash:
       serializedVersion: 2
-      Hash: 93ef8d122fe8f91be1f0ade1637fe507
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAnimation
@@ -1012,6 +1010,12 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
+      Hash: 7c4b757744c83f1b9d4303eab5a4d499
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1132,10 +1136,10 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: 1f55ca8850ce8071191a0bdeca75c9be
+      Hash: de3e3d16f730b4ab10c1989a897650db
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerMove
+    className: PlayerInput
   - hash:
       serializedVersion: 2
       Hash: d5630f96bd5a6a6eed7e1754c3fb8703
