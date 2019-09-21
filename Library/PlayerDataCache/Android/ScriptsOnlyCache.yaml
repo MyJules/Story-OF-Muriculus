@@ -18,10 +18,10 @@ ScriptsOnlyBuild:
     - NPColision
     - ParallaxBackground
     - ParallaxCamera
+    - ParallaxLayer
     - PlayerAnimation
-    - PlayerController
-    - PlayerInput
     - PlayerMechanics
+    - PlayerMove
     - PlayerSE
     - Rays
     - SaveTrigger
@@ -47,8 +47,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    Unity.Rider.Editor.dll:
-    - Packages.Rider.Editor.RiderScriptEditorData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -64,7 +62,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.UI.CanvasScaler
@@ -73,7 +70,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/Main.unity:
@@ -107,6 +103,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -129,6 +127,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10022}
     - Class: 114
       Script: {instanceID: 10060}
+    - Class: 114
+      Script: {instanceID: 10064}
     - Class: 114
       Script: {instanceID: 10198}
     - Class: 114
@@ -194,39 +194,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12662}
     - Class: 114
-      Script: {instanceID: 12674}
+      Script: {instanceID: 12740}
     - Class: 114
-      Script: {instanceID: 12742}
+      Script: {instanceID: 12916}
     - Class: 114
-      Script: {instanceID: 12918}
+      Script: {instanceID: 12938}
     - Class: 114
-      Script: {instanceID: 12940}
+      Script: {instanceID: 13042}
     - Class: 114
-      Script: {instanceID: 13044}
+      Script: {instanceID: 13260}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 13384}
     - Class: 114
-      Script: {instanceID: 13386}
+      Script: {instanceID: 13506}
     - Class: 114
-      Script: {instanceID: 13508}
+      Script: {instanceID: 13584}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13646}
     - Class: 114
-      Script: {instanceID: 13648}
+      Script: {instanceID: 13680}
     - Class: 114
-      Script: {instanceID: 13682}
+      Script: {instanceID: 13714}
     - Class: 114
-      Script: {instanceID: 13716}
+      Script: {instanceID: 13738}
     - Class: 114
       Script: {instanceID: 13740}
     - Class: 114
-      Script: {instanceID: 13742}
+      Script: {instanceID: 13788}
     - Class: 114
-      Script: {instanceID: 13790}
+      Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 13832}
+      Script: {instanceID: 13932}
     - Class: 114
-      Script: {instanceID: 13934}
+      Script: {instanceID: 20270}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -286,7 +286,7 @@ ScriptsOnlyBuild:
     className: LensDistortion
   - hash:
       serializedVersion: 2
-      Hash: 3c08375166df118bd1801438fc36b92f
+      Hash: 984dcc0ba3707b7691fbdca8ff508d28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
@@ -298,7 +298,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 626925ef558787b2d85c809198164d19
+      Hash: bf530eb47e6a86dcee1d42e40c3b7ac8
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
@@ -370,7 +370,7 @@ ScriptsOnlyBuild:
     className: Rays
   - hash:
       serializedVersion: 2
-      Hash: 72712369a7c681ad84fc255a5ec0b333
+      Hash: fc108ce7d98c40ac0907e8ca7f500c76
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
@@ -382,7 +382,7 @@ ScriptsOnlyBuild:
     className: MovablePlatform
   - hash:
       serializedVersion: 2
-      Hash: 499fd23433e68e265d153aa6b95d0047
+      Hash: 06a330481ec400be50745bb7faf76bd0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
@@ -406,7 +406,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 8e0313c6f5e2ce35991fec2d64f8eaab
+      Hash: 89498a9a4a6296605faa18a2c5f758a4
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
@@ -430,7 +430,7 @@ ScriptsOnlyBuild:
     className: DepthOfField
   - hash:
       serializedVersion: 2
-      Hash: 234235b9fb07320d11497e08a726cc56
+      Hash: 9e70ecf91466f07d9bd649be625cae52
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
@@ -538,7 +538,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 4e9333594897a1fb8b136ad2eae996c7
+      Hash: 00274a21279f5cb831ce20f895049e38
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
@@ -616,7 +616,7 @@ ScriptsOnlyBuild:
     className: PostProcessEffectSettings
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 93ef8d122fe8f91be1f0ade1637fe507
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAnimation
@@ -706,7 +706,7 @@ ScriptsOnlyBuild:
     className: InputAxisScrollbar
   - hash:
       serializedVersion: 2
-      Hash: a3e33967c52de89ebdcdd8796777f42e
+      Hash: 2eff7445b55fad7f920ca9d48c40e45a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NPColision
@@ -730,7 +730,7 @@ ScriptsOnlyBuild:
     className: CinemachineOrbitalTransposer
   - hash:
       serializedVersion: 2
-      Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
+      Hash: 97ace6213ad0f149b0917a4c669c6ca3
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
@@ -856,13 +856,13 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
+      Hash: 516824a435828eadd660ef2f1658a48e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: feb9a5a121d15fa3654d4e50a5233045
+      Hash: 92da9881aed190e8bb74661bcd74aa2c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
@@ -928,13 +928,13 @@ ScriptsOnlyBuild:
     className: SpriteSkin
   - hash:
       serializedVersion: 2
-      Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
+      Hash: 12e64d607873da15ad3f833620350d51
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: InputField
   - hash:
       serializedVersion: 2
-      Hash: c9a8b80298a116835b51ba1cf9284367
+      Hash: 3f8d7b92a6be3c715e55d5cfa7cc8384
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
@@ -1012,12 +1012,6 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
-      Hash: 7c4b757744c83f1b9d4303eab5a4d499
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerController
-  - hash:
-      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1048,7 +1042,7 @@ ScriptsOnlyBuild:
     className: NetworkBehaviour
   - hash:
       serializedVersion: 2
-      Hash: 3b760e6526e13f7504f59e210145899a
+      Hash: ee0cef6caaac8ae485bfa82f000f0f7b
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
@@ -1060,7 +1054,7 @@ ScriptsOnlyBuild:
     className: LimbSolver2D
   - hash:
       serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
+      Hash: 516824a435828eadd660ef2f1658a48e
     assemblyName: Unity.Analytics.DataPrivacy.dll
     namespaceName: UnityEngine.Analytics
     className: DataPrivacyButton
@@ -1138,10 +1132,10 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: de3e3d16f730b4ab10c1989a897650db
+      Hash: 1f55ca8850ce8071191a0bdeca75c9be
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerInput
+    className: PlayerMove
   - hash:
       serializedVersion: 2
       Hash: d5630f96bd5a6a6eed7e1754c3fb8703
@@ -1150,7 +1144,7 @@ ScriptsOnlyBuild:
     className: PostProcessVolume
   - hash:
       serializedVersion: 2
-      Hash: 95dbd4935e7a36e14acf636e5126726a
+      Hash: edec4c602b0001fe25485c47ebf3be6c
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEditor.Experimental.U2D.IK
     className: IKEditorManagerHelper
@@ -1162,7 +1156,7 @@ ScriptsOnlyBuild:
     className: Grain
   - hash:
       serializedVersion: 2
-      Hash: df434544c9f7b33d1cc7e635b180d279
+      Hash: 5372ed2ce39229b1ac910757999a8be2
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshPro
@@ -1216,7 +1210,7 @@ ScriptsOnlyBuild:
     className: NetworkManagerHUD
   - hash:
       serializedVersion: 2
-      Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
+      Hash: 3f52d34ea17dfc771004b80f5d492445
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventTrigger
@@ -1234,19 +1228,19 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: 4ecb95b2d829d8749c1e345f0de19a93
+      Hash: 8df2bee66a446c58b31b6bc7b1a991c6
     assemblyName: Assembly-CSharp.dll
     namespaceName: Cinemachine
     className: CinemachineBrain
   - hash:
       serializedVersion: 2
-      Hash: 20eeaeae829475b5e354d1f626c51a2b
+      Hash: 7090bc1e5ccaec2a9d0d1335ed8cee99
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
-      Hash: 2aeeec1b1a144c469cd2d37776bc2315
+      Hash: 0852116b29df10ce3f9156850d406521
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Dropdown
@@ -1276,7 +1270,7 @@ ScriptsOnlyBuild:
     className: CinemachineBasicMultiChannelPerlin
   - hash:
       serializedVersion: 2
-      Hash: aa88ae22474df55295327e4ee99e5a24
+      Hash: 3ab7272a8b7d3ea5a142e0c9b6aae63b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Toggle
@@ -1294,7 +1288,7 @@ ScriptsOnlyBuild:
     className: CinemachineClearShot
   - hash:
       serializedVersion: 2
-      Hash: 7072231382eb3c4871b3dd75ad0227e1
+      Hash: 85c97bcc5f84eeb0999d75902803b99d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Slider

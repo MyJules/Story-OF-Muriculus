@@ -16,8 +16,6 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> _sentences;
 
-    private bool _lastSentenceDisplayed = false;
-
 
     void Start()
     {
@@ -31,6 +29,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+
         _dialogueUI.SetActive(true);
 
         nameText.text = dialogue.name;
@@ -43,35 +42,22 @@ public class DialogueManager : MonoBehaviour
         }
 
         DisplayNextSentence();
-    }
 
-    public bool IsLastSentenceDisplayed()
-    {
-        if(_lastSentenceDisplayed)
-            return true;
-        else
-            return false;
-        
     }
 
     public void DisplayNextSentence()
     {
         if (_sentences.Count == 0)
         {
-            _lastSentenceDisplayed = true;
             EndDialogue();
             return;
-        }
-        else
-        {
-            _lastSentenceDisplayed = false;
         }
 
         string sentence =_sentences.Dequeue();
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-        
+
     }
 
     IEnumerator TypeSentence (string sentence)
