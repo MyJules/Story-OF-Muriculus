@@ -1398,7 +1398,7 @@ Transform:
   - {fileID: 3616109078370160364}
   m_Father: {fileID: 3616109077342609698}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 178.98401}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 161.498}
 --- !u!1 &3616109078362373046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,12 +2110,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3616109079139740010}
   - component: {fileID: 2167076726185797199}
-  - component: {fileID: 3616109079139740005}
+  - component: {fileID: 1889689461066736950}
+  - component: {fileID: 1895987259740445747}
   - component: {fileID: 3616109079139740004}
   - component: {fileID: 3616109079139740006}
   - component: {fileID: 3616109079139740001}
   - component: {fileID: 3616109079139740000}
-  - component: {fileID: 3616109079139740003}
+  - component: {fileID: 7638284308003692324}
   m_Layer: 8
   m_Name: Player(Mouse)
   m_TagString: Untagged
@@ -2148,7 +2149,29 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3616109079139740002}
   m_Enabled: 1
---- !u!114 &3616109079139740005
+--- !u!114 &1889689461066736950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3616109079139740002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0499fba2b5a9bc4bac7eeb36307f729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxSpeed: 100
+  _acceleration: 200
+  _decceleration: 400
+  _jumpHeight: 25
+  _fallGravityScale: 5
+  coyoteTimeMax: 0.1
+  verticalMultipl: 0.9
+  verticalSwithMultipl: 0.8
+  wallJumpCoyoteTimeMax: 1
+  wallMaxVelocity: 30
+--- !u!114 &1895987259740445747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2160,16 +2183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f6f42e5b9be3f47ad08683adeff7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 25
-  _jumpHeight: 35
-  _fallGravityScale: 3
-  coyoteTimeMax: 0.1
-  verticalMultipl: 0.86
-  verticalSwithMultipl: 0.5
-  wallJumpCoyoteTimeMax: 0.13
-  wallMaxVelocity: -25
-  OffJumpForceX: 3
-  OffJumpForceY: 3
+  jumpButton: Jump
+  horizontalButton: Horizontal
 --- !u!114 &3616109079139740004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2182,7 +2197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02a7aed461e6e0d41b61028487cd729d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowFlipTimerMax: 0.1
 --- !u!114 &3616109079139740006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2253,8 +2267,8 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &3616109079139740003
-CapsuleCollider2D:
+--- !u!61 &7638284308003692324
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2262,13 +2276,23 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 3616109079139740002}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 422b0da332eb77840aceb6f8eba51856, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.99999994, y: 8.714607}
-  m_Size: {x: 6.0000005, y: 16.229212}
-  m_Direction: 0
+  m_Offset: {x: 0.9735565, y: 8.707993}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.5264506, y: 13.66882}
+  m_EdgeRadius: 0.12
 --- !u!1 &3616109079146774703
 GameObject:
   m_ObjectHideFlags: 0
