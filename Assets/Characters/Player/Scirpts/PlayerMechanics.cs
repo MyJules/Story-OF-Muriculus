@@ -8,7 +8,6 @@ public class PlayerMechanics : MonoBehaviour, IDie, IMemory
     public void Die()
     {
         Load();
-       
     }
 
     public void Load()

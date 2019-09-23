@@ -30,6 +30,7 @@ public class FrameManager : MonoBehaviour
             frameConfiner[i].InvalidatePathCache();
             frameConfiner[i].m_BoundingShape2D = collider;
         }
+
         //disabling all other frames.
         for (int i = 0; i < _frames.Length; i++)
         {

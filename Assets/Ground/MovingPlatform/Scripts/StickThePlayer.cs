@@ -9,7 +9,7 @@ public class StickThePlayer : MonoBehaviour
     {
         
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
-        {
+        { 
             collision.collider.transform.SetParent(transform);
         }
     }

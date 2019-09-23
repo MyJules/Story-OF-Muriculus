@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerSE : MonoBehaviour
 {
     [SerializeField]
-    private Transform particlePosition;
+    private Transform groundParticlePosition;
 
     [SerializeField]
     private AudioSource audioSorce;
 
-    private SpecialEffects _specialEffects;
+    private GroundSpecialEffects _groundSpecialEffects;
 
     private Rays _rays;
 
@@ -28,11 +28,11 @@ public class PlayerSE : MonoBehaviour
 
         if (isGroundWithParticle)
         {
-            _specialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<SpecialEffects>();
+            _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
-            if (_specialEffects == true)
+            if (_groundSpecialEffects == true)
             {
-                Instantiate(_specialEffects.landParticles, particlePosition);
+                Instantiate(_groundSpecialEffects.landParticles, groundParticlePosition);
             }
         }
     }
@@ -43,12 +43,12 @@ public class PlayerSE : MonoBehaviour
 
         if (isGroundWithParticle)
         {
-            _specialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<SpecialEffects>();
+            _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
-            if (_specialEffects == true)
+            if (_groundSpecialEffects == true)
             {
                 audioSorce.pitch = Random.Range(0.7f, 1.2f);
-                audioSorce.PlayOneShot(_specialEffects.stepSound);
+                audioSorce.PlayOneShot(_groundSpecialEffects.stepSound);
                 //audioSorce.pitch = 1;
             }
         }
@@ -60,12 +60,12 @@ public class PlayerSE : MonoBehaviour
 
         if (isGroundWithParticle)
         {
-            _specialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<SpecialEffects>();
+            _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
-            if (_specialEffects == true)
+            if (_groundSpecialEffects == true)
             {
                 audioSorce.pitch = Random.Range(0.7f, 1.4f);
-                audioSorce.PlayOneShot(_specialEffects.landSound);
+                audioSorce.PlayOneShot(_groundSpecialEffects.landSound);
             }
         }
     }
@@ -76,12 +76,12 @@ public class PlayerSE : MonoBehaviour
 
         if (isGroundWithParticle)
         {
-            _specialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<SpecialEffects>();
+            _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
-            if (_specialEffects == true)
+            if (_groundSpecialEffects == true)
             {
                 audioSorce.pitch = 0.9f;
-                audioSorce.PlayOneShot(_specialEffects.jumpSound);
+                audioSorce.PlayOneShot(_groundSpecialEffects.jumpSound);
             }
         }
     }

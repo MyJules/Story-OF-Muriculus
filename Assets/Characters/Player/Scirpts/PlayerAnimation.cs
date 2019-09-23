@@ -16,7 +16,7 @@ public class PlayerAnimation : MonoBehaviour
 
     private bool isGrouded, isWallGrabbed, isPushing;
 
-    private Vector3 _localScale;
+    private Vector2 _localScale;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,8 @@ public class PlayerAnimation : MonoBehaviour
         _localScale = transform.localScale;
     }
     
-    void FixedUpdate()
+    
+    void Update()
     {
         _moveX = _rb.velocity.x;
         _moveY = _rb.velocity.y;
@@ -51,26 +52,14 @@ public class PlayerAnimation : MonoBehaviour
         //flip just when on ground or on wall
         if (_moveX < -2f && !_fliped)
         {
-            if (isGrouded)
-                StartCoroutine(AnimatedFlip());
-            else
-            {
-                Flip();                    
-            }
-
+            Flip();
             _fliped = true;
         }
         else if (_moveX > 2f && _fliped)
         {
-            if (isGrouded)
-                StartCoroutine(AnimatedFlip());
-            else
-            {
-                Flip();
-            }
+            Flip();
             _fliped = false;
         }
-
 
         //grab the wall
         if (isWallGrabbed && !isGrouded)
@@ -102,21 +91,16 @@ public class PlayerAnimation : MonoBehaviour
 
         //setting horizontal animation
         _animator.SetFloat("Speed", Mathf.Abs(_moveX));
+        
     }
 
-    private IEnumerator AnimatedFlip()
-    {
-        _animator.SetBool("isFlipTransition", true);
-        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f 
-                                                   && Mathf.Abs(_moveX) > 0.1f &&  isGrouded);
-        _animator.SetBool("isFlipTransition", false);
-        Flip();
-    }
+
 
     private void Flip()
     {
         _localScale.x *= -1;
-        transform.localScale = _localScale;
+       //transform.localScale = _localScale;
+       transform.Rotate(Vector3.up * 180);
     }
 
 }
