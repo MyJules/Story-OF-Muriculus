@@ -1,27 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿#if UNITY_EDITOR
+
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Networking.NetworkSystem;
 
-[CustomEditor(typeof(MovablePlatform))]
-public class MovablePlatformEditor : Editor
+namespace Assets.Ground.MovingPlatform.Scripts
 {
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(MovablePlatform))]
+    public class MovablePlatformEditor : Editor
     {
-        DrawDefaultInspector();
-
-
-        MovablePlatform movablePlatform = (MovablePlatform) target;
-
-        if (GUILayout.Button("Add Point"))
+        public override void OnInspectorGUI()
         {
-            movablePlatform.AddPoint();
-        }
+            DrawDefaultInspector();
+
+
+            MovablePlatform movablePlatform = (MovablePlatform) target;
+
+            if (GUILayout.Button("Add Point"))
+            {
+                movablePlatform.AddPoint();
+            }
         
-        if (GUILayout.Button("Remove Point"))
-        {
-            movablePlatform.RemovePoint();
+            if (GUILayout.Button("Remove Point"))
+            {
+                movablePlatform.RemovePoint();
+            }
         }
     }
 }
+#endif

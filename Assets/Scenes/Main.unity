@@ -1498,7 +1498,6 @@ GameObject:
   - component: {fileID: 900734295}
   - component: {fileID: 900734297}
   - component: {fileID: 900734296}
-  - component: {fileID: 900734298}
   m_Layer: 9
   m_Name: Ground
   m_TagString: Untagged
@@ -1595,22 +1594,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.1205873, y: 5.132869}
   m_EdgeRadius: 0
---- !u!114 &900734298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900734294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0f374f5e6394544b46f9ec13754e11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  landParticles: {fileID: 0}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!1 &916389511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,7 +1989,6 @@ GameObject:
   - component: {fileID: 1142872331}
   - component: {fileID: 1142872333}
   - component: {fileID: 1142872334}
-  - component: {fileID: 1142872332}
   m_Layer: 9
   m_Name: Platform
   m_TagString: Untagged
@@ -2028,22 +2010,6 @@ Transform:
   m_Father: {fileID: 1971060143}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1142872332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142872330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0f374f5e6394544b46f9ec13754e11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  landParticles: {fileID: 0}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!61 &1142872333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2436,7 +2402,6 @@ GameObject:
   - component: {fileID: 1258949418}
   - component: {fileID: 1258949419}
   - component: {fileID: 1258949416}
-  - component: {fileID: 1258949417}
   m_Layer: 9
   m_Name: Platform
   m_TagString: Untagged
@@ -2453,7 +2418,7 @@ Transform:
   m_GameObject: {fileID: 1258949414}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.60001, y: 7, z: 4.321906}
-  m_LocalScale: {x: 2.4, y: 0.61625004, z: 1}
+  m_LocalScale: {x: 3.5400002, y: 0.61625004, z: 1}
   m_Children: []
   m_Father: {fileID: 951239346}
   m_RootOrder: 0
@@ -2507,22 +2472,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1258949417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258949414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0f374f5e6394544b46f9ec13754e11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  landParticles: {fileID: 0}
-  stepSound: {fileID: 0}
-  landSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!61 &1258949418
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3304,11 +3253,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 0.01
   far clip plane: 5000
-  field of view: 40
+  field of view: 95.3
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 25
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -3332,7 +3281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767177410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 82.299995, y: 43.5, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3796,7 +3745,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2044436786}
   - component: {fileID: 2044436789}
-  - component: {fileID: 2044436788}
   - component: {fileID: 2044436787}
   m_Layer: 9
   m_Name: Platform (1)
@@ -3868,23 +3816,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2044436788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044436785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd658aef0a6a2ec48b76dabec044a6f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  landParticles: {fileID: 31026670821222755, guid: f2ac55427eb6eb64eb1916650dac31d6,
-    type: 3}
-  stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
-  landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
-  jumpSound: {fileID: 0}
 --- !u!61 &2044436789
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4395,21 +4326,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Default
       objectReference: {fileID: 0}
-    - target: {fileID: 1184071111453111, guid: 6db985bb253ca2248ad148956b582584, type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 1142399384}
-    - target: {fileID: 1184071111453111, guid: 6db985bb253ca2248ad148956b582584, type: 3}
-      propertyPath: m_Priority
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184071111453111, guid: 6db985bb253ca2248ad148956b582584, type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 1184071111453104, guid: 6db985bb253ca2248ad148956b582584, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 82.3
+      value: 82.299995
       objectReference: {fileID: 0}
     - target: {fileID: 1184071111453104, guid: 6db985bb253ca2248ad148956b582584, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4455,6 +4374,18 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 330724317}
+    - target: {fileID: 1184071111453111, guid: 6db985bb253ca2248ad148956b582584, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1142399384}
+    - target: {fileID: 1184071111453111, guid: 6db985bb253ca2248ad148956b582584, type: 3}
+      propertyPath: m_Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184071111453111, guid: 6db985bb253ca2248ad148956b582584, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1184072726353060, guid: 6db985bb253ca2248ad148956b582584, type: 3}
       propertyPath: m_DeadZoneHeight
       value: 0.087

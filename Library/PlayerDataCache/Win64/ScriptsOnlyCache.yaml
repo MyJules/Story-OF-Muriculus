@@ -1,7 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - AutoDestroyParticle
     - Cinemachine.CinemachineBasicMultiChannelPerlin
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineConfiner
@@ -13,6 +12,7 @@ ScriptsOnlyBuild:
     - DialogueManager
     - FrameControl
     - FrameManager
+    - MovablePlatform
     - NPCDialogueTriger
     - NPColision
     - ParallaxBackground
@@ -24,7 +24,7 @@ ScriptsOnlyBuild:
     - PlayerSE
     - Rays
     - SaveTrigger
-    - SpecialEffects
+    - StickThePlayer
     - UnityStandardAssets.CrossPlatformInput.AxisTouchButton
     - UnityStandardAssets.CrossPlatformInput.ButtonHandler
     - UnityStandardAssets.CrossPlatformInput.MobileControlRig
@@ -55,11 +55,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationBlendTree.Node
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -127,6 +124,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10032}
     - Class: 114
+      Script: {instanceID: 10070}
+    - Class: 114
       Script: {instanceID: 10208}
     - Class: 114
       Script: {instanceID: 10216}
@@ -134,6 +133,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10316}
     - Class: 114
       Script: {instanceID: 10330}
+    - Class: 114
+      Script: {instanceID: 10332}
     - Class: 114
       Script: {instanceID: 10348}
     - Class: 114
@@ -151,77 +152,73 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11086}
     - Class: 114
-      Script: {instanceID: 11158}
-    - Class: 114
       Script: {instanceID: 11200}
     - Class: 114
       Script: {instanceID: 11278}
     - Class: 114
       Script: {instanceID: 11302}
     - Class: 114
-      Script: {instanceID: 11566}
+      Script: {instanceID: 11568}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 11686}
+      Script: {instanceID: 11688}
     - Class: 114
-      Script: {instanceID: 11932}
-    - Class: 114
-      Script: {instanceID: 11940}
+      Script: {instanceID: 11934}
     - Class: 114
       Script: {instanceID: 11942}
     - Class: 114
-      Script: {instanceID: 12004}
+      Script: {instanceID: 11944}
     - Class: 114
-      Script: {instanceID: 12012}
+      Script: {instanceID: 12006}
     - Class: 114
-      Script: {instanceID: 12202}
+      Script: {instanceID: 12014}
     - Class: 114
-      Script: {instanceID: 12340}
+      Script: {instanceID: 12204}
     - Class: 114
-      Script: {instanceID: 12458}
+      Script: {instanceID: 12342}
     - Class: 114
-      Script: {instanceID: 12548}
+      Script: {instanceID: 12460}
     - Class: 114
-      Script: {instanceID: 12572}
+      Script: {instanceID: 12550}
     - Class: 114
       Script: {instanceID: 12574}
     - Class: 114
-      Script: {instanceID: 12648}
+      Script: {instanceID: 12576}
     - Class: 114
-      Script: {instanceID: 12672}
+      Script: {instanceID: 12650}
     - Class: 114
-      Script: {instanceID: 12684}
+      Script: {instanceID: 12674}
     - Class: 114
-      Script: {instanceID: 12752}
+      Script: {instanceID: 12686}
     - Class: 114
-      Script: {instanceID: 12928}
+      Script: {instanceID: 12754}
     - Class: 114
-      Script: {instanceID: 12950}
+      Script: {instanceID: 12930}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 12952}
     - Class: 114
-      Script: {instanceID: 13396}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13518}
+      Script: {instanceID: 13398}
     - Class: 114
-      Script: {instanceID: 13596}
+      Script: {instanceID: 13520}
     - Class: 114
-      Script: {instanceID: 13658}
+      Script: {instanceID: 13598}
     - Class: 114
-      Script: {instanceID: 13692}
+      Script: {instanceID: 13660}
     - Class: 114
-      Script: {instanceID: 13726}
+      Script: {instanceID: 13694}
     - Class: 114
-      Script: {instanceID: 13750}
+      Script: {instanceID: 13728}
     - Class: 114
       Script: {instanceID: 13752}
     - Class: 114
-      Script: {instanceID: 13800}
+      Script: {instanceID: 13754}
     - Class: 114
-      Script: {instanceID: 13842}
+      Script: {instanceID: 13802}
     - Class: 114
-      Script: {instanceID: 13944}
+      Script: {instanceID: 13846}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -231,10 +228,6 @@ ScriptsOnlyBuild:
     - Class: 136
       Script: {instanceID: 0}
     - Class: 157
-      Script: {instanceID: 0}
-    - Class: 198
-      Script: {instanceID: 0}
-    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -369,7 +362,7 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: 49227bcee63b9fa471749e2e8928edb3
+      Hash: 0b9a2f2f7d06a5f64d097ddebdf5acf0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MovablePlatform
@@ -411,7 +404,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 5d1fdb79a0753489d558af70d8ae0ac4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FrameManager
@@ -693,6 +686,12 @@ ScriptsOnlyBuild:
     className: NetworkTransformVisualizer
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Assets.Ground.MovingPlatform.Scripts
+    className: MovablePlatformEditor
+  - hash:
+      serializedVersion: 2
       Hash: 4bd1cc3c85989d2213a9a8fd9d09e63f
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.CrossPlatformInput
@@ -807,7 +806,7 @@ ScriptsOnlyBuild:
     className: MobileControlRig
   - hash:
       serializedVersion: 2
-      Hash: dafe24a4eb52dc57d51fe7f4367f2042
+      Hash: f24172d9a969e02609f66347965a3b91
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerSE
@@ -1257,6 +1256,12 @@ ScriptsOnlyBuild:
     className: ParallaxBackground
   - hash:
       serializedVersion: 2
+      Hash: 79b86ef97a964cc8f92e55a178b1760e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GroundSpecialEffects
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1303,12 +1308,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ToggleGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 79b86ef97a964cc8f92e55a178b1760e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpecialEffects
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
