@@ -137,11 +137,11 @@
      <Compile Include="Assets\GameMechanics\Death\IDie.cs" />
      <Compile Include="Assets\GameMechanics\Saving\IMemory.cs" />
      <Compile Include="Assets\GameMechanics\Saving\SaveTrigger.cs" />
-     <Compile Include="Assets\Ground\GroundParticles\Scripts\AutoDestroyParticle.cs" />
-     <Compile Include="Assets\Ground\GroundParticles\Scripts\GroundSpecialEffects.cs" />
-     <Compile Include="Assets\Ground\MovingPlatform\Scripts\MovablePlatform.cs" />
-     <Compile Include="Assets\Ground\MovingPlatform\Scripts\MovablePlatformEditor.cs" />
-     <Compile Include="Assets\Ground\MovingPlatform\Scripts\StickThePlayer.cs" />
+     <Compile Include="Assets\LevelDesign\GroundParticles\Scripts\AutoDestroyParticle.cs" />
+     <Compile Include="Assets\LevelDesign\GroundParticles\Scripts\GroundSpecialEffects.cs" />
+     <Compile Include="Assets\LevelDesign\MovingPlatform\Scripts\MovablePlatform.cs" />
+     <Compile Include="Assets\LevelDesign\MovingPlatform\Scripts\MovablePlatformEditor.cs" />
+     <Compile Include="Assets\LevelDesign\MovingPlatform\Scripts\StickThePlayer.cs" />
      <Compile Include="Assets\Levels\FrameManager\FrameControl.cs" />
      <Compile Include="Assets\Levels\FrameManager\FrameManager.cs" />
      <Compile Include="Assets\UI\Dialogue\Scripts\Dialogue.cs" />

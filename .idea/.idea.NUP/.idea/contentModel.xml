@@ -235,7 +235,7 @@
             <e p="SaveTrigger.cs" t="Include" />
           </e>
         </e>
-        <e p="Ground" t="Include">
+        <e p="LevelDesign" t="Include">
           <e p="GroundParticles" t="Include">
             <e p="Scripts" t="Include">
               <e p="AutoDestroyParticle.cs" t="Include" />
