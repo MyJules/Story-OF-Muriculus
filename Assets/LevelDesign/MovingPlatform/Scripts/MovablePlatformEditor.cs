@@ -18,6 +18,7 @@ namespace Assets.Ground.MovingPlatform.Scripts
             if (GUILayout.Button("Add Point"))
             {
                 movablePlatform.AddPoint();
+                
             }
         
             if (GUILayout.Button("Remove Point"))

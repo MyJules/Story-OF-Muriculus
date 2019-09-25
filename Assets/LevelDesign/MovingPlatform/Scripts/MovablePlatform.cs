@@ -60,14 +60,14 @@ public class MovablePlatform : MonoBehaviour
         {
             pointPosition = points.ElementAt(points.Count - 1).transform.position;
 
-            newPoint = Instantiate(newPoint, pointPosition + Random.insideUnitCircle * 6,
+            newPoint = Instantiate(newPoint, pointPosition + Random.insideUnitCircle * 20,
                 Quaternion.identity, this.transform);
         }
         else
         {
             pointPosition = transform.position;
             
-            newPoint = Instantiate(newPoint, pointPosition + Random.insideUnitCircle * 6,
+            newPoint = Instantiate(newPoint, pointPosition + Random.insideUnitCircle * 20,
                 Quaternion.identity, this.transform);
         }
         newPoint.SetActive(true);

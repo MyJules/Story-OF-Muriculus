@@ -49,7 +49,7 @@ public class PlayerAnimation : MonoBehaviour
         }
 
         //flip just when on ground or on wall
-        if (_moveX < -2f && !_fliped)
+        if (_moveX < -6f && !_fliped)
         {
             if (isGrouded)
                 StartCoroutine(AnimatedFlip());
@@ -60,7 +60,7 @@ public class PlayerAnimation : MonoBehaviour
 
             _fliped = true;
         }
-        else if (_moveX > 2f && _fliped)
+        else if (_moveX > 6f && _fliped)
         {
             if (isGrouded)
                 StartCoroutine(AnimatedFlip());
@@ -107,8 +107,7 @@ public class PlayerAnimation : MonoBehaviour
     private IEnumerator AnimatedFlip()
     {
         _animator.SetBool("isFlipTransition", true);
-        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f 
-                                                   && Mathf.Abs(_moveX) > 0.3f &&  isGrouded);
+        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f && !isGrouded);
         _animator.SetBool("isFlipTransition", false);
         Flip();
     }
