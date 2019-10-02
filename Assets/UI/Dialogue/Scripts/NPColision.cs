@@ -32,6 +32,11 @@ public class NPColision : MonoBehaviour
     {
         _dialogueTriger = GetComponent<NPCDialogueTriger>();
         _dialogueManager = FindObjectOfType<DialogueManager>();
+        
+        //creating instance of dialogue indicator
+        _diallogueIndicatorInstance = Instantiate(dialogueIndicator, dialogueIndicatorPosition.transform.position, dialogueIndicator.transform.rotation, dialogueIndicatorPosition.transform);
+        _indicatorAnimator = _diallogueIndicatorInstance.GetComponent<Animator>();
+        _diallogueIndicatorInstance.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,8 +46,7 @@ public class NPColision : MonoBehaviour
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
-                _diallogueIndicatorInstance = Instantiate(dialogueIndicator, dialogueIndicatorPosition.transform.position, dialogueIndicator.transform.rotation);
-                _indicatorAnimator = _diallogueIndicatorInstance.GetComponent<Animator>();
+                _diallogueIndicatorInstance.SetActive(true);
                 // _dialogueTriger.TriggerDialogue();
                 _isFirstTrigger = true;
             }
@@ -58,7 +62,8 @@ public class NPColision : MonoBehaviour
             if (_indicatorAnimator != null)
             {
                 _indicatorAnimator.SetTrigger("Disapear");
-                Destroy(_diallogueIndicatorInstance, _indicatorAnimator.GetCurrentAnimatorStateInfo(0).length);
+                //Destroy(_diallogueIndicatorInstance, _indicatorAnimator.GetCurrentAnimatorStateInfo(0).length);
+                StartCoroutine(WaitAndDisapear(_indicatorAnimator.GetCurrentAnimatorStateInfo(0).length, _diallogueIndicatorInstance));
             }
 
 
@@ -102,7 +107,8 @@ public class NPColision : MonoBehaviour
             if (_isFirstTrigger)
             {
                 _indicatorAnimator.SetTrigger("Disapear");
-                Destroy(_diallogueIndicatorInstance, _indicatorAnimator.GetCurrentAnimatorStateInfo(0).length);
+                //Destroy(_diallogueIndicatorInstance, _indicatorAnimator.GetCurrentAnimatorStateInfo(0).length);
+                StartCoroutine(WaitAndDisapear(_indicatorAnimator.GetCurrentAnimatorStateInfo(0).length, _diallogueIndicatorInstance));
 
                 _dialogueTriger.TriggerDialogue();
                 _isFirstTrigger = false;
@@ -121,4 +127,11 @@ public class NPColision : MonoBehaviour
             }
         }
     }
+
+    private IEnumerator WaitAndDisapear(float waitTime, GameObject disapearObject)
+    {
+        yield return new WaitForSeconds(waitTime);
+        disapearObject.SetActive(false);
+    }
+
 }

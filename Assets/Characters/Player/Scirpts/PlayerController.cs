@@ -37,12 +37,11 @@ public class PlayerController : MonoBehaviour
     [Header("Wall Jump Control")]
 
         [SerializeField]
-        [Range(0, 3)] private float wallJumpCoyoteTimeMax = 0.5f;
-        
-    [SerializeField]
     private float wallJumpHeight = 500f;
 
     [SerializeField] private float jumpOffForce = 30f;
+
+    [SerializeField] private float wallDeccelerForce = 80f;
 
     [Space]
 
@@ -50,11 +49,11 @@ public class PlayerController : MonoBehaviour
 
     private Rays _crossDetection;
 
-    private bool _isGrounded, _isWallGrabbed, _isFirstJump = true, _isWallJump = true;
+    private bool _isGrounded, _isWallGrabbed, _isFirstJump = true;
 
     private float _startGravityScale;
 
-    private float _coyoteTime, _wallCoyoteTime;
+    private float _coyoteTime;
 
     private Vector2 _wallNormal;
 
@@ -74,9 +73,7 @@ public class PlayerController : MonoBehaviour
         _isWallGrabbed = _crossDetection.IsCrossed(3);
 
         GetWallNormal();
-
         CalculateCoyoteTime();
-        CalculateWallCoyoteTime();
     }
 
     public void Move(float horizontalInput, bool isJumping)
@@ -149,13 +146,15 @@ public class PlayerController : MonoBehaviour
     
     private void WallJump(bool isJumping, bool isWallGrabbed)
     {
-        if (isWallGrabbed || _wallCoyoteTime > 0)
+        if (isWallGrabbed)
         {
-            if (isJumping && _isWallJump && jumpWasRealised)
+            //velocity control
+            
+            //wall jump
+            if (isJumping && jumpWasRealised)
             {
                 _rb.velocity = Vector2.zero;
                 jumpWasRealised = false;
-                _isWallJump = false;
                 WallJump();
             }
         }
@@ -242,20 +241,7 @@ public class PlayerController : MonoBehaviour
             _coyoteTime -= Time.deltaTime;
         }
     }
-    
-    private void CalculateWallCoyoteTime()
-    {
-        if (_isWallGrabbed)
-        {
-            _isWallJump = true;
-            _wallCoyoteTime = wallJumpCoyoteTimeMax;
-        }
-        else if(!_isGrounded)
-        {
-            _wallCoyoteTime -= Time.deltaTime;
-        }
-    }
-    
+
     private void GetWallNormal()
     {
         if (_isWallGrabbed && _crossDetection.IsCrossed(3))

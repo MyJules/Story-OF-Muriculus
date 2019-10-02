@@ -47,6 +47,7 @@ public class PlayerSE : MonoBehaviour
 
             if (_groundSpecialEffects == true)
             {
+                audioSorce.volume = 1;
                 audioSorce.pitch = Random.Range(0.7f, 1.2f);
                 audioSorce.PlayOneShot(_groundSpecialEffects.stepSound);
                 //audioSorce.pitch = 1;
@@ -64,7 +65,8 @@ public class PlayerSE : MonoBehaviour
 
             if (_groundSpecialEffects == true)
             {
-                audioSorce.pitch = Random.Range(0.7f, 1.4f);
+                audioSorce.volume = 0.6f;
+                audioSorce.pitch = Random.Range(0.7f, 1.2f);
                 audioSorce.PlayOneShot(_groundSpecialEffects.landSound);
             }
         }
@@ -80,6 +82,7 @@ public class PlayerSE : MonoBehaviour
 
             if (_groundSpecialEffects == true)
             {
+                audioSorce.volume = 1;
                 audioSorce.pitch = 0.9f;
                 audioSorce.PlayOneShot(_groundSpecialEffects.jumpSound);
             }

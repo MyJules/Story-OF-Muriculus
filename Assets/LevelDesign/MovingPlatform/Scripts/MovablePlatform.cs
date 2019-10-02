@@ -8,7 +8,6 @@ using UnityEngine;
 
 public class MovablePlatform : MonoBehaviour
 {
-    [Tooltip("Platform will apear at first point")]
     [SerializeField]
     private Transform platformObject;
 

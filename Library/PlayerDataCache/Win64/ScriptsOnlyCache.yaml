@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AutoDestroyParticle
     - Cinemachine.CinemachineBasicMultiChannelPerlin
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineConfiner
@@ -10,8 +11,11 @@ ScriptsOnlyBuild:
     - Cinemachine.NoiseSettings
     - DeadTrigger
     - DialogueManager
+    - FallingRock
     - FrameControl
     - FrameManager
+    - GroundButton
+    - GroundSpecialEffects
     - MovablePlatform
     - NPCDialogueTriger
     - NPColision
@@ -55,8 +59,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -146,79 +152,87 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10750}
     - Class: 114
-      Script: {instanceID: 10796}
+      Script: {instanceID: 10758}
     - Class: 114
-      Script: {instanceID: 11058}
+      Script: {instanceID: 10798}
     - Class: 114
-      Script: {instanceID: 11086}
+      Script: {instanceID: 11060}
     - Class: 114
-      Script: {instanceID: 11200}
+      Script: {instanceID: 11088}
     - Class: 114
-      Script: {instanceID: 11278}
+      Script: {instanceID: 11160}
     - Class: 114
-      Script: {instanceID: 11302}
+      Script: {instanceID: 11202}
     - Class: 114
-      Script: {instanceID: 11568}
+      Script: {instanceID: 11280}
     - Class: 114
-      Script: {instanceID: 11574}
+      Script: {instanceID: 11304}
     - Class: 114
-      Script: {instanceID: 11688}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11934}
+      Script: {instanceID: 11572}
     - Class: 114
-      Script: {instanceID: 11942}
+      Script: {instanceID: 11578}
     - Class: 114
-      Script: {instanceID: 11944}
+      Script: {instanceID: 11692}
     - Class: 114
-      Script: {instanceID: 12006}
+      Script: {instanceID: 11938}
     - Class: 114
-      Script: {instanceID: 12014}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12204}
+      Script: {instanceID: 11948}
     - Class: 114
-      Script: {instanceID: 12342}
+      Script: {instanceID: 12010}
     - Class: 114
-      Script: {instanceID: 12460}
+      Script: {instanceID: 12018}
     - Class: 114
-      Script: {instanceID: 12550}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 12346}
     - Class: 114
-      Script: {instanceID: 12576}
+      Script: {instanceID: 12464}
     - Class: 114
-      Script: {instanceID: 12650}
+      Script: {instanceID: 12554}
     - Class: 114
-      Script: {instanceID: 12674}
+      Script: {instanceID: 12578}
     - Class: 114
-      Script: {instanceID: 12686}
+      Script: {instanceID: 12580}
     - Class: 114
-      Script: {instanceID: 12754}
+      Script: {instanceID: 12654}
     - Class: 114
-      Script: {instanceID: 12930}
+      Script: {instanceID: 12678}
     - Class: 114
-      Script: {instanceID: 12952}
+      Script: {instanceID: 12690}
     - Class: 114
-      Script: {instanceID: 13056}
+      Script: {instanceID: 12758}
     - Class: 114
-      Script: {instanceID: 13398}
+      Script: {instanceID: 12934}
     - Class: 114
-      Script: {instanceID: 13520}
+      Script: {instanceID: 12956}
     - Class: 114
-      Script: {instanceID: 13598}
+      Script: {instanceID: 13060}
     - Class: 114
-      Script: {instanceID: 13660}
+      Script: {instanceID: 13402}
     - Class: 114
-      Script: {instanceID: 13694}
+      Script: {instanceID: 13524}
     - Class: 114
-      Script: {instanceID: 13728}
+      Script: {instanceID: 13602}
     - Class: 114
-      Script: {instanceID: 13752}
+      Script: {instanceID: 13664}
     - Class: 114
-      Script: {instanceID: 13754}
+      Script: {instanceID: 13698}
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 13732}
     - Class: 114
-      Script: {instanceID: 13846}
+      Script: {instanceID: 13756}
+    - Class: 114
+      Script: {instanceID: 13758}
+    - Class: 114
+      Script: {instanceID: 13806}
+    - Class: 114
+      Script: {instanceID: 13820}
+    - Class: 114
+      Script: {instanceID: 13850}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -228,6 +242,10 @@ ScriptsOnlyBuild:
     - Class: 136
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -488,6 +506,12 @@ ScriptsOnlyBuild:
     className: Vignette
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FallingRock
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -660,6 +684,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.CrossPlatformInput
     className: Joystick
+  - hash:
+      serializedVersion: 2
+      Hash: 6e9cf40c2c5d322fdddc4a340671065f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GroundButton
   - hash:
       serializedVersion: 2
       Hash: a93b2012e0dadb91ac8ccb87e0ef3875
@@ -1004,7 +1034,7 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
-      Hash: 7c4b757744c83f1b9d4303eab5a4d499
+      Hash: 794c12736ae7d3fdfe3b43e4426f6b6b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController

@@ -225,6 +225,12 @@
             </e>
           </e>
         </e>
+        <e p="Frames" t="Include">
+          <e p="FrameManager" t="Include">
+            <e p="FrameControl.cs" t="Include" />
+            <e p="FrameManager.cs" t="Include" />
+          </e>
+        </e>
         <e p="GameMechanics" t="Include">
           <e p="Death" t="Include">
             <e p="DeadTrigger.cs" t="Include" />
@@ -236,6 +242,16 @@
           </e>
         </e>
         <e p="LevelDesign" t="Include">
+          <e p="FallingRock" t="Include">
+            <e p="Scipts" t="Include">
+              <e p="FallingRock.cs" t="Include" />
+            </e>
+          </e>
+          <e p="GroundButton" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="GroundButton.cs" t="Include" />
+            </e>
+          </e>
           <e p="GroundParticles" t="Include">
             <e p="Scripts" t="Include">
               <e p="AutoDestroyParticle.cs" t="Include" />
@@ -248,12 +264,6 @@
               <e p="MovablePlatformEditor.cs" t="Include" />
               <e p="StickThePlayer.cs" t="Include" />
             </e>
-          </e>
-        </e>
-        <e p="Levels" t="Include">
-          <e p="FrameManager" t="Include">
-            <e p="FrameControl.cs" t="Include" />
-            <e p="FrameManager.cs" t="Include" />
           </e>
         </e>
         <e p="UI" t="Include">
