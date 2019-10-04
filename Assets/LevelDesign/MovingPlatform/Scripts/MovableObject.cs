@@ -1,12 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using UnityEditor;
 using UnityEngine;
 
-public class MovablePlatform : MonoBehaviour
+public class MovableObject : MonoBehaviour
 {
     [SerializeField]
     private Transform platformObject;
@@ -38,14 +34,6 @@ public class MovablePlatform : MonoBehaviour
     private int _i;
 
     private bool _isReturning = false;
-    
-
-    void FixedUpdate()
-    {
-        _nextPoint = CalculateNextPoint(points);
-        
-        GoToPoint(_nextPoint);
-    }
 
     public void AddPoint()
     {
@@ -85,12 +73,22 @@ public class MovablePlatform : MonoBehaviour
         }
     }
 
-    private void GoToPoint(Transform goToPosition)
+    public void MoveTowardsPoint(Transform goToPosition)
     {
         platformObject.transform.position = Vector2.MoveTowards(platformObject.transform.position, goToPosition.transform.position, speed * Time.deltaTime); 
     }
-    
-    private Transform CalculateNextPoint(List<GameObject> points)
+
+    public void ChangeDirection()
+    {
+        _isReturning = !_isReturning;
+    }
+
+    public Transform GetPoint(int i)
+    {
+        return points[i].transform;
+    }
+
+    public Transform CalculateNextPoint()
     {
         Transform nextPoint;
             

@@ -244,7 +244,7 @@
         <e p="LevelDesign" t="Include">
           <e p="FallingRock" t="Include">
             <e p="Scipts" t="Include">
-              <e p="FallingRock.cs" t="Include" />
+              <e p="ButtonControleMove.cs" t="Include" />
             </e>
           </e>
           <e p="GroundButton" t="Include">
@@ -260,7 +260,8 @@
           </e>
           <e p="MovingPlatform" t="Include">
             <e p="Scripts" t="Include">
-              <e p="MovablePlatform.cs" t="Include" />
+              <e p="ConstantMove.cs" t="Include" />
+              <e p="MovableObject.cs" t="Include" />
               <e p="MovablePlatformEditor.cs" t="Include" />
               <e p="StickThePlayer.cs" t="Include" />
             </e>

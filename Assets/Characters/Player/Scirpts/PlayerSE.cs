@@ -30,7 +30,7 @@ public class PlayerSE : MonoBehaviour
         {
             _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
-            if (_groundSpecialEffects == true)
+            if (_groundSpecialEffects == true && _groundSpecialEffects.landParticles != null)
             {
                 Instantiate(_groundSpecialEffects.landParticles, groundParticlePosition);
             }
@@ -45,7 +45,7 @@ public class PlayerSE : MonoBehaviour
         {
             _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
-            if (_groundSpecialEffects == true)
+            if (_groundSpecialEffects == true &&  _groundSpecialEffects.stepSound != null)
             {
                 audioSorce.volume = 1;
                 audioSorce.pitch = Random.Range(0.7f, 1.2f);
@@ -63,7 +63,7 @@ public class PlayerSE : MonoBehaviour
         {
             _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
-            if (_groundSpecialEffects == true)
+            if (_groundSpecialEffects == true && _groundSpecialEffects.landSound != null)
             {
                 audioSorce.volume = 0.6f;
                 audioSorce.pitch = Random.Range(0.7f, 1.2f);
@@ -80,7 +80,7 @@ public class PlayerSE : MonoBehaviour
         {
             _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
-            if (_groundSpecialEffects == true)
+            if (_groundSpecialEffects == true && _groundSpecialEffects.jumpSound != null)
             {
                 audioSorce.volume = 1;
                 audioSorce.pitch = 0.9f;

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Assets.Ground.MovingPlatform.Scripts
 {
-    [CustomEditor(typeof(MovablePlatform))]
+    [CustomEditor(typeof(MovableObject))]
     public class MovablePlatformEditor : Editor
     {
         public override void OnInspectorGUI()
@@ -13,17 +13,17 @@ namespace Assets.Ground.MovingPlatform.Scripts
             DrawDefaultInspector();
 
 
-            MovablePlatform movablePlatform = (MovablePlatform) target;
+            MovableObject movableObject = (MovableObject) target;
 
             if (GUILayout.Button("Add Point"))
             {
-                movablePlatform.AddPoint();
+                movableObject.AddPoint();
                 
             }
         
             if (GUILayout.Button("Remove Point"))
             {
-                movablePlatform.RemovePoint();
+                movableObject.RemovePoint();
             }
         }
     }
