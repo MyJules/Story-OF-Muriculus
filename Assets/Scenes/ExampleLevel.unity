@@ -5252,7 +5252,7 @@ PrefabInstance:
     - target: {fileID: 1889689461066736950, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
       propertyPath: _simpleDeccelerationDiv
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1889689461066736950, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
@@ -5263,6 +5263,16 @@ PrefabInstance:
         type: 3}
       propertyPath: _maxSpeed
       value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889689461066736950, guid: 91083a7ce6105754e8b67546443d0d2d,
+        type: 3}
+      propertyPath: coyoteTimeMax
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889689461066736950, guid: 91083a7ce6105754e8b67546443d0d2d,
+        type: 3}
+      propertyPath: _fallGravityScale
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3616109079139740000, guid: 91083a7ce6105754e8b67546443d0d2d,
         type: 3}
