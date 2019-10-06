@@ -10,6 +10,7 @@ public class NPCDialogueTriger : MonoBehaviour
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        
     }
 
 }
