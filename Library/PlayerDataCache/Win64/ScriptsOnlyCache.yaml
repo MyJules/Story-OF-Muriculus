@@ -77,7 +77,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
-    Assets/Scenes/Main.unity:
+    Assets/Scenes/ExampleLevel.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -1353,5 +1353,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Main.unity
+  - Assets/Scenes/ExampleLevel.unity
   playerPath: D:/Projects/RigCaracter/misc/New Unity Project.exe
