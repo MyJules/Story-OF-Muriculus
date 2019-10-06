@@ -267,6 +267,13 @@
             </e>
           </e>
         </e>
+        <e p="Scenes" t="Include">
+          <e p="MainMenu" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="MainMenu.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="UI" t="Include">
           <e p="Dialogue" t="Include">
             <e p="Scripts" t="Include">

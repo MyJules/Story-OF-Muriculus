@@ -147,6 +147,7 @@
      <Compile Include="Assets\LevelDesign\MovingPlatform\Scripts\MovableObject.cs" />
      <Compile Include="Assets\LevelDesign\MovingPlatform\Scripts\MovablePlatformEditor.cs" />
      <Compile Include="Assets\LevelDesign\MovingPlatform\Scripts\StickThePlayer.cs" />
+     <Compile Include="Assets\Scenes\MainMenu\Scripts\MainMenu.cs" />
      <Compile Include="Assets\UI\Dialogue\Scripts\Dialogue.cs" />
      <Compile Include="Assets\UI\Dialogue\Scripts\DialogueManager.cs" />
      <Compile Include="Assets\UI\Dialogue\Scripts\NPCDialogueTriger.cs" />
