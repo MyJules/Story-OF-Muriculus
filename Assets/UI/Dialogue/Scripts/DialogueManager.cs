@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
 
     private Animator _dialogueAnimator;
 
-    private Queue<string> _sentences;
+    private Queue<string> _sentences, _names;
 
     private bool _lastSentenceDisplayed = false;
 
@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         _sentences = new Queue<string>();
+        _names = new Queue<string>();
 
         _dialogueUI.SetActive(false);
 
@@ -32,14 +33,18 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         _dialogueUI.SetActive(true);
-
-        nameText.text = dialogue.name;
-
+        
         _sentences.Clear();
+        _names.Clear();
 
         foreach (string sentence in dialogue.sentecnes)
         {
             _sentences.Enqueue(sentence);
+        }
+
+        foreach (var names in dialogue.name)
+        {
+            _names.Enqueue(names);
         }
 
         DisplayNextSentence();
@@ -68,7 +73,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence =_sentences.Dequeue();
+        string names = _names.Dequeue();
+        
+        nameText.text = names;
 
+        
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
         
