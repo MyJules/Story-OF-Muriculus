@@ -1,0 +1,40 @@
+{
+  "dialogues":
+  [
+    
+    {
+      "id": 0,
+      "content": 
+      [
+        {
+          "name": "player",
+          "sentence": "Hello Mouse"
+        },
+        {
+          "name": "mouse",
+          "sentence": "Hello cat"
+        },
+        {
+          "name": "mouse",
+          "sentence": "Helt"
+        }
+      ]
+    },
+
+    {
+      "id": 1,
+      "content":
+      [
+        {
+          "name": "player",
+          "sentence": "Hello hsdf"
+        },
+        {
+          "name": "mouse",
+          "sentence": "Hello catasd"
+        }
+      ]
+    }
+    
+  ]
+}
