@@ -161,6 +161,7 @@
      <None Include="Assets\dll\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\dll\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\dll\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\dll\JsonDotNet\link.xml" />
      <None Include="Assets\dll\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\dll\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\dll\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
@@ -461,9 +462,6 @@
  <Reference Include="UnityEngine.XRModule">
  <HintPath>/home/andrew/MY/Unity/2019.2.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>/home/andrew/MY/Projects/UnityProject/NUP/Assets/dll/Newtonsoft.Json.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>/home/andrew/MY/Projects/UnityProject/NUP/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
@@ -472,6 +470,9 @@
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
  <HintPath>/home/andrew/MY/Projects/UnityProject/NUP/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/home/andrew/MY/Projects/UnityProject/NUP/Assets/dll/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>/home/andrew/MY/Unity/2019.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

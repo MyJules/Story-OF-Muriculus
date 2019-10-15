@@ -403,9 +403,6 @@
  <Reference Include="UnityEditor.LinuxStandalone.Extensions">
  <HintPath>/home/andrew/MY/Unity/2019.2.8f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>/home/andrew/MY/Projects/UnityProject/NUP/Assets/dll/Newtonsoft.Json.dll</HintPath>
- </Reference>
  <Reference Include="NSubstitute">
  <HintPath>/home/andrew/MY/Projects/UnityProject/NUP/Library/PackageCache/com.unity.2d.common@1.2.0-preview.1/Tests/Editor/Lib/NSubstitute/NSubstitute.dll</HintPath>
  </Reference>
@@ -423,6 +420,9 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>/home/andrew/MY/Projects/UnityProject/NUP/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/home/andrew/MY/Projects/UnityProject/NUP/Assets/dll/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>/home/andrew/MY/Projects/UnityProject/NUP/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
