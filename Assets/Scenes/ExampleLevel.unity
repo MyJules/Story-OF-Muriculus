@@ -1750,7 +1750,7 @@ PrefabInstance:
     - target: {fileID: 1105425679103822942, guid: e724ff81847eb3d418678826dfbe7ca0,
         type: 3}
       propertyPath: DialoguePath
-      value: /Level1Dialogues.json
+      value: /Scenes/FirstLevel/Dialogues/Level1Dialogues.json
       objectReference: {fileID: 0}
     - target: {fileID: 1105425679103822942, guid: e724ff81847eb3d418678826dfbe7ca0,
         type: 3}
@@ -3936,11 +3936,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 0.1
   far clip plane: 5000
-  field of view: 95.3
+  field of view: 40
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -3964,7 +3964,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767177410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 133.8, y: 45, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5170,31 +5170,6 @@ PrefabInstance:
     - target: {fileID: 1105425679103822928, guid: e724ff81847eb3d418678826dfbe7ca0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105425679103822943, guid: e724ff81847eb3d418678826dfbe7ca0,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.27384186
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105425679103822943, guid: e724ff81847eb3d418678826dfbe7ca0,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 21.688187
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105425678491714126, guid: e724ff81847eb3d418678826dfbe7ca0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105425679103822942, guid: e724ff81847eb3d418678826dfbe7ca0,
-        type: 3}
-      propertyPath: DialoguePath
-      value: /Level1Dialogues.json
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105425679103822942, guid: e724ff81847eb3d418678826dfbe7ca0,
-        type: 3}
-      propertyPath: id
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

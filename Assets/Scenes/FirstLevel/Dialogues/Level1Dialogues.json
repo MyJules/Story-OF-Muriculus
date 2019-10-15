@@ -1,3 +1,82 @@
 {
-  
+  "dialogues":
+  [
+    
+    {
+      "id": 0,
+      "content": 
+      [
+        {
+          "name": "Me",
+          "sentence": "Oh good. It's new dialogues form JSON File!!"
+        },
+        {
+          "name": "Me",
+          "sentence": "Interesting what else is new here?"
+        },
+        {
+          "name": "Mouse",
+          "sentence": "Say hello to me."
+        },
+
+        {
+          "name": "Me",
+          "sentence": "!!!"
+        },
+        {
+          "name": "Me",
+          "sentence": "What the hell. Who are you?"
+        },
+        {
+          "name": "Me",
+          "sentence": "..."
+        },
+        {
+          "name": "Me",
+          "sentence": "Seems it's gone."
+        },
+        {
+          "name": "Me",
+          "sentence": "Wef, It was scary."
+        },
+        {
+          "name": "Me",
+          "sentence": "Hmm"
+        },
+
+        {
+          "name": "Me",
+          "sentence": "Seems buttons are changed too."
+        }
+      ]
+    },
+
+    {
+      "id": 1,
+      "content":
+      [
+        {
+          "name": "Me",
+          "sentence": "OOO, I like this new button."
+        },
+        {
+          "name": "mouse",
+          "sentence": "Yee me too!!!"
+        },
+        {
+          "name": "Me",
+          "sentence": "!!!"
+        },
+        {
+          "name": "Me",
+          "sentence": "What the hell."
+        },
+        {
+          "name": "Me",
+          "sentence": "I can hear it again."
+        }
+      ]
+    }
+    
+  ]
 }

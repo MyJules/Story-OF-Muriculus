@@ -19,7 +19,7 @@ public class NPCDialogueTriger : MonoBehaviour
 
     private void Start()
     {
-        JObject dialogue = (JObject) JsonConvert.DeserializeObject(File.ReadAllText(@Application.streamingAssetsPath + @DialoguePath));
+        JObject dialogue = (JObject) JsonConvert.DeserializeObject(File.ReadAllText(@Application.dataPath + @DialoguePath));
         
         dialogues = new Dialogue();
         

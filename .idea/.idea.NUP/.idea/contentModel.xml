@@ -221,6 +221,9 @@
               </e>
             </e>
           </e>
+          <e p="JsonDotNet" t="Include">
+            <e p="link.xml" t="Include" />
+          </e>
           <e p="Standard Assets" t="Include">
             <e p="CrossPlatformInput" t="Include">
               <e p="CrossPlatformInputGuidelines.txt" t="Include" />
