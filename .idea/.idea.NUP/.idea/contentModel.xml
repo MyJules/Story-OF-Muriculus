@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_NUP.-2076611521.00" t="ExcludeRecursive" />
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\mudry\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mudry\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_NUP.1750856845.00" t="ExcludeRecursive" />
+    <e p="D:\Projects\RigCaracter\NUP" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -32,73 +32,14 @@
             </e>
           </e>
         </e>
-        <e p="Frames" t="Include">
-          <e p="FrameManager" t="Include">
-            <e p="FrameControl.cs" t="Include" />
-            <e p="FrameManager.cs" t="Include" />
-          </e>
-        </e>
-        <e p="GameMechanics" t="Include">
-          <e p="Death" t="Include">
-            <e p="DeadTrigger.cs" t="Include" />
-            <e p="IDie.cs" t="Include" />
-          </e>
-          <e p="Saving" t="Include">
-            <e p="IMemory.cs" t="Include" />
-            <e p="SaveTrigger.cs" t="Include" />
-          </e>
-        </e>
-        <e p="LevelDesign" t="Include">
-          <e p="FallingRock" t="Include">
-            <e p="Scipts" t="Include">
-              <e p="ButtonControleMove.cs" t="Include" />
-            </e>
-          </e>
-          <e p="GroundButton" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="GroundButton.cs" t="Include" />
-            </e>
-          </e>
-          <e p="GroundParticles" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="AutoDestroyParticle.cs" t="Include" />
-              <e p="GroundSpecialEffects.cs" t="Include" />
-            </e>
-          </e>
-          <e p="MovingPlatform" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="ConstantMove.cs" t="Include" />
-              <e p="MovableObject.cs" t="Include" />
-              <e p="MovablePlatformEditor.cs" t="Include" />
-              <e p="StickThePlayer.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Scenes" t="Include">
-          <e p="MainMenu" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="MainMenu.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="UI" t="Include">
-          <e p="Dialogue" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="Dialogue.cs" t="Include" />
-              <e p="DialogueManager.cs" t="Include" />
-              <e p="NPCDialogueTriger.cs" t="Include" />
-              <e p="NPColision.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="dll" t="Include">
           <e p="Cinemachine" t="Include">
             <e p="Base" t="Include">
               <e p="Editor" t="Include">
                 <e p="Editors" t="Include">
                   <e p="CinemachineBasicMultiChannelPerlinEditor.cs" t="Include" />
-                  <e p="CinemachineBlendListCameraEditor.cs" t="Include" />
                   <e p="CinemachineBlenderSettingsEditor.cs" t="Include" />
+                  <e p="CinemachineBlendListCameraEditor.cs" t="Include" />
                   <e p="CinemachineBrainEditor.cs" t="Include" />
                   <e p="CinemachineClearShotEditor.cs" t="Include" />
                   <e p="CinemachineColliderEditor.cs" t="Include" />
@@ -112,8 +53,8 @@
                   <e p="CinemachineHardLookAtEditor.cs" t="Include" />
                   <e p="CinemachineMixingCameraEditor.cs" t="Include" />
                   <e p="CinemachineOrbitalTransposerEditor.cs" t="Include" />
-                  <e p="CinemachinePOVEditor.cs" t="Include" />
                   <e p="CinemachinePathEditor.cs" t="Include" />
+                  <e p="CinemachinePOVEditor.cs" t="Include" />
                   <e p="CinemachineScreenComposerGuides.cs" t="Include" />
                   <e p="CinemachineSmoothPathEditor.cs" t="Include" />
                   <e p="CinemachineStateDrivenCameraEditor.cs" t="Include" />
@@ -160,8 +101,8 @@
                   <e p="CinemachineMixingCamera.cs" t="Include" />
                   <e p="CinemachinePath.cs" t="Include" />
                   <e p="CinemachinePipeline.cs" t="Include" />
-                  <e p="CinemachineSmoothPath.cs" t="Include" />
                   <e p="CinemachineSmoother.cs" t="Include" />
+                  <e p="CinemachineSmoothPath.cs" t="Include" />
                   <e p="CinemachineStateDrivenCamera.cs" t="Include" />
                   <e p="CinemachineTargetGroup.cs" t="Include" />
                   <e p="CinemachineVirtualCamera.cs" t="Include" />
@@ -287,11 +228,70 @@
             </e>
           </e>
         </e>
+        <e p="Frames" t="Include">
+          <e p="FrameManager" t="Include">
+            <e p="FrameControl.cs" t="Include" />
+            <e p="FrameManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="GameMechanics" t="Include">
+          <e p="Death" t="Include">
+            <e p="DeadTrigger.cs" t="Include" />
+            <e p="IDie.cs" t="Include" />
+          </e>
+          <e p="Saving" t="Include">
+            <e p="IMemory.cs" t="Include" />
+            <e p="SaveTrigger.cs" t="Include" />
+          </e>
+        </e>
+        <e p="LevelDesign" t="Include">
+          <e p="FallingRock" t="Include">
+            <e p="Scipts" t="Include">
+              <e p="ButtonControleMove.cs" t="Include" />
+            </e>
+          </e>
+          <e p="GroundButton" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="GroundButton.cs" t="Include" />
+            </e>
+          </e>
+          <e p="GroundParticles" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="AutoDestroyParticle.cs" t="Include" />
+              <e p="GroundSpecialEffects.cs" t="Include" />
+            </e>
+          </e>
+          <e p="MovingPlatform" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ConstantMove.cs" t="Include" />
+              <e p="MovableObject.cs" t="Include" />
+              <e p="MovablePlatformEditor.cs" t="Include" />
+              <e p="StickThePlayer.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scenes" t="Include">
+          <e p="MainMenu" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="MainMenu.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="UI" t="Include">
+          <e p="Dialogue" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Dialogue.cs" t="Include" />
+              <e p="DialogueManager.cs" t="Include" />
+              <e p="NPCDialogueTriger.cs" t="Include" />
+              <e p="NPColision.cs" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
       <e p="NUP.sln" t="IncludeFlat" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
