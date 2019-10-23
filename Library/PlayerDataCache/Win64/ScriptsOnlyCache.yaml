@@ -1107,7 +1107,7 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
-      Hash: 794c12736ae7d3fdfe3b43e4426f6b6b
+      Hash: 443a24391f8868126d3f3752838d8baa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController

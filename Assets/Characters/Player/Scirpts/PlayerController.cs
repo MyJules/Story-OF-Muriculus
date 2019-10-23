@@ -41,9 +41,11 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float jumpOffForce = 30f;
 
+    [SerializeField] private float maxFallSpeed = 10f;
+
     [SerializeField] private float wallDeccelerForce = 80f;
 
-    [Space]
+        [Space]
 
     private Rigidbody2D _rb;
 
@@ -57,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 _wallNormal;
 
-    private bool jumpWasRealised = false;
+    private bool _jumpWasRelesed = false, _allowJumping = false;
 
     private void Start()
     {
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
 
         _startGravityScale = _rb.gravityScale;
+        
     }
 
     private void Update()
@@ -74,6 +77,7 @@ public class PlayerController : MonoBehaviour
 
         GetWallNormal();
         CalculateCoyoteTime();
+
     }
 
     public void Move(float horizontalInput, bool isJumping)
@@ -121,47 +125,56 @@ public class PlayerController : MonoBehaviour
 
     private void Jumping(bool isJumping)
     {
-        //main
-            if (isJumping && _isFirstJump && jumpWasRealised)
+        if (isJumping && _isFirstJump && _allowJumping)
+        {
+            if (_coyoteTime > 0)
             {
-                if (_coyoteTime > 0)
-                {
-                    Jump();
-                    _isFirstJump = false;
-                    jumpWasRealised = false;
-                }
+                Jump();
+                _isFirstJump = false;
+                _jumpWasRelesed = false;
             }
-            else //realising button when jumping
-            if (!isJumping && _rb.velocity.y > 0.1f)
-            {
-                _rb.AddForce(Vector2.down * _rb.velocity.y * 5);
-                   // jumpWasRealised = true;
-            }
+        }
+        else //realising button when jumping
+        if (!isJumping && _rb.velocity.y > 0.1f)
+        {
+            _rb.AddForce(Vector2.down * _rb.velocity.y * 5);
+        }
 
-            if (!isJumping)
-            {
-                jumpWasRealised = true;
-            }
+        if (!isJumping)
+        {
+            _jumpWasRelesed = true;
+        }
+
+        //is jump button pressed again
+        if (_jumpWasRelesed && isJumping)
+        {
+            _allowJumping = true;
+        }
+        else
+        {
+            _allowJumping = false;
+        }
+  
     }
     
     private void WallJump(bool isJumping, bool isWallGrabbed)
     {
-        if (isWallGrabbed)
+        if (isWallGrabbed && !_isGrounded)
         {
             //velocity control
             
             //wall jump
-            if (isJumping && jumpWasRealised)
+            if (isJumping && _jumpWasRelesed)
             {
                 _rb.velocity = Vector2.zero;
-                jumpWasRealised = false;
+                _jumpWasRelesed = false;
                 WallJump();
             }
         }
 
         if (!isJumping)
         {
-            jumpWasRealised = true;
+            _jumpWasRelesed = true;
         }
     }
     
@@ -220,7 +233,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        _rb.AddForce(Vector2.up * _jumpHeight);
+        _rb.AddForce(Vector2.up *_jumpHeight + new Vector2(0, Mathf.Abs(_rb.velocity.y)));
     }
     
     private void WallJump()
