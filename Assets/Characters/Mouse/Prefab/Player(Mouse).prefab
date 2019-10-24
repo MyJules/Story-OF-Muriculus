@@ -2294,7 +2294,7 @@ MonoBehaviour:
   _decceleration: 200
   _simpleDeccelerationDiv: 3.2
   _jumpHeight: 1780
-  _fallGravityScale: 13
+  _fallGravityScale: 14
   coyoteTimeMax: 0.1
   _airAcceleration: 60
   _airDecceeleration: 100
