@@ -170,6 +170,8 @@ public class PlayerController : MonoBehaviour
                 _jumpWasRelesed = false;
                 WallJump();
             }
+
+            WallSlideControl();
         }
 
         if (!isJumping)
@@ -177,7 +179,15 @@ public class PlayerController : MonoBehaviour
             _jumpWasRelesed = true;
         }
     }
-    
+
+    private void WallSlideControl()
+    {
+        if (Mathf.Abs(_rb.velocity.y) > maxFallSpeed)
+        {
+            _rb.AddForce(new Vector2(0, -_rb.velocity.y).normalized * wallDeccelerForce);
+        }
+    }
+
     private void AirControl(float horizontalInput)
     {
         IncreaseGravityScale();
@@ -233,13 +243,13 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        _rb.AddForce(Vector2.up *_jumpHeight + new Vector2(0, Mathf.Abs(_rb.velocity.y)));
+        _rb.AddForce(Vector2.up * (_jumpHeight + Mathf.Abs(_rb.velocity.y)), ForceMode2D.Impulse);
     }
     
     private void WallJump()
     {
-        _rb.AddForce(_wallNormal * jumpOffForce);
-        _rb.AddForce(Vector2.up * wallJumpHeight);
+        _rb.AddForce(_wallNormal * jumpOffForce, ForceMode2D.Impulse);
+        _rb.AddForce(Vector2.up * wallJumpHeight, ForceMode2D.Impulse);
     }
     
     private void CalculateCoyoteTime()
