@@ -41,7 +41,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Experimental.U2D.Animation.SpriteSkin
     Unity.2D.IK.Editor.dll:
     - UnityEditor.Experimental.U2D.IK.IKEditorManager
-    - UnityEditor.Experimental.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.Experimental.U2D.IK.IKEditorManagerHelper
     - UnityEngine.Experimental.U2D.IK.IKManager2D
@@ -52,8 +51,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    Unity.Rider.Editor.dll:
-    - Packages.Rider.Editor.RiderScriptEditorData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -69,7 +66,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -81,7 +77,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/ExampleLevel.unity:
@@ -126,95 +121,95 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9964}
+      Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 9980}
+      Script: {instanceID: 9976}
     - Class: 114
-      Script: {instanceID: 10088}
+      Script: {instanceID: 10084}
     - Class: 114
-      Script: {instanceID: 10334}
+      Script: {instanceID: 10330}
     - Class: 114
-      Script: {instanceID: 10348}
+      Script: {instanceID: 10344}
     - Class: 114
-      Script: {instanceID: 10424}
+      Script: {instanceID: 10420}
     - Class: 114
-      Script: {instanceID: 10462}
+      Script: {instanceID: 10458}
     - Class: 114
-      Script: {instanceID: 10812}
+      Script: {instanceID: 10808}
     - Class: 114
-      Script: {instanceID: 11074}
+      Script: {instanceID: 11070}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11098}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11216}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11304}
     - Class: 114
-      Script: {instanceID: 11320}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11588}
+      Script: {instanceID: 11584}
     - Class: 114
-      Script: {instanceID: 11594}
+      Script: {instanceID: 11590}
     - Class: 114
-      Script: {instanceID: 11708}
+      Script: {instanceID: 11704}
     - Class: 114
-      Script: {instanceID: 11956}
+      Script: {instanceID: 11952}
     - Class: 114
-      Script: {instanceID: 11964}
+      Script: {instanceID: 11960}
     - Class: 114
-      Script: {instanceID: 11966}
+      Script: {instanceID: 11962}
     - Class: 114
-      Script: {instanceID: 12028}
+      Script: {instanceID: 12024}
     - Class: 114
-      Script: {instanceID: 12226}
+      Script: {instanceID: 12222}
     - Class: 114
-      Script: {instanceID: 12290}
+      Script: {instanceID: 12286}
     - Class: 114
-      Script: {instanceID: 12366}
+      Script: {instanceID: 12362}
     - Class: 114
-      Script: {instanceID: 12484}
+      Script: {instanceID: 12480}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12600}
+      Script: {instanceID: 12596}
     - Class: 114
-      Script: {instanceID: 12676}
+      Script: {instanceID: 12672}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12696}
     - Class: 114
-      Script: {instanceID: 12712}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 12956}
+      Script: {instanceID: 12954}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 12976}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 13300}
+      Script: {instanceID: 13298}
     - Class: 114
-      Script: {instanceID: 13548}
+      Script: {instanceID: 13546}
     - Class: 114
-      Script: {instanceID: 13626}
+      Script: {instanceID: 13624}
     - Class: 114
-      Script: {instanceID: 13688}
+      Script: {instanceID: 13686}
     - Class: 114
-      Script: {instanceID: 13722}
+      Script: {instanceID: 13720}
     - Class: 114
-      Script: {instanceID: 13756}
+      Script: {instanceID: 13754}
+    - Class: 114
+      Script: {instanceID: 13778}
     - Class: 114
       Script: {instanceID: 13780}
     - Class: 114
-      Script: {instanceID: 13782}
+      Script: {instanceID: 13828}
     - Class: 114
-      Script: {instanceID: 13830}
+      Script: {instanceID: 13842}
     - Class: 114
-      Script: {instanceID: 13844}
-    - Class: 114
-      Script: {instanceID: 13874}
+      Script: {instanceID: 13872}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -269,45 +264,45 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9980}
+      Script: {instanceID: 9976}
     - Class: 114
-      Script: {instanceID: 10050}
+      Script: {instanceID: 10046}
     - Class: 114
-      Script: {instanceID: 10226}
+      Script: {instanceID: 10222}
     - Class: 114
-      Script: {instanceID: 10234}
+      Script: {instanceID: 10230}
     - Class: 114
-      Script: {instanceID: 10364}
+      Script: {instanceID: 10360}
     - Class: 114
-      Script: {instanceID: 10404}
+      Script: {instanceID: 10400}
     - Class: 114
-      Script: {instanceID: 10424}
+      Script: {instanceID: 10420}
     - Class: 114
-      Script: {instanceID: 10766}
+      Script: {instanceID: 10762}
     - Class: 114
-      Script: {instanceID: 11224}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 11294}
+      Script: {instanceID: 11290}
     - Class: 114
-      Script: {instanceID: 12036}
+      Script: {instanceID: 12032}
     - Class: 114
-      Script: {instanceID: 12138}
+      Script: {instanceID: 12134}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12598}
+      Script: {instanceID: 12594}
     - Class: 114
-      Script: {instanceID: 12780}
+      Script: {instanceID: 12776}
     - Class: 114
-      Script: {instanceID: 12956}
+      Script: {instanceID: 12954}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 13424}
+      Script: {instanceID: 13422}
     - Class: 114
-      Script: {instanceID: 13470}
+      Script: {instanceID: 13468}
     - Class: 114
-      Script: {instanceID: 13850}
+      Script: {instanceID: 13848}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -519,6 +514,18 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkTransform
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -1429,4 +1436,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/ExampleLevel.unity
-  playerPath: /home/andrew/MY/Projects/UnityProject/misc/FirstLinux.x86_64
+  playerPath: D:/Projects/RigCaracter/misc/Best.x86_64

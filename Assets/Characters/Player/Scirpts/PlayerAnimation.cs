@@ -111,7 +111,7 @@ public class PlayerAnimation : MonoBehaviour
     private IEnumerator AnimatedFlip()
     {
         _animator.SetBool("isFlipTransition", true);
-        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f && isGrouded);
+        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1f && isGrouded);
         _animator.SetBool("isFlipTransition", false);
         Flip();
     }
