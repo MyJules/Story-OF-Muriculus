@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Frame
+  - DeathTrigger
   layers:
   - Default
   - TransparentFX
