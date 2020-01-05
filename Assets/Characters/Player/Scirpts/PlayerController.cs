@@ -82,13 +82,13 @@ public class PlayerController : MonoBehaviour
 
     public void Move(float horizontalInput, bool isJumping)
     {
-        Running(horizontalInput);
+        Running(horizontalInput, isJumping);
         Jumping(isJumping);
         WallJump(isJumping, _isWallGrabbed);
         AirControl(horizontalInput);
     }
 
-    private void Running(float horizontalInput)
+    private void Running(float horizontalInput, bool isJumping)
     {
         if(_isGrounded)
         {
@@ -114,13 +114,15 @@ public class PlayerController : MonoBehaviour
                     _rb.AddForce(new Vector2(-_decceleration / _simpleDeccelerationDiv, 0));
                 }
             }
+
+
+            //setting velocity to 0 if x velocity is small
+            if (Mathf.Abs(_rb.velocity.x) < 0.5f && horizontalInput == 0 && !isJumping)
+            {
+                _rb.velocity = Vector2.zero;
+            }
         }
         
-        //setting velocity to 0 if x velocity is small
-        if (Mathf.Abs(_rb.velocity.x) < 1f && horizontalInput == 0 && _isGrounded)
-        {
-            _rb.velocity = Vector2.zero;
-        }
     }
 
     private void Jumping(bool isJumping)

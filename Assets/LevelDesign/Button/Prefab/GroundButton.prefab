@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8945196358356893057}
   - component: {fileID: 8945196358356893056}
   - component: {fileID: 8945196358356893059}
+  - component: {fileID: 1356794950002248849}
   m_Layer: 9
   m_Name: GroundButton(Button)
   m_TagString: Untagged
@@ -125,6 +126,18 @@ MonoBehaviour:
   stepSound: {fileID: 8300000, guid: c4f48ff3739665542b6235691c09f380, type: 3}
   landSound: {fileID: 8300000, guid: 33ee707ffb398ab4fabb774bb178527f, type: 3}
   jumpSound: {fileID: 0}
+--- !u!114 &1356794950002248849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945196358356893063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ec7590612a132498eb2ee2ffa2dbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8945196358524470141
 GameObject:
   m_ObjectHideFlags: 0
