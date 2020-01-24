@@ -24,10 +24,10 @@ public class PlayerSE : MonoBehaviour
 
     public void SpawnGroundParticle()
     {
-        isGroundWithParticle = _rays.IsCrossed(0);
+        isGroundWithParticle = _rays.IsCrossed(0,2);
 
         if (isGroundWithParticle)
-        {
+        {   
             _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
             if (_groundSpecialEffects == true && _groundSpecialEffects.landParticles != null)

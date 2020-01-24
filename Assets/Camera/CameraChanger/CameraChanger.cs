@@ -13,7 +13,7 @@ public class CameraChanger : MonoBehaviour
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-        changeEnterCamera.Priority = 10;
+        changeEnterCamera.Priority = 100;
         changeExitCamera.Priority = 0;
         }
     }
@@ -22,8 +22,8 @@ public class CameraChanger : MonoBehaviour
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-        changeEnterCamera.Priority = -10;
-        changeExitCamera.Priority = 0;
+        changeEnterCamera.Priority = 0;
+        changeExitCamera.Priority = 100;
         }
     }
 }

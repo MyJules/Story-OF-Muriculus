@@ -29,12 +29,12 @@ public class PlayerAnimation : MonoBehaviour
         _localScale = transform.localScale;
     }
     
-    void FixedUpdate()
+    void Update()
     {
         _moveX = _rb.velocity.x;
         _moveY = _rb.velocity.y;
 
-        isGrouded = _crossDetection.IsCrossed(1, 2);
+        isGrouded = _crossDetection.IsCrossed(1,2);
         isWallGrabbed = _crossDetection.IsCrossed(3);
 
         isPushing = _crossDetection.IsCrossed(4);

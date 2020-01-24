@@ -2291,11 +2291,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxSpeed: 21.5
   _acceleration: 90
-  _decceleration: 200
+  _decceleration: 180
   _simpleDeccelerationDiv: 4
   _jumpHeight: 34.1
   _fallGravityScale: 14
-  coyoteTimeMax: 0.1
+  coyoteTimeMax: 0.12
   _airAcceleration: 50
   _airDecceeleration: 100
   _simpleAirDeccelerationDiv: 3.5

@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
 
 
             //setting velocity to 0 if x velocity is small
-            if (Mathf.Abs(_rb.velocity.x) < 0.5f && horizontalInput == 0 && !isJumping)
+            if (Mathf.Abs(_rb.velocity.x) < _maxSpeed / 5f && horizontalInput == 0 && !isJumping)
             {
                 _rb.velocity = Vector2.zero;
             }
@@ -269,7 +269,7 @@ public class PlayerController : MonoBehaviour
 
     private void GetWallNormal()
     {
-        if (_isWallGrabbed && _crossDetection.IsCrossed(3))
+        if (_isWallGrabbed)
         {
             _wallNormal = _crossDetection.GetCrossInformaiton(3).normal;
         }
