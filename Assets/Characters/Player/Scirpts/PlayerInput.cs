@@ -36,7 +36,7 @@ public class PlayerInput : MonoBehaviour
     
     private void GetInput()
     {
-        _hMove = CrossPlatformInputManager.GetAxisRaw(horizontalButton);
+        _hMove = CrossPlatformInputManager.GetAxis(horizontalButton);
         
         _isJumpDown = CrossPlatformInputManager.GetButtonDown(jumpButton);
         _isJumpUp = CrossPlatformInputManager.GetButtonUp(jumpButton);

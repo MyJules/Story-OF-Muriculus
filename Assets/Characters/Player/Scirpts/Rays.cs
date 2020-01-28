@@ -42,7 +42,6 @@ public class Rays : MonoBehaviour
     }
 
 
-
     private void OnDrawGizmos()
     {
         for (int i = 0; i < _rayInfo.Length; i++)
