@@ -6,7 +6,8 @@ using UnityEngine.Events;
 
 public class GroundButton : MonoBehaviour
 {
-    [SerializeField] public UnityEvent ButtonPressEvent;
+    [SerializeField] 
+    public UnityEvent ButtonPressEvent;
 
     [SerializeField]
     public UnityEvent ButtonReleaseEvent;

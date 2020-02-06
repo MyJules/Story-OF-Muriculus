@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rays))]
 public class PlayerSE : MonoBehaviour
 {
     [SerializeField]

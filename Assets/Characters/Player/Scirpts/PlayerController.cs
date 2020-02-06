@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
+[RequireComponent(typeof(Rays), typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Run")]
@@ -11,7 +13,6 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float _decceleration = 80;
     
-    [SerializeField] private float _simpleDeccelerationDiv = 2;
 
     [Header("Jump")]
     [SerializeField]
@@ -29,9 +30,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _airAcceleration = 300;
     
     [SerializeField] private float _airDecceeleration = 200;
-
-    [SerializeField] private float _simpleAirDeccelerationDiv = 2;
-
+    
         [Space]
 
     [Header("Wall Jump Control")]
@@ -45,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float wallDeccelerForce = 80f;
 
-        [Space]
+    [Space]
 
     private Rigidbody2D _rb;
 
@@ -90,39 +89,35 @@ public class PlayerController : MonoBehaviour
 
     private void Running(float horizontalInput, bool isJumping)
     {
-        if(_isGrounded)
+        if (_isGrounded)
         {
-            //setting up max speed + acceleration and decceleration
-            if (Mathf.Abs(_rb.velocity.x) < _maxSpeed && horizontalInput != 0)
+            if (Math.Abs(horizontalInput) > 0.01f)
             {
-                _rb.AddForce(new Vector2(horizontalInput * _acceleration, y: 0));
-            }else if (_rb.velocity.x < 0 && horizontalInput == 1) 
-            {    //deccelerate if we pushing the opposite direction
-                _rb.AddForce(new Vector2(horizontalInput * _decceleration , y: 0));
-            }else if (_rb.velocity.x > 0 && horizontalInput == -1)
-            {    //deccelerate if we pushing the opposite direction
-                _rb.AddForce(new Vector2(horizontalInput * _decceleration , y: 0));
-            }else if (Mathf.Abs(_rb.velocity.x) > 0.2f && horizontalInput == 0)
-            {
-                //deccelerete if don't puch any button
-                if (_rb.velocity.x < 0.2f)
+                // acceleration when X velocity is smaller then max speed.    
+                if (Mathf.Abs(_rb.velocity.x) < _maxSpeed)
                 {
-                    _rb.AddForce(new Vector2(_decceleration / _simpleDeccelerationDiv, 0));
+                    _rb.AddForce(new Vector2(_acceleration * horizontalInput, 0));
                 }
-                else if (_rb.velocity.x > 0.2f)
+                else
                 {
-                    _rb.AddForce(new Vector2(-_decceleration / _simpleDeccelerationDiv, 0));
+                    _rb.AddForce(new Vector2(-_decceleration * _rb.velocity.normalized.x, 0));
                 }
             }
-
-
-            //setting velocity to 0 if x velocity is small
-            if (Mathf.Abs(_rb.velocity.x) < _maxSpeed / 5f && horizontalInput == 0 && !isJumping)
+            //deccelerate when input X is 0
+            else
             {
-                _rb.velocity = Vector2.zero;
+                if (Mathf.Abs(_rb.velocity.x) > 3f)
+                {
+                    _rb.AddForce(new Vector2(-_decceleration * _rb.velocity.normalized.x, 0));
+                }
+                else
+                {
+                    _rb.velocity = Vector2.down;    
+                }
             }
+            
         }
-        
+
     }
 
     private void Jumping(bool isJumping)
@@ -200,27 +195,26 @@ public class PlayerController : MonoBehaviour
     {
         if (!_isGrounded && !_isWallGrabbed)
         {
-            //setting up max speed + acceleration and decceleration
-            if (Mathf.Abs(_rb.velocity.x) < _maxSpeed && horizontalInput != 0)
+            if (Math.Abs(horizontalInput) > 0.01f)
             {
-                _rb.AddForce(new Vector2(horizontalInput * _airAcceleration, y: 0));
-            }else if (_rb.velocity.x < 0 && horizontalInput == 1) 
-            {    //deccelerate if we pushing the opposite direction
-                _rb.AddForce(new Vector2(horizontalInput * _airDecceeleration , y: 0));
-            }else if (_rb.velocity.x > 0 && horizontalInput == -1)
-            {    //deccelerate if we pushing the opposite direction
-                _rb.AddForce(new Vector2(horizontalInput * _airDecceeleration , y: 0));
-            }else if (Mathf.Abs(_rb.velocity.x) > 0.2f && horizontalInput == 0)
+                // acceleration when X velocity is smaller then max speed.    
+                if (Mathf.Abs(_rb.velocity.x) < _maxSpeed)
+                {
+                    _rb.AddForce(new Vector2(_airAcceleration * horizontalInput, 0));
+                }
+                else
+                {
+                    _rb.AddForce(new Vector2(-_airAcceleration * _rb.velocity.normalized.x, 0));
+                }
+            }
+            //deccelerate when input X is 0
+            else
             {
-                //deccelerete if don't puch any button
-                if (_rb.velocity.x < 0.2f)
+                if (Mathf.Abs(_rb.velocity.x) > 3f)
                 {
-                    _rb.AddForce(new Vector2(_airDecceeleration / _simpleAirDeccelerationDiv, 0));
+                    _rb.AddForce(new Vector2(-_airDecceeleration * _rb.velocity.normalized.x, 0));
                 }
-                else if (_rb.velocity.x > 0.2f)
-                {
-                    _rb.AddForce(new Vector2(-_airDecceeleration / _simpleAirDeccelerationDiv, 0));
-                }
+
             }
         }
     }

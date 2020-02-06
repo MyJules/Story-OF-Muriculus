@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_NUP.-2076611521.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_NUP.276834762.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -49,14 +49,14 @@
           </e>
         </e>
         <e p="LevelDesign" t="Include">
-          <e p="FallingRock" t="Include">
-            <e p="Scipts" t="Include">
-              <e p="ButtonControleMove.cs" t="Include" />
-            </e>
-          </e>
-          <e p="GroundButton" t="Include">
+          <e p="Button" t="Include">
             <e p="Scripts" t="Include">
               <e p="GroundButton.cs" t="Include" />
+            </e>
+          </e>
+          <e p="FallingPlat" t="Include">
+            <e p="Scipts" t="Include">
+              <e p="ButtonControleMove.cs" t="Include" />
             </e>
           </e>
           <e p="GroundParticles" t="Include">
