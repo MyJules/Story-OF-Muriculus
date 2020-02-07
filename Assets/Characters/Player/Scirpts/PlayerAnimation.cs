@@ -84,7 +84,7 @@ public class PlayerAnimation : MonoBehaviour
     private void FlipAnimation()
     {
         //flip just when on ground or on wall
-        if (velocityX < -1f && !_fliped)
+        if (velocityX < -0.5f && !_fliped)
         {
             if (isGrouded)
             {
@@ -97,7 +97,7 @@ public class PlayerAnimation : MonoBehaviour
 
             _fliped = true;
         }
-        else if (velocityX > 1f && _fliped)
+        else if (velocityX > 0.5f && _fliped)
         {
             if (isGrouded)
             {

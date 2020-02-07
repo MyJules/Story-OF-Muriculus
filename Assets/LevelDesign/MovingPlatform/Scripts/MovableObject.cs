@@ -31,7 +31,7 @@ public class MovableObject : MonoBehaviour
 
     private Transform _nextPoint;
     
-    private int _i;
+    private int _currentPoint;
 
     private bool _isReturning = false;
 
@@ -92,38 +92,38 @@ public class MovableObject : MonoBehaviour
     {
         Transform nextPoint;
             
-        if (Vector2.Distance(platformObject.position, points[_i].transform.position) < 0.1f)
+        if (Vector2.Distance(platformObject.position, points[_currentPoint].transform.position) < 0.1f)
         {
             if (_isReturning)
             {
-                _i--;
+                _currentPoint--;
 
-                if (_i < 0)
+                if (_currentPoint < 0)
                 {
-                    _i = 1;
+                    _currentPoint = 1;
                     _isReturning = false;
                 }
             }
             else
             {
-                _i++;
+                _currentPoint++;
 
-                if (_i >= points.Count)
+                if (_currentPoint >= points.Count)
                 {
                     if (isLooped)
                     {
-                        _i = 0;
+                        _currentPoint = 0;
                         _isReturning = false;
                     }
                     else
                     {
-                        _i--;
+                        _currentPoint--;
                         _isReturning = true;
                     }
                 }
             }
         }
-        nextPoint = points[_i].transform;
+        nextPoint = points[_currentPoint].transform;
         
         return nextPoint;
     }

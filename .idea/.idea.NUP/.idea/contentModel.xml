@@ -74,24 +74,7 @@
             </e>
           </e>
         </e>
-        <e p="Scenes" t="Include">
-          <e p="MainMenu" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="MainMenu.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="UI" t="Include">
-          <e p="Dialogue" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="Dialogue.cs" t="Include" />
-              <e p="DialogueManager.cs" t="Include" />
-              <e p="NPCDialogueTriger.cs" t="Include" />
-              <e p="NPColision.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="dll" t="Include">
+        <e p="Packages" t="Include">
           <e p="Cinemachine" t="Include">
             <e p="Base" t="Include">
               <e p="Editor" t="Include">
@@ -221,6 +204,9 @@
               </e>
             </e>
           </e>
+          <e p="Gothicvania Cemetery Artwork" t="Include">
+            <e p="about.txt" t="Include" />
+          </e>
           <e p="JsonDotNet" t="Include">
             <e p="link.xml" t="Include" />
           </e>
@@ -284,6 +270,23 @@
                   <e p="LICENSE.txt" t="Include" />
                 </e>
               </e>
+            </e>
+          </e>
+        </e>
+        <e p="Scenes" t="Include">
+          <e p="MainMenu" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="MainMenu.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="UI" t="Include">
+          <e p="Dialogue" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Dialogue.cs" t="Include" />
+              <e p="DialogueManager.cs" t="Include" />
+              <e p="NPCDialogueTriger.cs" t="Include" />
+              <e p="NPColision.cs" t="Include" />
             </e>
           </e>
         </e>

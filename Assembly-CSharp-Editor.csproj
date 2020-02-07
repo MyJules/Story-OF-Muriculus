@@ -58,50 +58,50 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineBasicMultiChannelPerlinEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineBlendListCameraEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineBlenderSettingsEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineBrainEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineClearShotEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineColliderEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineComposerEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineConfinerEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineExternalCameraEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineFramingTransposerEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineFreeLookEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineGroupComposerEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineHardLockToTargetEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineHardLookAtEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineMixingCameraEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineOrbitalTransposerEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachinePOVEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachinePathEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineScreenComposerGuides.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineSmoothPathEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineStateDrivenCameraEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineTargetGroupEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineTrackedDollyEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineTransposerEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraBaseEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Menus\CinemachineMenu.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\PropertyDrawers\CinemachineBlendDefinitionPropertyDrawer.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\PropertyDrawers\CinemachineTagFieldPropertyDrawer.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\PropertyDrawers\GetSetDrawer.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\PropertyDrawers\LensSettingsPropertyDrawer.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\PropertyDrawers\MinDrawer.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Utility\BaseEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Utility\EmbeddedAssetHelpers.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Utility\SaveDuringPlay.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Utility\ScriptableObjectUtility.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Utility\SerializedPropertyHelper.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Windows\AboutWindow.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Windows\CinemachineColliderPrefs.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Base\Editor\Windows\CinemachineSettings.cs" />
-     <Compile Include="Assets\dll\Cinemachine\PostFX\Editor\CinemachinePostProcessingEditor.cs" />
-     <Compile Include="Assets\dll\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
-     <Compile Include="Assets\dll\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
-     <Compile Include="Assets\dll\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineBasicMultiChannelPerlinEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineBlendListCameraEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineBlenderSettingsEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineBrainEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineClearShotEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineColliderEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineComposerEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineConfinerEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineExternalCameraEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineFramingTransposerEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineFreeLookEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineGroupComposerEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineHardLockToTargetEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineHardLookAtEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineMixingCameraEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineOrbitalTransposerEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachinePOVEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachinePathEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineScreenComposerGuides.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineSmoothPathEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineStateDrivenCameraEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineTargetGroupEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineTrackedDollyEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineTransposerEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraBaseEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Editors\CinemachineVirtualCameraEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Menus\CinemachineMenu.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\PropertyDrawers\CinemachineBlendDefinitionPropertyDrawer.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\PropertyDrawers\CinemachineTagFieldPropertyDrawer.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\PropertyDrawers\GetSetDrawer.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\PropertyDrawers\LensSettingsPropertyDrawer.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\PropertyDrawers\MinDrawer.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Utility\BaseEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Utility\EmbeddedAssetHelpers.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Utility\SaveDuringPlay.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Utility\ScriptableObjectUtility.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Utility\SerializedPropertyHelper.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Windows\AboutWindow.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Windows\CinemachineColliderPrefs.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Base\Editor\Windows\CinemachineSettings.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\PostFX\Editor\CinemachinePostProcessingEditor.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
+     <Compile Include="Assets\Packages\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
+     <Compile Include="Assets\Packages\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>/home/andrew/MY/Projects/NUP/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
@@ -227,6 +227,33 @@
  </Reference>
  <Reference Include="Unity.MemoryProfiler.Editor">
  <HintPath>/home/andrew/MY/Projects/NUP/Library/ScriptAssemblies/Unity.MemoryProfiler.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+ <HintPath>/home/andrew/MY/Projects/NUP/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+ <HintPath>/home/andrew/MY/Projects/NUP/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Editor">
+ <HintPath>/home/andrew/MY/Projects/NUP/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Runtime">
+ <HintPath>/home/andrew/MY/Projects/NUP/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+ <HintPath>/home/andrew/MY/Projects/NUP/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Editor">
+ <HintPath>/home/andrew/MY/Projects/NUP/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+ <HintPath>/home/andrew/MY/Projects/NUP/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ShaderGraph.Editor">
+ <HintPath>/home/andrew/MY/Projects/NUP/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+ <HintPath>/home/andrew/MY/Projects/NUP/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/andrew/MY/Programs/Unity/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -420,9 +447,6 @@
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>/home/andrew/MY/Programs/Unity/2019.3.0f6/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>/home/andrew/MY/Projects/NUP/Assets/dll/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/home/andrew/MY/Projects/NUP/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -437,6 +461,12 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>/home/andrew/MY/Projects/NUP/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.NRefactory">
+ <HintPath>/home/andrew/MY/Projects/NUP/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/home/andrew/MY/Projects/NUP/Assets/Packages/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>/home/andrew/MY/Projects/NUP/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

@@ -32,6 +32,9 @@
       <Path>Library/PackageCache/com.unity.postprocessing@2.1.7</Path>
       <Path>Library/PackageCache/com.unity.postprocessing@2.3.0</Path>
       <Path>Library/PackageCache/com.unity.purchasing@2.0.6</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.core@7.1.8</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.universal@7.1.8</Path>
+      <Path>Library/PackageCache/com.unity.shadergraph@7.1.8</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.0.13</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.1.11</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@2.0.1</Path>
@@ -51,6 +54,7 @@
       <Path>Logs</Path>
       <Path>MemoryCaptures</Path>
       <Path>New-Unity-Project-master</Path>
+      <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>
