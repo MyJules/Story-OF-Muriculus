@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184071111453110}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 155.1, y: 45.100002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -49,7 +49,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 0
+  m_Priority: 100
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
@@ -86,7 +86,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1184072726353067}
   - component: {fileID: 1184072726353061}
-  - component: {fileID: 1184072726353060}
+  - component: {fileID: 1456731267}
+  - component: {fileID: 1456731269}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -120,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1184072726353060
+--- !u!114 &1456731267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,22 +133,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LookaheadTime: 0.04
-  m_LookaheadSmoothing: 3.5
+  m_LookaheadTime: 0.1
+  m_LookaheadSmoothing: 10
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
-  m_ScreenX: 0.5
-  m_ScreenY: 0.49
+  m_ScreenX: 0.491
+  m_ScreenY: 0.462
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.162
-  m_DeadZoneHeight: 0.006
+  m_DeadZoneWidth: 0.1
+  m_DeadZoneHeight: 0.117
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.856
-  m_SoftZoneHeight: 0.75
-  m_BiasX: 0
-  m_BiasY: -0.20000033
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.762
+  m_BiasX: 0.025999973
+  m_BiasY: 0.036000002
   m_GroupFramingMode: 2
   m_AdjustmentMode: 2
   m_GroupFramingSize: 0.8
@@ -159,3 +160,18 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 100
+--- !u!114 &1456731269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184072726353066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
+  m_AmplitudeGain: 0.3
+  m_FrequencyGain: 0.3
