@@ -11,13 +11,16 @@ public class NPCDialogueTriger : MonoBehaviour
     [NonSerialized]
     public Dialogue dialogues;
 
+    private DialogueManager _dialogueManager;
+
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogues);
+        _dialogueManager.StartDialogue(dialogues);
     }
 
     private void Start()
     {
+        _dialogueManager = FindObjectOfType<DialogueManager>();
         TextAsset jFile =  (TextAsset) Resources.Load(@DialoguePath);
         
         JObject dialogue = (JObject) JsonConvert.DeserializeObject(jFile.ToString());

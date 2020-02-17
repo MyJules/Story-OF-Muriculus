@@ -96,7 +96,14 @@ public class PlayerController : MonoBehaviour
                 // acceleration when X velocity is smaller then max speed.    
                 if (Mathf.Abs(_rb.velocity.x) < _maxSpeed)
                 {
-                    _rb.AddForce(new Vector2(_acceleration * horizontalInput, 0));
+                    if ( Mathf.Abs(Mathf.Abs(_rb.velocity.x) - _maxSpeed) > 0.3f || Math.Abs(_rb.velocity.normalized.x - horizontalInput) > 0.3f)
+                    {
+                        _rb.AddForce(new Vector2(_acceleration * horizontalInput, 0));
+                    }
+                    else
+                    {
+                        _rb.velocity = new Vector2(horizontalInput * _maxSpeed, 0);
+                    }
                 }
                 else
                 {
