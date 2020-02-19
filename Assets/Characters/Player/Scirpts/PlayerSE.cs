@@ -24,9 +24,9 @@ public class PlayerSE : MonoBehaviour
 
     public void SpawnGroundParticle()
     {
-        isGroundWithParticle = _rays.IsCrossed(1,2);
+        isGroundWithParticle = _rays.IsCrossed(0);
 
-        if (isGroundWithParticle != null)
+        if (isGroundWithParticle)
         {   
             _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
@@ -39,7 +39,7 @@ public class PlayerSE : MonoBehaviour
 
     public void PlayStepSound()
     {
-        isGroundWithParticle = _rays.IsCrossed(1,2);
+        isGroundWithParticle = _rays.IsCrossed(0);
 
         if (isGroundWithParticle)
         {

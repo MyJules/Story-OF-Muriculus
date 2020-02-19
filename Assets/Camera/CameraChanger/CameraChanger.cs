@@ -9,6 +9,12 @@ public class CameraChanger : MonoBehaviour
     [SerializeField]
         CinemachineVirtualCamera changeExitCamera;
 
+        private void Start()
+        {
+         changeEnterCamera.Priority = 0;
+         changeExitCamera.Priority = 100;   
+        }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))

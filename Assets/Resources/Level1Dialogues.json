@@ -7,16 +7,16 @@
       "content": 
       [
         {
-          "name": "Me",
+          "name": "Leo",
           "sentence": "Ehhh"
         },
         {
-          "name": "Me",
+          "name": "Leo",
           "sentence": "How long would it continue?"
         },
         {
-          "name": "Me",
-          "sentence": "I should find another way."
+          "name": "Leo",
+          "sentence": "I should find a way out."
         }
 
       ]
@@ -27,14 +27,21 @@
       "content":
       [
         {
-          "name": "Me",
+          "name": "Leo",
           "sentence": "..."
-        },
-        {
-          "name": "Me",
-          "sentence": "Think I should use wall jump to speed up."
         }
       ]
+    },
+
+    {
+      "id": 2,
+      "content":
+      [
+        {
+          "name": "Leo",
+          "sentence": "How would I get to the other side?"
+        }
+       ]
     }
     
   ]
