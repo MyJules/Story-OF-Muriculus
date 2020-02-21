@@ -4,52 +4,43 @@ using UnityEngine;
 
 public class PlayerSE : MonoBehaviour
 {
-    [SerializeField]
-    private Transform groundParticlePosition;
 
     [SerializeField]
     private AudioSource audioSorce;
 
-    private GroundSpecialEffects _groundSpecialEffects;
+    [SerializeField]
+    private ParticleSystem _playerParticleSystem;
+
+    private GroundSpecialEffects groundCrossInfo;
+
 
     private Rays _rays;
 
-    private bool isGroundWithParticle;
+    private bool isGroundCrossed;
 
     private void Start()
     {
         _rays = GetComponentInParent<Rays>();
-
     }
 
-    public void SpawnGroundParticle()
+    public void PlayGroundParticle()
     {
-        isGroundWithParticle = _rays.IsCrossed(0);
-
-        if (isGroundWithParticle)
-        {   
-            _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
-
-            if (_groundSpecialEffects == true && _groundSpecialEffects.landParticles != null)
-            {
-                Instantiate(_groundSpecialEffects.landParticles, groundParticlePosition);
-            }
-        }
+        _playerParticleSystem.Play();
     }
 
     public void PlayStepSound()
     {
-        isGroundWithParticle = _rays.IsCrossed(0);
+        isGroundCrossed = _rays.IsCrossed(0);
 
-        if (isGroundWithParticle)
+        if (isGroundCrossed)
         {
-            _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
+            groundCrossInfo = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
-            if (_groundSpecialEffects == true &&  _groundSpecialEffects.stepSound != null)
+            if (groundCrossInfo == true &&  groundCrossInfo.stepSound != null)
             {
                 audioSorce.volume = 1;
                 audioSorce.pitch = Random.Range(0.7f, 1.2f);
-                audioSorce.PlayOneShot(_groundSpecialEffects.stepSound);
+                audioSorce.PlayOneShot(groundCrossInfo.stepSound);
                 //audioSorce.pitch = 1;
             }
         }
@@ -57,34 +48,34 @@ public class PlayerSE : MonoBehaviour
 
     public void PlayLandSound()
     {
-        isGroundWithParticle = _rays.IsCrossed(0);
+        isGroundCrossed = _rays.IsCrossed(0);
 
-        if (isGroundWithParticle)
+        if (isGroundCrossed)
         {
-            _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
+            groundCrossInfo = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
-            if (_groundSpecialEffects == true && _groundSpecialEffects.landSound != null)
+            if (groundCrossInfo == true && groundCrossInfo.landSound != null)
             {
                 audioSorce.volume = 0.6f;
                 audioSorce.pitch = Random.Range(0.7f, 1.2f);
-                audioSorce.PlayOneShot(_groundSpecialEffects.landSound);
+                audioSorce.PlayOneShot(groundCrossInfo.landSound);
             }
         }
     }
 
     public void PlayJumpSound()
     {
-        isGroundWithParticle = _rays.IsCrossed(0);
+        isGroundCrossed = _rays.IsCrossed(0);
 
-        if (isGroundWithParticle)
+        if (isGroundCrossed)
         {
-            _groundSpecialEffects = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
+            groundCrossInfo = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
 
-            if (_groundSpecialEffects == true && _groundSpecialEffects.jumpSound != null)
+            if (groundCrossInfo == true && groundCrossInfo.jumpSound != null)
             {
                 audioSorce.volume = 1;
                 audioSorce.pitch = 0.9f;
-                audioSorce.PlayOneShot(_groundSpecialEffects.jumpSound);
+                audioSorce.PlayOneShot(groundCrossInfo.jumpSound);
             }
         }
     }

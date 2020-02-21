@@ -16,7 +16,6 @@ public class PlayerAnimation : MonoBehaviour
     private bool _isFirst = true, _fliped = false, isAnimFinished = false;
 
     private bool isGrouded, isWallGrabbed, isPushing;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +25,7 @@ public class PlayerAnimation : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
 
         _crossDetection = GetComponent<Rays>();
+
     }
     
     void Update()
