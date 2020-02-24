@@ -9,40 +9,29 @@ public class PlayerAnimation : MonoBehaviour
 
     private Rigidbody2D _rb;
 
-    private Rays _crossDetection;
-
     private float velocityX, velocityY;
 
     private bool _isFirst = true, _fliped = false, isAnimFinished = false;
-
-    private bool isGrouded, isWallGrabbed, isPushing;
 
     // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponentInChildren<Animator>();
-
         _rb = GetComponent<Rigidbody2D>();
-
-        _crossDetection = GetComponent<Rays>();
-
     }
     
-    void Update()
+    public void Animate(PlayerInputData inputData)
     {
         velocityX = _rb.velocity.x;
         velocityY = _rb.velocity.y;
 
-        isGrouded = _crossDetection.IsCrossed(1,2);
-        isWallGrabbed = _crossDetection.IsCrossed(3);
+        PushAnimation(false);
 
-        PushAnimation();
-
-        FlipAnimation();
+        FlipAnimation(inputData.isGrounded);
         
-        GrabWallAnimation();
+        GrabWallAnimation(inputData.isWallGrabbed, inputData.isGrounded);
 
-        JumpAnimation();
+        JumpAnimation(inputData.isGrounded);
 
         //setting up jump animation.
         _animator.SetFloat("vertical_velocity", velocityY);
@@ -51,19 +40,19 @@ public class PlayerAnimation : MonoBehaviour
         _animator.SetFloat("Speed", Mathf.Abs(velocityX));
     }
 
-    private void GrabWallAnimation()
+    private void GrabWallAnimation(bool isWallGrabbed, bool isGrounded)
     {
         //grab the wall
-        if (isWallGrabbed && !isGrouded)
+        if (isWallGrabbed && !isGrounded)
             _animator.SetBool("isWallGrabbed", true);
         else
             _animator.SetBool("isWallGrabbed", false);
     }
 
-    private void JumpAnimation()
+    private void JumpAnimation(bool isGrounded)
     {
         //jump animaiton
-        if (isGrouded)
+        if (isGrounded)
         {
             if (!_isFirst)
             {
@@ -81,27 +70,26 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
-    private void FlipAnimation()
+    private void FlipAnimation(bool isGrounded)
     {
         //flip just when on ground or on wall
         if (velocityX < -2f && !_fliped)
         {
 
-                StartCoroutine(AnimatedFlip());
+                StartCoroutine(AnimatedFlip(isGrounded));
 
             _fliped = true;
         }
         else if (velocityX > 2f && _fliped)
         {
-                StartCoroutine(AnimatedFlip());
+                StartCoroutine(AnimatedFlip(isGrounded));
 
             _fliped = false;    
         }
     }
 
-    private void PushAnimation()
+    private void PushAnimation(bool isPushing)
     {
-        isPushing = _crossDetection.IsCrossed(4);
 
         if (isPushing)
         {
@@ -113,10 +101,10 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
-    private IEnumerator AnimatedFlip()
+    private IEnumerator AnimatedFlip(bool isGrounded)
     {
         _animator.SetBool("isFlipTransition", true);
-        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1f && isGrouded);
+        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1f && isGrounded);
         _animator.SetBool("isFlipTransition", false);
         Flip();
     }
@@ -125,5 +113,4 @@ public class PlayerAnimation : MonoBehaviour
     {
         transform.Rotate(Vector2.up * 180);
     }
-
 }

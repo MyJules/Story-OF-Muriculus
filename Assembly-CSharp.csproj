@@ -71,6 +71,7 @@
     <Compile Include="Assets\Characters\Player\Scirpts\PlayerController.cs" />
     <Compile Include="Assets\Characters\Player\Scirpts\PlayerInfo.cs" />
     <Compile Include="Assets\Characters\Player\Scirpts\PlayerInput.cs" />
+    <Compile Include="Assets\Characters\Player\Scirpts\PlayerInputData.cs" />
     <Compile Include="Assets\Characters\Player\Scirpts\PlayerMechanics.cs" />
     <Compile Include="Assets\Characters\Player\Scirpts\PlayerPersistance.cs" />
     <Compile Include="Assets\Characters\Player\Scirpts\PlayerSE.cs" />

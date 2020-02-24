@@ -13,47 +13,57 @@ public class PlayerInput : MonoBehaviour
 
     private PlayerController _controller;
 
-    private bool _isJumping;
-    
-    private bool _isJumpDown, _isJumpUp;
+    private PlayerAnimation _animation;
 
-    private float _hMove;
+    private PlayerInputData _inputData;
+
+    private Rays _rays;
+
+    private bool _isJumpDown, _isJumpUp;
 
     private void Start()
     {
         _controller = GetComponent<PlayerController>();
+        _rays = GetComponent<Rays>();
+        _animation = GetComponent<PlayerAnimation>();
+
+        _inputData = new PlayerInputData();
     }
 
     private void Update()
     {
-        GetInput();
+        _inputData.isWallGrabbed = _rays.IsCrossed(3);
+        _inputData.isGrounded = _rays.IsCrossed(1, 2);
+
+        SetInput();
     }
 
     private void FixedUpdate()
     {
-        _controller.Move(_hMove, _isJumping);
+        _controller.Move(_inputData);
+        _animation.Animate(_inputData);
     }
     
-    private void GetInput()
+    private void SetInput()
     {
-        _hMove = CrossPlatformInputManager.GetAxis(horizontalButton);
+        _inputData.horizontalInput = CrossPlatformInputManager.GetAxis(horizontalButton);
         
         _isJumpDown = CrossPlatformInputManager.GetButtonDown(jumpButton);
         _isJumpUp = CrossPlatformInputManager.GetButtonUp(jumpButton);
 
-        CalculateInput();
+        setJumping();
     }
     
-    private void CalculateInput()
+    private void setJumping()
     {
         if (_isJumpDown)
         {
-            _isJumping = true;
+            _inputData.isJumping = true;
         }
 
         if (_isJumpUp)
         {
-            _isJumping = false;
+            _inputData.isJumping = false;
         }
 
     }
