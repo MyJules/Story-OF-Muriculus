@@ -89,15 +89,13 @@ public class PlayerAnimation : MonoBehaviour
 
                 StartCoroutine(AnimatedFlip());
 
-
             _fliped = true;
         }
         else if (velocityX > 2f && _fliped)
         {
-
                 StartCoroutine(AnimatedFlip());
 
-            _fliped = false;
+            _fliped = false;    
         }
     }
 
