@@ -1,8 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using PlayerRays;
 
-[RequireComponent(typeof(Rays), typeof(Rigidbody2D), typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator _animator;

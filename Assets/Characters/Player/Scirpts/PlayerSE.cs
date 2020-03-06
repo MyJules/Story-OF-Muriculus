@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using PlayerRays;
 
 public class PlayerSE : MonoBehaviour
 {
@@ -30,11 +29,11 @@ public class PlayerSE : MonoBehaviour
 
     public void PlayStepSound()
     {
-        isGroundCrossed = _rays.IsCrossed(0);
+        isGroundCrossed = _rays.IsCrossed((int) PlayerRaysEnum.GroundParticleCheck);
 
         if (isGroundCrossed)
         {
-            groundCrossInfo = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
+            groundCrossInfo = _rays.GetCrossInformaiton((int)PlayerRaysEnum.GroundParticleCheck).collider.GetComponent<GroundSpecialEffects>();
 
             if (groundCrossInfo == true &&  groundCrossInfo.stepSound != null)
             {
@@ -48,11 +47,11 @@ public class PlayerSE : MonoBehaviour
 
     public void PlayLandSound()
     {
-        isGroundCrossed = _rays.IsCrossed(0);
+        isGroundCrossed = _rays.IsCrossed((int)PlayerRaysEnum.GroundParticleCheck);
 
         if (isGroundCrossed)
         {
-            groundCrossInfo = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
+            groundCrossInfo = _rays.GetCrossInformaiton((int)PlayerRaysEnum.GroundParticleCheck).collider.GetComponent<GroundSpecialEffects>();
 
             if (groundCrossInfo == true && groundCrossInfo.landSound != null)
             {
@@ -65,11 +64,11 @@ public class PlayerSE : MonoBehaviour
 
     public void PlayJumpSound()
     {
-        isGroundCrossed = _rays.IsCrossed(0);
+        isGroundCrossed = _rays.IsCrossed((int)PlayerRaysEnum.GroundParticleCheck);
 
         if (isGroundCrossed)
         {
-            groundCrossInfo = _rays.GetCrossInformaiton(0).collider.GetComponent<GroundSpecialEffects>();
+            groundCrossInfo = _rays.GetCrossInformaiton((int)PlayerRaysEnum.GroundParticleCheck).collider.GetComponent<GroundSpecialEffects>();
 
             if (groundCrossInfo == true && groundCrossInfo.jumpSound != null)
             {

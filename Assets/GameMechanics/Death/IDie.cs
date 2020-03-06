@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public interface IDie
+﻿public interface IDie
 {
     void Die();
 }

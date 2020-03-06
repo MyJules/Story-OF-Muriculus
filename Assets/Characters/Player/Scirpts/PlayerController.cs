@@ -1,7 +1,8 @@
 ﻿using System;
 using UnityEngine;
+using PlayerRays;
 
-[RequireComponent(typeof(Rays), typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Run")]
@@ -48,23 +49,17 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
 
-    private Rays _rays;
-
     private bool _isFirstJump = true, _allowJumping = false, _jumpWasRelesed = false;
 
     private float _startGravityScale;
 
     private float _currentCoyoteTime;
 
-    private Vector2 _wallNormal;
-
     private void Start()
     {
-        _rays = GetComponent<Rays>();
         _rigidbody = GetComponent<Rigidbody2D>();
 
         _startGravityScale = _rigidbody.gravityScale;
-        
     }
 
     public void Move(PlayerInputData inputData)
@@ -72,13 +67,10 @@ public class PlayerController : MonoBehaviour
 
         Running(inputData.horizontalInput, inputData.isGrounded);
         Jumping(inputData.isJumping);
-        WallJump(inputData.isJumping, inputData.isWallGrabbed, inputData.isGrounded);
+        WallJump(inputData.isJumping, inputData.isWallGrabbed, inputData.isGrounded, inputData.wallNormal);
         AirControl(inputData.horizontalInput, inputData.isGrounded, inputData.isWallGrabbed);
 
         CalculateCoyoteTime(inputData.isGrounded, coyoteTimeMax);
-
-        if(inputData.isWallGrabbed)
-            _wallNormal = GetWallNormal(3);
     }
 
     private void Running(float horizontalInput, bool isGrounded)
@@ -157,7 +149,7 @@ public class PlayerController : MonoBehaviour
   
     }
     
-    private void WallJump(bool isJumping, bool isWallGrabbed, bool isGrounded)
+    private void WallJump(bool isJumping, bool isWallGrabbed, bool isGrounded, Vector2 wallNormal)
     {
         if (isWallGrabbed && !isGrounded)
         {
@@ -168,7 +160,7 @@ public class PlayerController : MonoBehaviour
             {
                 _rigidbody.velocity = Vector2.zero;
                 _jumpWasRelesed = false;
-                WallJump();
+                WallJump(wallNormal);
             }
 
             WallSlideControl();
@@ -245,9 +237,9 @@ public class PlayerController : MonoBehaviour
         _rigidbody.AddForce(Vector2.up * (_jumpHeight + Mathf.Abs(_rigidbody.velocity.y)), ForceMode2D.Impulse);
     }
     
-    private void WallJump()
+    private void WallJump(Vector2 wallNormal)
     {
-        _rigidbody.AddForce(_wallNormal * jumpOffForce, ForceMode2D.Impulse);
+        _rigidbody.AddForce(wallNormal * jumpOffForce, ForceMode2D.Impulse);
         _rigidbody.AddForce(Vector2.up * wallJumpHeight, ForceMode2D.Impulse);
     }
     
@@ -262,10 +254,5 @@ public class PlayerController : MonoBehaviour
         {
             _currentCoyoteTime -= Time.deltaTime;
         }
-    }
-
-    private Vector2 GetWallNormal(int wallId)
-    {
-          return _rays.GetCrossInformaiton(wallId).normal;
     }
 }

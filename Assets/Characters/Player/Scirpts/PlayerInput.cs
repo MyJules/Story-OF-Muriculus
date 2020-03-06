@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using PlayerRays;
 
 [DefaultExecutionOrder(-100)]
 public class PlayerInput : MonoBehaviour
@@ -32,10 +33,10 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        _inputData.isWallGrabbed = _rays.IsCrossed(3);
-        _inputData.isGrounded = _rays.IsCrossed(1, 2);
+        _inputData.isWallGrabbed = _rays.IsCrossed((int) PlayerRaysEnum.IsWallJumpCollide);
+        _inputData.isGrounded = _rays.IsCrossed((int) PlayerRaysEnum.IsLeftLegGrounded, (int) PlayerRaysEnum.IsRightLegGrounded);
 
-        SetInput();
+        setMovement();
     }
 
     private void FixedUpdate()
@@ -44,7 +45,7 @@ public class PlayerInput : MonoBehaviour
         _animation.Animate(_inputData);
     }
     
-    private void SetInput()
+    private void setMovement()
     {
         _inputData.horizontalInput = CrossPlatformInputManager.GetAxis(horizontalButton);
         
@@ -64,6 +65,11 @@ public class PlayerInput : MonoBehaviour
         if (_isJumpUp)
         {
             _inputData.isJumping = false;
+        }
+
+        if (_inputData.isWallGrabbed)
+        {
+            _inputData.wallNormal = _rays.GetCrossInformaiton((int) PlayerRaysEnum.IsWallJumpCollide).normal.normalized;
         }
 
     }

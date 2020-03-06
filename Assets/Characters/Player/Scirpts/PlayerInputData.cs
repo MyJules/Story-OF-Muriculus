@@ -1,4 +1,6 @@
-﻿public class PlayerInputData
+﻿using UnityEngine;
+
+public class PlayerInputData
 {
     public float horizontalInput;
 
@@ -9,4 +11,8 @@
     public bool isGrounded;
 
     public bool isWallGrabbed;
+
+    public bool isMovableObjGrabbed;
+
+    public Vector2 wallNormal;
 }
