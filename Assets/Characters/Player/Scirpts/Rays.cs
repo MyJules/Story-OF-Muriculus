@@ -34,7 +34,7 @@ public class Rays : MonoBehaviour
     }
 
 
-    public RaycastHit2D GetCrossInformaiton(int i)
+    public RaycastHit2D GetCrossInformation(int i)
     {
         return Physics2D.Raycast(_rayInfo[i].rayTransform.position, Quaternion.Euler(_rayInfo[i].rayTransform.rotation.eulerAngles) * Vector3.forward, _rayInfo[i].rayLength, _rayInfo[i].rayCrossLayer);
     }

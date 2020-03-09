@@ -2,7 +2,7 @@
 
 class PlayerPersistance
 {
-    public static void SaveInfo(PlayerMechanics player)
+    public static void SaveInfo(PlayerDeathMechanic player)
     {
         PlayerPrefs.SetFloat("x", player.transform.position.x);
         PlayerPrefs.SetFloat("y", player.transform.position.y);

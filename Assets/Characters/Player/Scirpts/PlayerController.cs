@@ -62,15 +62,15 @@ public class PlayerController : MonoBehaviour
         _startGravityScale = _rigidbody.gravityScale;
     }
 
-    public void Move(PlayerInputData inputData)
+    public void Move(PlayerMoveData moveData, PlayerMechanicsData mechanicsData)
     {
 
-        Running(inputData.horizontalInput, inputData.isGrounded);
-        Jumping(inputData.isJumping);
-        WallJump(inputData.isJumping, inputData.isWallGrabbed, inputData.isGrounded, inputData.wallNormal);
-        AirControl(inputData.horizontalInput, inputData.isGrounded, inputData.isWallGrabbed);
+        Running(moveData.horizontalInput, moveData.isGrounded);
+        Jumping(moveData.isJumping);
+        WallJump(moveData.isJumping, mechanicsData.isWallGrabbed, moveData.isGrounded, mechanicsData.wallNormal);
+        AirControl(moveData.horizontalInput, moveData.isGrounded, mechanicsData.isWallGrabbed);
 
-        CalculateCoyoteTime(inputData.isGrounded, coyoteTimeMax);
+        CalculateCoyoteTime(moveData.isGrounded, coyoteTimeMax);
     }
 
     private void Running(float horizontalInput, bool isGrounded)

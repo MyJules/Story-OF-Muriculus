@@ -20,7 +20,7 @@ public class PlayerAnimation : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
     
-    public void Animate(PlayerInputData inputData)
+    public void Animate(PlayerMoveData inputData, PlayerMechanicsData mechanicsData)
     {
         velocityX = _rb.velocity.x;
         velocityY = _rb.velocity.y;
@@ -29,7 +29,7 @@ public class PlayerAnimation : MonoBehaviour
 
         FlipAnimation(inputData.isGrounded);
         
-        GrabWallAnimation(inputData.isWallGrabbed, inputData.isGrounded);
+        GrabWallAnimation(mechanicsData.isWallGrabbed, inputData.isGrounded);
 
         JumpAnimation(inputData.isGrounded);
 
@@ -73,14 +73,14 @@ public class PlayerAnimation : MonoBehaviour
     private void FlipAnimation(bool isGrounded)
     {
         //flip just when on ground or on wall
-        if (velocityX < -2f && !_fliped)
+        if (velocityX < -1f && !_fliped)
         {
 
                 StartCoroutine(AnimatedFlip(isGrounded));
 
             _fliped = true;
         }
-        else if (velocityX > 2f && _fliped)
+        else if (velocityX > 1f && _fliped)
         {
                 StartCoroutine(AnimatedFlip(isGrounded));
 
@@ -92,7 +92,7 @@ public class PlayerAnimation : MonoBehaviour
     {
 
         if (isPushing)
-        {
+        {   
             _animator.SetBool("isPushing", true);
         }
         else

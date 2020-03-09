@@ -1,27 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerMechanics : MonoBehaviour, IDie, IMemory
+public class PlayerMechanics : MonoBehaviour
 {
-    private PlayerInfo _playerInfo;
-    public void Die()
+    public void Grabbing(PlayerMechanicsData inputData, ref IGrabbable grabbable) 
     {
-        Load();
-    }
+        if (grabbable != null)
+        {
+            if (inputData.isMovableObjGrabbed)
+            {
+                grabbable.Grab();
+            }
+            else if (!inputData.isMovableObjGrabbed)
+            {
+                grabbable.Release();
+                grabbable = null;
+            }
+        }
 
-    public void Load()
-    {
-         //Application.LoadLevel(Application.loadedLevel);
-
-        _playerInfo = PlayerPersistance.LoadInfo();
-
-        transform.position = _playerInfo.position;
-    
-    }
-
-    public void Save()
-    {
-        PlayerPersistance.SaveInfo(this);
     }
 }

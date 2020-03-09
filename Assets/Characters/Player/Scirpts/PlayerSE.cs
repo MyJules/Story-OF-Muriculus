@@ -33,7 +33,7 @@ public class PlayerSE : MonoBehaviour
 
         if (isGroundCrossed)
         {
-            groundCrossInfo = _rays.GetCrossInformaiton((int)PlayerRaysEnum.GroundParticleCheck).collider.GetComponent<GroundSpecialEffects>();
+            groundCrossInfo = _rays.GetCrossInformation((int)PlayerRaysEnum.GroundParticleCheck).collider.GetComponent<GroundSpecialEffects>();
 
             if (groundCrossInfo == true &&  groundCrossInfo.stepSound != null)
             {
@@ -51,7 +51,7 @@ public class PlayerSE : MonoBehaviour
 
         if (isGroundCrossed)
         {
-            groundCrossInfo = _rays.GetCrossInformaiton((int)PlayerRaysEnum.GroundParticleCheck).collider.GetComponent<GroundSpecialEffects>();
+            groundCrossInfo = _rays.GetCrossInformation((int)PlayerRaysEnum.GroundParticleCheck).collider.GetComponent<GroundSpecialEffects>();
 
             if (groundCrossInfo == true && groundCrossInfo.landSound != null)
             {
@@ -68,7 +68,7 @@ public class PlayerSE : MonoBehaviour
 
         if (isGroundCrossed)
         {
-            groundCrossInfo = _rays.GetCrossInformaiton((int)PlayerRaysEnum.GroundParticleCheck).collider.GetComponent<GroundSpecialEffects>();
+            groundCrossInfo = _rays.GetCrossInformation((int)PlayerRaysEnum.GroundParticleCheck).collider.GetComponent<GroundSpecialEffects>();
 
             if (groundCrossInfo == true && groundCrossInfo.jumpSound != null)
             {
