@@ -8,68 +8,51 @@ public class PlayerController : MonoBehaviour
     [Header("Run")]
     [SerializeField]
     private float _maxSpeed = 100;
-    
     [SerializeField]
     private  float _acceleration = 80;
-
     [SerializeField] private float _decceleration = 80;
     
-
     [Header("Jump")]
     [SerializeField]
     private float _jumpHeight = 2000;
-
     [SerializeField]
     private float _fallGravityScale = 20;
 
     [Header("Air Control")]
-
     [SerializeField]
     [Range(0, 3)]
     private float coyoteTimeMax = 0.1f;
-
-    [SerializeField] private float _airAcceleration = 300;
-    
+    [SerializeField] private float _airAcceleration = 300;  
     [SerializeField] private float _airDecceeleration = 200;
-    
-        [Space]
+    [Space]
 
     [Header("Wall Jump Control")]
-
-        [SerializeField]
+    [SerializeField]
     private float wallJumpHeight = 500f;
-
     [SerializeField] private float jumpOffForce = 30f;
-
     [SerializeField] private float maxFallSpeed = 10f;
-
     [SerializeField] private float wallDeccelerForce = 80f;
-
     [Space]
 
     private Rigidbody2D _rigidbody;
-
-    private bool _isFirstJump = true, _allowJumping = false, _jumpWasRelesed = false;
-
+    private bool _isFirstJump = true;
+    private bool _allowJumping = false;
+    private bool _jumpWasRelesed = false;
     private float _startGravityScale;
-
     private float _currentCoyoteTime;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-
         _startGravityScale = _rigidbody.gravityScale;
     }
 
     public void Move(PlayerMoveData moveData, PlayerMechanicsData mechanicsData)
     {
-
         Running(moveData.horizontalInput, moveData.isGrounded);
         Jumping(moveData.isJumping);
         WallJump(moveData.isJumping, mechanicsData.isWallGrabbed, moveData.isGrounded, mechanicsData.wallNormal);
         AirControl(moveData.horizontalInput, moveData.isGrounded, mechanicsData.isWallGrabbed);
-
         CalculateCoyoteTime(moveData.isGrounded, coyoteTimeMax);
     }
 
@@ -83,7 +66,8 @@ public class PlayerController : MonoBehaviour
                 if (Mathf.Abs(_rigidbody.velocity.x) < _maxSpeed)
                 {
                     //setting up constant speed if player reached max speed.
-                    if ( Mathf.Abs(Mathf.Abs(_rigidbody.velocity.x) - _maxSpeed) > 0.3f || Math.Abs(_rigidbody.velocity.normalized.x - horizontalInput) > 0.3f)
+                    if ( Mathf.Abs(Mathf.Abs(_rigidbody.velocity.x) - _maxSpeed) > 0.3f ||
+                        Math.Abs(_rigidbody.velocity.normalized.x - horizontalInput) > 0.3f)
                     {
                         _rigidbody.AddForce(new Vector2(_acceleration * horizontalInput, 0));
                     }
@@ -153,8 +137,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isWallGrabbed && !isGrounded)
         {
-            //velocity control
-            
+            //velocity control       
             //wall jump
             if (isJumping && _jumpWasRelesed)
             {
@@ -162,7 +145,6 @@ public class PlayerController : MonoBehaviour
                 _jumpWasRelesed = false;
                 WallJump(wallNormal);
             }
-
             WallSlideControl();
         }
 
@@ -229,7 +211,9 @@ public class PlayerController : MonoBehaviour
             }
         }
         else
+        {
             _rigidbody.gravityScale = _startGravityScale;
+        }
     }
 
     private void Jump()

@@ -5,31 +5,25 @@ using PlayerRays;
 [DefaultExecutionOrder(-100)]
 public class PlayerInput : MonoBehaviour
 {
-
     [SerializeField]
     private string jumpButton = "Jump";
-
     [SerializeField]
     private string horizontalButton = "Horizontal";
-
     [SerializeField]
     private string grabButton = "NextDialogue";
 
     private PlayerController _controller;
-
     private PlayerAnimation _animation;
-
     private PlayerMechanics _mechanics;
 
     private PlayerMoveData _moveData;
-
     private PlayerMechanicsData _mechanicsData;
 
     private Rays _rays;
 
-    private bool _isJumpDown, _isJumpUp;
-
-    private bool _isGrabDown, _isGrabUp;
+    private bool _isJumpDown;
+    private bool _isJumpUp;
+    private bool _isGrabDown;
 
     private void Start()
     {
@@ -46,9 +40,6 @@ public class PlayerInput : MonoBehaviour
     {
         _mechanicsData.isWallGrabbed = _rays.IsCrossed((int) PlayerRaysEnum.IsWallJumpCollide);
         _moveData.isGrounded = _rays.IsCrossed((int) PlayerRaysEnum.IsLeftLegGrounded, (int) PlayerRaysEnum.IsRightLegGrounded);
-
-        _mechanicsData.isMovableObjGrabbed = _rays.IsCrossed((int) PlayerRaysEnum.IsMovableObjeGrabbed);
-
         setMovement();
     }
 
@@ -60,13 +51,10 @@ public class PlayerInput : MonoBehaviour
     
     private void setMovement()
     {
-        _moveData.horizontalInput = CrossPlatformInputManager.GetAxis(horizontalButton);
-        
+        _moveData.horizontalInput = CrossPlatformInputManager.GetAxis(horizontalButton); 
         _isJumpDown = CrossPlatformInputManager.GetButtonDown(jumpButton);
         _isJumpUp = CrossPlatformInputManager.GetButtonUp(jumpButton);
-
         _isGrabDown = CrossPlatformInputManager.GetButtonDown(grabButton);
-        _isGrabUp = CrossPlatformInputManager.GetButtonUp(grabButton);
 
         setJumping();
         setMechanics();
@@ -78,30 +66,27 @@ public class PlayerInput : MonoBehaviour
         {
             _moveData.isJumping = true;
         }
-
         if (_isJumpUp)
         {
             _moveData.isJumping = false;
         }
-
         if (_mechanicsData.isWallGrabbed && _isJumpDown)
         {
             _mechanicsData.wallNormal = _rays.GetCrossInformation((int) PlayerRaysEnum.IsWallJumpCollide).normal.normalized;
         }
     }
-
+     
     private void setMechanics() 
-    {
+    { 
         if (_isGrabDown) 
         {
-            _mechanicsData.isMovableObjGrabbed = true;
-            _mechanicsData.grabbableObject = _rays.GetCrossInformation((int) PlayerRaysEnum.IsMovableObjeGrabbed).collider.gameObject.GetComponent<IGrabbable>();
-            _mechanics.Grabbing(_mechanicsData, ref _mechanicsData.grabbableObject);
-        }
-
-        if (_isGrabUp) 
-        {
-            _mechanicsData.isMovableObjGrabbed = false;
+            _mechanicsData.isMovableObjGrabbed = !_mechanicsData.isMovableObjGrabbed ||
+                                                  _mechanicsData.grabbableObject == null;
+            if (_mechanicsData.isMovableObjGrabbed == true)
+            {
+                _mechanicsData.grabbableObject =
+                    _rays.GetCrossInformation((int)PlayerRaysEnum.IsMovableObjeGrabbed).collider.gameObject.GetComponent<IGrabbable>();
+            }
             _mechanics.Grabbing(_mechanicsData, ref _mechanicsData.grabbableObject);
         }
     }

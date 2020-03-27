@@ -2,20 +2,19 @@
 
 public class PlayerMechanics : MonoBehaviour
 {
-    public void Grabbing(PlayerMechanicsData inputData, ref IGrabbable grabbable) 
+    public void Grabbing(PlayerMechanicsData inputData, ref IGrabbable grabbableObj) 
     {
-        if (grabbable != null)
+        if (grabbableObj != null)
         {
-            if (inputData.isMovableObjGrabbed)
+            if (inputData.isMovableObjGrabbed == true)
             {
-                grabbable.Grab();
+                grabbableObj.Grab();
             }
-            else if (!inputData.isMovableObjGrabbed)
+            else if (inputData.isMovableObjGrabbed == false)
             {
-                grabbable.Release();
-                grabbable = null;
+                grabbableObj.Release();
+                grabbableObj = null;
             }
         }
-
     }
 }

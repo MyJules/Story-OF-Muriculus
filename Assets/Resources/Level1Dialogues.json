@@ -8,17 +8,36 @@
       [
         {
           "name": "Leo",
-          "sentence": "Ehhh"
+          "sentence": "..."
         },
         {
           "name": "Leo",
-          "sentence": "How long would it continue?"
+          "sentence": "What heppend?"
         },
         {
           "name": "Leo",
-          "sentence": "I should find a way out."
+          "sentence": "Whare am I?"
+        },
+        {
+          "name": "Leo",
+          "sentence": "How long was I here?"
+        },
+        {
+         "name": "Leo",
+         "sentence": "Oh good!" 
+        },
+        {
+         "name": "Leo",
+         "sentence": "No." 
+        },
+        {
+         "name": "Leo",
+         "sentence": "No, no, no, no, no!!!" 
+        },
+        {
+         "name": "Leo",
+         "sentence": "I can't loose time." 
         }
-
       ]
     },
 

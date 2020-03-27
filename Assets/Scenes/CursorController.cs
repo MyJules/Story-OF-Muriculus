@@ -6,7 +6,10 @@ public class CursorController : MonoBehaviour
 {
     private void Start()
     {
-        Cursor.visible = false;
+        Cursor.visible = true;
     }
-
+    public void setVisible(bool isVisible)
+    {
+        Cursor.visible = isVisible;
+    }
 }

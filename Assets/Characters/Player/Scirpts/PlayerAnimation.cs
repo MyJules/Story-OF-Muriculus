@@ -6,12 +6,12 @@ using PlayerRays;
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator _animator;
-
     private Rigidbody2D _rb;
 
-    private float velocityX, velocityY;
-
-    private bool _isFirst = true, _fliped = false, isAnimFinished = false;
+    private float velocityX;
+    private float velocityY;
+    private bool _isFirst = true;
+    private bool _fliped = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,28 +25,17 @@ public class PlayerAnimation : MonoBehaviour
         velocityX = _rb.velocity.x;
         velocityY = _rb.velocity.y;
 
-        PushAnimation(false);
-
-        FlipAnimation(inputData.isGrounded);
-        
+        FlipAnimation(inputData.isGrounded);     
         GrabWallAnimation(mechanicsData.isWallGrabbed, inputData.isGrounded);
-
         JumpAnimation(inputData.isGrounded);
 
-        //setting up jump animation.
         _animator.SetFloat("vertical_velocity", velocityY);
-
-        //setting horizontal animation
         _animator.SetFloat("Speed", Mathf.Abs(velocityX));
     }
 
     private void GrabWallAnimation(bool isWallGrabbed, bool isGrounded)
     {
-        //grab the wall
-        if (isWallGrabbed && !isGrounded)
-            _animator.SetBool("isWallGrabbed", true);
-        else
-            _animator.SetBool("isWallGrabbed", false);
+        _animator.SetBool("isWallGrabbed", isWallGrabbed && !isGrounded);
     }
 
     private void JumpAnimation(bool isGrounded)
@@ -75,36 +64,25 @@ public class PlayerAnimation : MonoBehaviour
         //flip just when on ground or on wall
         if (velocityX < -1f && !_fliped)
         {
-
-                StartCoroutine(AnimatedFlip(isGrounded));
-
+            StartCoroutine(AnimatedFlip(isGrounded));
             _fliped = true;
         }
         else if (velocityX > 1f && _fliped)
         {
-                StartCoroutine(AnimatedFlip(isGrounded));
-
+            StartCoroutine(AnimatedFlip(isGrounded));
             _fliped = false;    
         }
     }
 
     private void PushAnimation(bool isPushing)
     {
-
-        if (isPushing)
-        {   
-            _animator.SetBool("isPushing", true);
-        }
-        else
-        {
-            _animator.SetBool("isPushing", false);
-        }
+        _animator.SetBool("isPushing", isPushing);
     }
 
     private IEnumerator AnimatedFlip(bool isGrounded)
     {
         _animator.SetBool("isFlipTransition", true);
-        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1f && isGrounded);
+        yield return new WaitWhile(() => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f && isGrounded);
         _animator.SetBool("isFlipTransition", false);
         Flip();
     }
