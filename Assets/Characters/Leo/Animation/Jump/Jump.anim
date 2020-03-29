@@ -371,7 +371,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: -156.255}
+        value: {x: 0, y: 0, z: -166.60501}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -2319,7 +2319,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -156.255
+        value: -166.60501
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2605,7 +2605,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Torso_Main/Torso_Middle/Torso_UP/Torso_UP_2
+    path: Torso_Main/Torso_Middle/Torso_UP/Neck/Head_Neck
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2615,7 +2615,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Torso_Main/Torso_Middle/Torso_UP/Torso_UP_2
+    path: Torso_Main/Torso_Middle/Torso_UP/Neck/Head_Neck
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2625,7 +2625,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Torso_Main/Torso_Middle/Torso_UP/Torso_UP_2
+    path: Torso_Main/Torso_Middle/Torso_UP/Neck/Head_Neck
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3115,7 +3115,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Torso_Main/Torso_Middle/Torso_UP/Neck/Head_Neck
+    path: Torso_Main/Torso_Middle/Torso_UP/Torso_UP_2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3125,7 +3125,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Torso_Main/Torso_Middle/Torso_UP/Neck/Head_Neck
+    path: Torso_Main/Torso_Middle/Torso_UP/Torso_UP_2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3135,7 +3135,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Torso_Main/Torso_Middle/Torso_UP/Neck/Head_Neck
+    path: Torso_Main/Torso_Middle/Torso_UP/Torso_UP_2
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

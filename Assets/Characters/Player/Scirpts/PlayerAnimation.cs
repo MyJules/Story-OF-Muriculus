@@ -40,13 +40,13 @@ public class PlayerAnimation : MonoBehaviour
     }
     private void GrabObjAnimation(PlayerMechanicsData mechanicsData)
     {
-        if (mechanicsData.grabbableObject != null)
+        if (mechanicsData.grabbableObject == null)
         {
-            _animator.SetLayerWeight(1, 1);
+            _animator.SetLayerWeight(1, 0);
         }
         else
         {
-            _animator.SetLayerWeight(1, 0);
+            _animator.SetLayerWeight(1, 1);
         }
     }
     private void JumpAnimation(bool isGrounded)
@@ -54,7 +54,7 @@ public class PlayerAnimation : MonoBehaviour
         //jump animaiton
         if (isGrounded)
         {
-            if (!_isFirst)
+            if (!_isFirst && Mathf.Abs(_rb.velocity.y) < 3f)
             {
                 _animator.SetBool("isJumping", false);
                 _isFirst = true;

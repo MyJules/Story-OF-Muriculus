@@ -55,7 +55,6 @@ public class PlayerController : MonoBehaviour
         AirControl(moveData.horizontalInput, moveData.isGrounded, mechanicsData.isWallGrabbed);
         CalculateCoyoteTime(moveData.isGrounded, coyoteTimeMax);
     }
-
     private void Running(float horizontalInput, bool isGrounded)
     {
         if (isGrounded)
@@ -88,9 +87,8 @@ public class PlayerController : MonoBehaviour
                 {
                     _rigidbody.AddForce(new Vector2(-_decceleration * _rigidbody.velocity.normalized.x, 0));
                 }
-                else
+                else if(Mathf.Abs(_rigidbody.velocity.y) < 3f)
                 {
-
                     _rigidbody.velocity = Vector2.down;
                 }
             }

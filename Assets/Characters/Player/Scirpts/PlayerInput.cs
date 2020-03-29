@@ -65,7 +65,7 @@ public class PlayerInput : MonoBehaviour
         if (_isJumpDown)
         {
             _moveData.isJumping = true;
-        }
+        }else
         if (_isJumpUp)
         {
             _moveData.isJumping = false;
@@ -85,7 +85,7 @@ public class PlayerInput : MonoBehaviour
             if (_mechanicsData.isMovableObjGrabbed == true)
             {
                 _mechanicsData.grabbableObject =
-                    _rays.GetCrossInformation((int)PlayerRaysEnum.IsMovableObjeGrabbed).collider.gameObject.GetComponent<IGrabbable>();
+                _rays.GetCrossInformation((int)PlayerRaysEnum.IsMovableObjeGrabbed).collider.gameObject.GetComponent<IGrabbable>();
             }
             _mechanics.Grabbing(_mechanicsData, ref _mechanicsData.grabbableObject);
         }
