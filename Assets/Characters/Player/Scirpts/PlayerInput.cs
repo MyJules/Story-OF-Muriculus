@@ -38,20 +38,20 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        _mechanicsData.isWallGrabbed = _rays.IsCrossed((int) PlayerRaysEnum.IsWallJumpCollide);
-        _moveData.isGrounded = _rays.IsCrossed((int) PlayerRaysEnum.IsLeftLegGrounded, (int) PlayerRaysEnum.IsRightLegGrounded);
+        _mechanicsData.isWallGrabbed = _rays.IsCrossed((int)PlayerRaysEnum.IsWallJumpCollide);
+        _moveData.isGrounded = _rays.IsCrossed((int)PlayerRaysEnum.IsLeftLegGrounded, (int)PlayerRaysEnum.IsRightLegGrounded);
         setMovement();
     }
 
     private void FixedUpdate()
     {
-        _controller.Move(_moveData, _mechanicsData); 
-        _animation.Animate(_moveData, _mechanicsData); 
+        _controller.Move(_moveData, _mechanicsData);
+        _animation.Animate(_moveData, _mechanicsData);
     }
-    
+
     private void setMovement()
     {
-        _moveData.horizontalInput = CrossPlatformInputManager.GetAxis(horizontalButton); 
+        _moveData.horizontalInput = CrossPlatformInputManager.GetAxis(horizontalButton);
         _isJumpDown = CrossPlatformInputManager.GetButtonDown(jumpButton);
         _isJumpUp = CrossPlatformInputManager.GetButtonUp(jumpButton);
         _isGrabDown = CrossPlatformInputManager.GetButtonDown(grabButton);
@@ -59,7 +59,7 @@ public class PlayerInput : MonoBehaviour
         setJumping();
         setMechanics();
     }
-    
+
     private void setJumping()
     {
         if (_isJumpDown)
@@ -72,13 +72,13 @@ public class PlayerInput : MonoBehaviour
         }
         if (_mechanicsData.isWallGrabbed && _isJumpDown)
         {
-            _mechanicsData.wallNormal = _rays.GetCrossInformation((int) PlayerRaysEnum.IsWallJumpCollide).normal.normalized;
+            _mechanicsData.wallNormal = _rays.GetCrossInformation((int)PlayerRaysEnum.IsWallJumpCollide).normal.normalized;
         }
     }
-     
-    private void setMechanics() 
-    { 
-        if (_isGrabDown) 
+
+    private void setMechanics()
+    {
+        if (_isGrabDown)
         {
             _mechanicsData.isMovableObjGrabbed = !_mechanicsData.isMovableObjGrabbed ||
                                                   _mechanicsData.grabbableObject == null;

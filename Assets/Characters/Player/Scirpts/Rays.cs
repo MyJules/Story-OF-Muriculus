@@ -22,14 +22,14 @@ public class Rays : MonoBehaviour
     }
     public bool IsCrossed(int i)
     {
-            RaycastHit2D raycast = Physics2D.Raycast(_rayInfo[i].rayTransform.position,
-                Quaternion.Euler(_rayInfo[i].rayTransform.rotation.eulerAngles) * Vector3.forward, _rayInfo[i].rayLength,
-                _rayInfo[i].rayCrossLayer);
+        RaycastHit2D raycast = Physics2D.Raycast(_rayInfo[i].rayTransform.position,
+            Quaternion.Euler(_rayInfo[i].rayTransform.rotation.eulerAngles) * Vector3.forward, _rayInfo[i].rayLength,
+            _rayInfo[i].rayCrossLayer);
 
-            if (raycast == true)
-            {
-                return true;
-            }
+        if (raycast == true)
+        {
+            return true;
+        }
         return false;
     }
     public RaycastHit2D GetCrossInformation(int i)

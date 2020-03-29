@@ -3,20 +3,13 @@ using PlayerRays;
 
 public class PlayerSE : MonoBehaviour
 {
-
     [SerializeField]
     private AudioSource audioSorce;
-
     [SerializeField]
-    private ParticleSystem _playerParticleSystem;
-
+    private ParticleSystem _playerDust;
     private GroundSpecialEffects groundCrossInfo;
-
-
     private Rays _rays;
-
     private bool isGroundCrossed;
-
     private void Start()
     {
         _rays = GetComponentInParent<Rays>();
@@ -24,18 +17,18 @@ public class PlayerSE : MonoBehaviour
 
     public void PlayGroundParticle()
     {
-        _playerParticleSystem.Play();
+        _playerDust.Play();
     }
 
     public void PlayStepSound()
     {
-        isGroundCrossed = _rays.IsCrossed((int) PlayerRaysEnum.GroundParticleCheck);
+        isGroundCrossed = _rays.IsCrossed((int)PlayerRaysEnum.GroundParticleCheck);
 
         if (isGroundCrossed)
         {
             groundCrossInfo = _rays.GetCrossInformation((int)PlayerRaysEnum.GroundParticleCheck).collider.GetComponent<GroundSpecialEffects>();
 
-            if (groundCrossInfo == true &&  groundCrossInfo.stepSound != null)
+            if (groundCrossInfo == true && groundCrossInfo.stepSound != null)
             {
                 audioSorce.volume = 1;
                 audioSorce.pitch = Random.Range(0.7f, 1.2f);

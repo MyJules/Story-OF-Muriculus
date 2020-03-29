@@ -7,22 +7,17 @@ public class FrameManager : MonoBehaviour
 {
     [SerializeField]
     private CinemachineConfiner[] frameConfiner;
-
     private GameObject[] _frames;
-
     private void Start()
     {
         _frames = GameObject.FindGameObjectsWithTag("Frame");
-
         //setting id for every frame.
         for (int i = 0; i < _frames.Length; i++)
         {
             FrameControl currentFrame = _frames[i].GetComponent<FrameControl>();
-
             currentFrame.id = i;
         }
     }
-   
     public void ChangeToFrame(Collider2D collider)
     {
         for (int i = 0; i < frameConfiner.Length; i++)
@@ -35,28 +30,24 @@ public class FrameManager : MonoBehaviour
         for (int i = 0; i < _frames.Length; i++)
         {
             FrameControl currentFrame = collider.GetComponent<FrameControl>();
-
             if (currentFrame.id == i)
-            { 
-
+            {
                 for (int j = 0; j < _frames[i].transform.childCount; j++)
                 {
                     _frames[i].transform.GetChild(j).gameObject.active = true;
                 }
-
             }
-            else if(_frames[i].transform.GetChild(0).gameObject.active)
+            else if (_frames[i].transform.GetChild(0).gameObject.active)
             {
-
                 for (int j = 0; j < _frames[i].transform.childCount; j++)
                 {
-                         _frames[i].transform.GetChild(j).gameObject.active = false;
-                }   
-                
+                    _frames[i].transform.GetChild(j).gameObject.active = false;
+                }
             }
-
         }
-
     }
-
+    public GameObject getCurrentFrame()
+    {
+        return _frames[0];
+    }
 }

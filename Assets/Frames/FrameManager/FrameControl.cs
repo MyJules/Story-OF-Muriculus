@@ -5,7 +5,6 @@ using UnityEngine;
 public class FrameControl : MonoBehaviour
 {
     private FrameManager _frameManager;
-
     [HideInInspector]
     public int id;
 

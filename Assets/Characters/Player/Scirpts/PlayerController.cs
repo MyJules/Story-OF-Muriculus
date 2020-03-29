@@ -9,9 +9,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float _maxSpeed = 100;
     [SerializeField]
-    private  float _acceleration = 80;
+    private float _acceleration = 80;
     [SerializeField] private float _decceleration = 80;
-    
+
     [Header("Jump")]
     [SerializeField]
     private float _jumpHeight = 2000;
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     [Range(0, 3)]
     private float coyoteTimeMax = 0.1f;
-    [SerializeField] private float _airAcceleration = 300;  
+    [SerializeField] private float _airAcceleration = 300;
     [SerializeField] private float _airDecceeleration = 200;
     [Space]
 
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
                 if (Mathf.Abs(_rigidbody.velocity.x) < _maxSpeed)
                 {
                     //setting up constant speed if player reached max speed.
-                    if ( Mathf.Abs(Mathf.Abs(_rigidbody.velocity.x) - _maxSpeed) > 0.3f ||
+                    if (Mathf.Abs(Mathf.Abs(_rigidbody.velocity.x) - _maxSpeed) > 0.3f ||
                         Math.Abs(_rigidbody.velocity.normalized.x - horizontalInput) > 0.3f)
                     {
                         _rigidbody.AddForce(new Vector2(_acceleration * horizontalInput, 0));
@@ -91,10 +91,10 @@ public class PlayerController : MonoBehaviour
                 else
                 {
 
-                    _rigidbody.velocity = Vector2.down;    
+                    _rigidbody.velocity = Vector2.down;
                 }
             }
-            
+
         }
 
     }
@@ -121,18 +121,9 @@ public class PlayerController : MonoBehaviour
             _jumpWasRelesed = true;
         }
 
-        //is jump button pressed again
-        if (_jumpWasRelesed && isJumping)
-        {
-            _allowJumping = true;
-        }
-        else
-        {
-            _allowJumping = false;
-        }
-  
+        _allowJumping = _jumpWasRelesed && isJumping;
     }
-    
+
     private void WallJump(bool isJumping, bool isWallGrabbed, bool isGrounded, Vector2 wallNormal)
     {
         if (isWallGrabbed && !isGrounded)
@@ -220,13 +211,13 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody.AddForce(Vector2.up * (_jumpHeight + Mathf.Abs(_rigidbody.velocity.y)), ForceMode2D.Impulse);
     }
-    
+
     private void WallJump(Vector2 wallNormal)
     {
         _rigidbody.AddForce(wallNormal * jumpOffForce, ForceMode2D.Impulse);
         _rigidbody.AddForce(Vector2.up * wallJumpHeight, ForceMode2D.Impulse);
     }
-    
+
     private void CalculateCoyoteTime(bool isGrounded, float coyoteTimeMax)
     {
         if (isGrounded)

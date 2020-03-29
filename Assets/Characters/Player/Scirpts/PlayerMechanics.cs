@@ -2,7 +2,7 @@
 
 public class PlayerMechanics : MonoBehaviour
 {
-    public void Grabbing(PlayerMechanicsData inputData, ref IGrabbable grabbableObj) 
+    public void Grabbing(PlayerMechanicsData inputData, ref IGrabbable grabbableObj)
     {
         if (grabbableObj != null)
         {

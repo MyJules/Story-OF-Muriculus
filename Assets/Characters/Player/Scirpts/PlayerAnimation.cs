@@ -19,15 +19,16 @@ public class PlayerAnimation : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _rb = GetComponent<Rigidbody2D>();
     }
-    
+
     public void Animate(PlayerMoveData inputData, PlayerMechanicsData mechanicsData)
     {
         velocityX = _rb.velocity.x;
         velocityY = _rb.velocity.y;
 
-        FlipAnimation(inputData.isGrounded);     
+        FlipAnimation(inputData.isGrounded);
         GrabWallAnimation(mechanicsData.isWallGrabbed, inputData.isGrounded);
         JumpAnimation(inputData.isGrounded);
+        GrabObjAnimation(mechanicsData);
 
         _animator.SetFloat("vertical_velocity", velocityY);
         _animator.SetFloat("Speed", Mathf.Abs(velocityX));
@@ -37,7 +38,17 @@ public class PlayerAnimation : MonoBehaviour
     {
         _animator.SetBool("isWallGrabbed", isWallGrabbed && !isGrounded);
     }
-
+    private void GrabObjAnimation(PlayerMechanicsData mechanicsData)
+    {
+        if (mechanicsData.grabbableObject != null)
+        {
+            _animator.SetLayerWeight(1, 1);
+        }
+        else
+        {
+            _animator.SetLayerWeight(1, 0);
+        }
+    }
     private void JumpAnimation(bool isGrounded)
     {
         //jump animaiton
@@ -70,7 +81,7 @@ public class PlayerAnimation : MonoBehaviour
         else if (velocityX > 1f && _fliped)
         {
             StartCoroutine(AnimatedFlip(isGrounded));
-            _fliped = false;    
+            _fliped = false;
         }
     }
 

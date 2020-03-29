@@ -21,9 +21,9 @@ public class MovableBox : MonoBehaviour, IGrabbable
     }
     public void Release()   
     {
-        float thrust = 500f;
+        float thrust = 600f;
         int direction;
-        if (transform.parent.rotation.y > 0)
+        if (transform.parent.rotation.y >= 0)
         {
             direction = 1;
         }
