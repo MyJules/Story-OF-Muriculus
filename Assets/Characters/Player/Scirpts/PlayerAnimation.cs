@@ -72,7 +72,6 @@ public class PlayerAnimation : MonoBehaviour
 
     private void FlipAnimation(bool isGrounded)
     {
-        //flip just when on ground or on wall
         if (velocityX < -1f && !_fliped)
         {
             StartCoroutine(AnimatedFlip(isGrounded));
