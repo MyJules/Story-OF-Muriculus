@@ -41,12 +41,12 @@ public class PlayerInput : MonoBehaviour
         _mechanicsData.isWallGrabbed = _rays.IsCrossed((int)PlayerRaysEnum.IsWallJumpCollide);
         _moveData.isGrounded = _rays.IsCrossed((int)PlayerRaysEnum.IsLeftLegGrounded, (int)PlayerRaysEnum.IsRightLegGrounded);
         setMovement();
+        _animation.Animate(_moveData, _mechanicsData);
     }
 
     private void FixedUpdate()
     {
         _controller.Move(_moveData, _mechanicsData);
-        _animation.Animate(_moveData, _mechanicsData);
     }
 
     private void setMovement()
@@ -55,7 +55,6 @@ public class PlayerInput : MonoBehaviour
         _isJumpDown = CrossPlatformInputManager.GetButtonDown(jumpButton);
         _isJumpUp = CrossPlatformInputManager.GetButtonUp(jumpButton);
         _isGrabDown = CrossPlatformInputManager.GetButtonDown(grabButton);
-
         setJumping();
         setMechanics();
     }
@@ -65,7 +64,8 @@ public class PlayerInput : MonoBehaviour
         if (_isJumpDown)
         {
             _moveData.isJumping = true;
-        }else
+        }
+        else
         if (_isJumpUp)
         {
             _moveData.isJumping = false;
@@ -80,7 +80,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (_isGrabDown)
         {
-            _mechanicsData.isMovableObjGrabbed = !_mechanicsData.isMovableObjGrabbed ||
+            _mechanicsData.isMovableObjGrabbed = _mechanicsData.isMovableObjGrabbed == false ||
                                                   _mechanicsData.grabbableObject == null;
             if (_mechanicsData.isMovableObjGrabbed == true)
             {

@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using PlayerRays;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
