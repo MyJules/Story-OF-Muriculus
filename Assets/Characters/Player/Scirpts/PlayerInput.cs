@@ -40,8 +40,8 @@ public class PlayerInput : MonoBehaviour
     {
         _mechanicsData.isWallGrabbed = _rays.IsCrossed((int)PlayerRaysEnum.IsWallJumpCollide);
         _moveData.isGrounded = _rays.IsCrossed((int)PlayerRaysEnum.IsLeftLegGrounded, (int)PlayerRaysEnum.IsRightLegGrounded);
-        setMovement();
         _animation.Animate(_moveData, _mechanicsData);
+        setMovement();
     }
 
     private void FixedUpdate()

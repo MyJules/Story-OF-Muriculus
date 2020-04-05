@@ -24,24 +24,21 @@ public class MovableBox : MonoBehaviour, IGrabbable
         transform.parent = grabPosition.transform;
         transform.position = grabPosition.transform.position;
     }
-    public void Release()   
+    public void Release()
     {
+        Vector2 releaseVelocity;
         float thrust = 600f;
-        int direction;
+        int direction = -1;
         if (transform.parent.rotation.y >= 0)
         {
             direction = 1;
         }
-        else
-        {
-            direction = -1;
-        }
-        Vector2 releaseVelocity = new Vector2(direction, 1);
+        releaseVelocity = new Vector2(direction, 1);
         rigidbody.bodyType = RigidbodyType2D.Dynamic;
         transform.parent = startParent.transform;
-        rigidbody.AddForce(releaseVelocity * thrust, ForceMode2D.Impulse);
         collider.enabled = true;
         transform.rotation = Quaternion.identity;
         transform.localScale = defaultScale;
+        rigidbody.AddForce(releaseVelocity * thrust, ForceMode2D.Impulse);
     }
 }

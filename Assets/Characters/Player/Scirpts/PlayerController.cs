@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isJumping && _isFirstJump && _allowJumping)
         {
-            if (_currentCoyoteTime > 0)
+            if (_currentCoyoteTime > 0 && Mathf.Abs(_rigidbody.velocity.y) < 1.5f)
             {
                 Jump();
                 _isFirstJump = false;
