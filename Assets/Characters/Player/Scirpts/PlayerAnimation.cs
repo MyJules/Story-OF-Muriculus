@@ -18,7 +18,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         _animator = GetComponentInChildren<Animator>();
         _rb = GetComponent<Rigidbody2D>();
-    }
+    }  
 
     public void Animate(PlayerMoveData inputData, PlayerMechanicsData mechanicsData)
     {
@@ -26,7 +26,8 @@ public class PlayerAnimation : MonoBehaviour
         _velocityY = _rb.velocity.y;
 
         FlipAnimation(inputData.isGrounded);
-        GrabWallAnimation(mechanicsData.isWallGrabbed, inputData.isGrounded);
+        SetWallGrabbAnimation(mechanicsData.isWallGrabbed, inputData.isGrounded);
+        SetGrabObjAnimation(mechanicsData);
         JumpAnimation(inputData.isGrounded);
         GrabObjAnimation(mechanicsData);
 
@@ -34,19 +35,25 @@ public class PlayerAnimation : MonoBehaviour
         _animator.SetFloat("Speed", Mathf.Abs(_velocityX));
     }
 
-    private void GrabWallAnimation(bool isWallGrabbed, bool isGrounded)
+    private void SetWallGrabbAnimation(bool isWallGrabbed, bool isGrounded)
     {
         _animator.SetBool("isWallGrabbed", isWallGrabbed && !isGrounded);
     }
+
+    private void SetGrabObjAnimation(PlayerMechanicsData mechanicsData)
+    {
+        _animator.SetBool("isObjectGrabbed", mechanicsData.isMovableObjGrabbed); 
+    }
+
     private void GrabObjAnimation(PlayerMechanicsData mechanicsData)
     {
-        if (mechanicsData.grabbableObject == null)
+        if (mechanicsData.isMovableObjGrabbed == true)
         {
-            _animator.SetLayerWeight(1, 0);
+            _animator.SetLayerWeight(1, 1);
         }
         else
         {
-            _animator.SetLayerWeight(1, 1);
+            _animator.SetLayerWeight(1, 0);
         }
     }
     private void JumpAnimation(bool isGrounded)

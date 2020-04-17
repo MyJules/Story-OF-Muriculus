@@ -40,12 +40,12 @@ public class PlayerInput : MonoBehaviour
     {
         _mechanicsData.isWallGrabbed = _rays.IsCrossed((int)PlayerRaysEnum.IsWallJumpCollide);
         _moveData.isGrounded = _rays.IsCrossed((int)PlayerRaysEnum.IsLeftLegGrounded, (int)PlayerRaysEnum.IsRightLegGrounded);
-        _animation.Animate(_moveData, _mechanicsData);
         setMovement();
     }
 
     private void FixedUpdate()
     {
+        _animation.Animate(_moveData, _mechanicsData);
         _controller.Move(_moveData, _mechanicsData);
     }
 
@@ -80,12 +80,16 @@ public class PlayerInput : MonoBehaviour
     {
         if (_isGrabDown)
         {
-            _mechanicsData.isMovableObjGrabbed = _mechanicsData.isMovableObjGrabbed == false ||
-                                                  _mechanicsData.grabbableObject == null;
-            if (_mechanicsData.isMovableObjGrabbed == true)
+            _mechanicsData.isMovableObjGrabbed = false;
+            if (_mechanicsData.grabbableObject == null)
             {
-                _mechanicsData.grabbableObject =
-                _rays.GetCrossInformation((int)PlayerRaysEnum.IsMovableObjeGrabbed).collider.gameObject.GetComponent<IGrabbable>();
+                IGrabbable grabbed = _rays.GetCrossInformation((int)PlayerRaysEnum.IsMovableObjeGrabbed).collider.gameObject.GetComponent<IGrabbable>();
+
+                if (grabbed != null)
+                {
+                    _mechanicsData.grabbableObject = grabbed;
+                    _mechanicsData.isMovableObjGrabbed = true;
+                }
             }
             _mechanics.Grabbing(_mechanicsData, ref _mechanicsData.grabbableObject);
         }
