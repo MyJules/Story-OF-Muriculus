@@ -50,6 +50,7 @@ public class PlayerAnimation : MonoBehaviour
         if (mechanicsData.isMovableObjGrabbed == true)
         {
             _animator.SetLayerWeight(1, 1);
+
         }
         else
         {
@@ -112,7 +113,7 @@ public class PlayerAnimation : MonoBehaviour
         _animator.SetBool("isFlipTransition", false);
         Flip();
     }
-
+    
     private void Flip()
     {
         transform.Rotate(Vector2.up * 180);
